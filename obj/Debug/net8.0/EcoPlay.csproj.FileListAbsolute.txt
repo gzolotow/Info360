@@ -1,0 +1,56 @@
+Z:\ECOSPORT ARTE\EcoPlay\bin\Debug\net8.0\appsettings.Development.json
+Z:\ECOSPORT ARTE\EcoPlay\bin\Debug\net8.0\appsettings.json
+Z:\ECOSPORT ARTE\EcoPlay\bin\Debug\net8.0\EcoPlay.staticwebassets.runtime.json
+Z:\ECOSPORT ARTE\EcoPlay\bin\Debug\net8.0\EcoPlay.exe
+Z:\ECOSPORT ARTE\EcoPlay\bin\Debug\net8.0\EcoPlay.deps.json
+Z:\ECOSPORT ARTE\EcoPlay\bin\Debug\net8.0\EcoPlay.runtimeconfig.json
+Z:\ECOSPORT ARTE\EcoPlay\bin\Debug\net8.0\EcoPlay.dll
+Z:\ECOSPORT ARTE\EcoPlay\bin\Debug\net8.0\EcoPlay.pdb
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\EcoPlay.GeneratedMSBuildEditorConfig.editorconfig
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\EcoPlay.AssemblyInfoInputs.cache
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\EcoPlay.AssemblyInfo.cs
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\EcoPlay.csproj.CoreCompileInputs.cache
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\EcoPlay.MvcApplicationPartsAssemblyInfo.cache
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\EcoPlay.RazorAssemblyInfo.cache
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\EcoPlay.RazorAssemblyInfo.cs
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\staticwebassets.build.json
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\staticwebassets.development.json
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\staticwebassets\msbuild.EcoPlay.Microsoft.AspNetCore.StaticWebAssets.props
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\staticwebassets\msbuild.build.EcoPlay.props
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.EcoPlay.props
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.EcoPlay.props
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\staticwebassets.pack.json
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\scopedcss\bundle\EcoPlay.styles.css
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\EcoPlay.dll
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\refint\EcoPlay.dll
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\EcoPlay.pdb
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\EcoPlay.genruntimeconfig.cache
+Z:\ECOSPORT ARTE\EcoPlay\obj\Debug\net8.0\ref\EcoPlay.dll
+Z:\EcoPlay\bin\Debug\net8.0\appsettings.Development.json
+Z:\EcoPlay\bin\Debug\net8.0\appsettings.json
+Z:\EcoPlay\bin\Debug\net8.0\EcoPlay.staticwebassets.runtime.json
+Z:\EcoPlay\bin\Debug\net8.0\EcoPlay.exe
+Z:\EcoPlay\bin\Debug\net8.0\EcoPlay.deps.json
+Z:\EcoPlay\bin\Debug\net8.0\EcoPlay.runtimeconfig.json
+Z:\EcoPlay\bin\Debug\net8.0\EcoPlay.dll
+Z:\EcoPlay\bin\Debug\net8.0\EcoPlay.pdb
+Z:\EcoPlay\obj\Debug\net8.0\EcoPlay.GeneratedMSBuildEditorConfig.editorconfig
+Z:\EcoPlay\obj\Debug\net8.0\EcoPlay.AssemblyInfoInputs.cache
+Z:\EcoPlay\obj\Debug\net8.0\EcoPlay.AssemblyInfo.cs
+Z:\EcoPlay\obj\Debug\net8.0\EcoPlay.csproj.CoreCompileInputs.cache
+Z:\EcoPlay\obj\Debug\net8.0\EcoPlay.MvcApplicationPartsAssemblyInfo.cache
+Z:\EcoPlay\obj\Debug\net8.0\EcoPlay.RazorAssemblyInfo.cache
+Z:\EcoPlay\obj\Debug\net8.0\EcoPlay.RazorAssemblyInfo.cs
+Z:\EcoPlay\obj\Debug\net8.0\staticwebassets.build.json
+Z:\EcoPlay\obj\Debug\net8.0\staticwebassets.development.json
+Z:\EcoPlay\obj\Debug\net8.0\staticwebassets\msbuild.EcoPlay.Microsoft.AspNetCore.StaticWebAssets.props
+Z:\EcoPlay\obj\Debug\net8.0\staticwebassets\msbuild.build.EcoPlay.props
+Z:\EcoPlay\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.EcoPlay.props
+Z:\EcoPlay\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.EcoPlay.props
+Z:\EcoPlay\obj\Debug\net8.0\staticwebassets.pack.json
+Z:\EcoPlay\obj\Debug\net8.0\scopedcss\bundle\EcoPlay.styles.css
+Z:\EcoPlay\obj\Debug\net8.0\EcoPlay.dll
+Z:\EcoPlay\obj\Debug\net8.0\refint\EcoPlay.dll
+Z:\EcoPlay\obj\Debug\net8.0\EcoPlay.pdb
+Z:\EcoPlay\obj\Debug\net8.0\EcoPlay.genruntimeconfig.cache
+Z:\EcoPlay\obj\Debug\net8.0\ref\EcoPlay.dll

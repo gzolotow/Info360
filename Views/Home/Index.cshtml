@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+
+<header class="header">
+  <div class="header__container">
+    <!-- Logo -->
+    <img src="logo.png" alt="">
+
+    <!-- Navegación -->
+    <nav class="header__nav">
+      <ul class="header__list">
+        <!-- Iniciar Sesión -->
+        <li>
+          <a asp-controller="Account" asp-action="IniciarSesion" class="header__link">
+            Log In
+          </a>
+        </li>
+
+        <!-- Registrarse -->
+        <li>
+          <a asp-controller="Account" asp-action="Registrarse" class="header__link">
+            Sign In
+          </a>
+        </li>
+
+        <!-- Home -->
+        <li>
+          <a asp-controller="Home" asp-action="Index" class="header__link">
+            Inicio
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+    <section class="section">
+        <h2>♻️ El Problema</h2>
+        <p>
+            A veces, las personas ensucian el mundo tirando basura y no separando lo que puede reciclarse.
+            Esto hace que la Tierra se ponga triste. Pero si aprendemos juntos a reciclar y a cuidar el medio ambiente,
+            podremos cambiarlo y darle una gran sonrisa al planeta.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>🌎 Nuestro Objetivo</h2>
+        <p>
+            Queremos cuidar la Tierra, nuestro gran hogar. Aquí podrás jugar y aprender cómo proteger la naturaleza mientras te diviertes.
+            ¡Cada pequeño gesto cuenta para que el planeta siga lleno de árboles, ríos limpios y animales felices!
+        </p>
+    </section>
+
+    <button class="btn-entrar">ENTRAR</button>
+
+    <div class="illustration">
+        <img src="~/images/recycle-bin.png" alt="Tacho de reciclaje feliz" />
+    </div>
+</main>
+
