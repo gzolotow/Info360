@@ -54,7 +54,7 @@
     }
 
     .section h2 {
-        color: #2c6e2f;
+        color: #3cae3c;
         background-color: #fff4bf;
         display: inline-block;
         padding: 8px 16px;
@@ -74,7 +74,7 @@
         display: inline-block;
         padding: 8px 16px;
         font-size: 20px;
-        color: #2c6e2f;
+        color: #3cae3c;
     }
 
     .btn-entrar {
@@ -101,3 +101,159 @@
     .illustration img {
         width: 120px;
     }
+    
+
+  nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    background-color: #fff2cc;
+    color: #4a4a4a;
+    font-weight: 600;
+    font-family: 'Comic Sans MS', 'Poppins', sans-serif;
+    padding: 8px 20px;
+    border-radius: 12px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  nav a:hover {
+    background-color: #ffe699;
+    transform: translateY(-2px);
+  }
+  
+  /* Fondo general */
+body {
+    background-color: #f5f5dc; /* beige claro */
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Contenedor del formulario */
+  .Iniciar {
+    background-color: #3cae3c; /* verde fuerte */
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    margin: 5% auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Título */
+  .Iniciar h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  /* Campos de entrada */
+  .Iniciar input[type="text"],
+  .Iniciar input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Botón de login */
+  .Iniciar input[type="submit"] {
+    background-color: #f5f5dc; /* beige */
+    color: #0d4d0d;
+    font-weight: bold;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .Iniciar input[type="submit"]:hover {
+    background-color: #e0dbb5;
+  }
+  
+  /* Enlaces */
+  .Iniciar a {
+    color: #f5f5dc;
+    text-align: center;
+    display: block;
+    margin-top: 0.5rem;
+    text-decoration: underline;
+    font-size: 0.9rem;
+  }
+  .Registrarse {
+    background-color: #3cae3c;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    margin: 5% auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .Registrarse h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .Registrarse form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Registrarse label {
+    align-self: flex-start;
+    margin: 1% 0 0.5%;
+    font-size: 110%;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .Registrarse input[type="text"],
+  .Registrarse input[type="email"],
+  .Registrarse input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .Registrarse input[type="submit"] {
+    background-color: #f5f5dc;
+    color: #0d4d0d;
+    font-weight: bold;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .Registrarse input[type="submit"]:hover {
+    background-color: #e0dbb5;
+  }
+  
+  .Registrarse a {
+    color: #f5f5dc;
+    text-align: center;
+    display: block;
+    margin-top: 0.5rem;
+    text-decoration: underline;
+    font-size: 0.9rem;
+  }
+  

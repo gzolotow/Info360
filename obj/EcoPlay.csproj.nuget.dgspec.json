@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\EcoPlay\\EcoPlay.csproj": {}
+    "C:\\Users\\49189314\\Downloads\\info360\\Info360-1\\EcoPlay.csproj": {}
   },
   "projects": {
-    "Z:\\EcoPlay\\EcoPlay.csproj": {
+    "C:\\Users\\49189314\\Downloads\\info360\\Info360-1\\EcoPlay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\EcoPlay\\EcoPlay.csproj",
+        "projectUniqueName": "C:\\Users\\49189314\\Downloads\\info360\\Info360-1\\EcoPlay.csproj",
         "projectName": "EcoPlay",
-        "projectPath": "Z:\\EcoPlay\\EcoPlay.csproj",
-        "packagesPath": "C:\\Users\\49550988\\.nuget\\packages\\",
-        "outputPath": "Z:\\EcoPlay\\obj\\",
+        "projectPath": "C:\\Users\\49189314\\Downloads\\info360\\Info360-1\\EcoPlay.csproj",
+        "packagesPath": "C:\\Users\\49189314\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\49189314\\Downloads\\info360\\Info360-1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\49550988\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\49189314\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -48,6 +48,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.1.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
