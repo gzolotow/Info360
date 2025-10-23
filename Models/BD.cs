@@ -52,32 +52,32 @@ public static class BD
         }
         return miUsuario;
     }
-    public static void ModificarUsuario(int IdUsuario, string Username, string Mail, DateTime FechaNacimiento, string Contraseña, string Foto)
+    public static void ModificarUsuario(int IDUsuario, string Username, string Mail, DateTime FechaNacimiento, string Contraseña, string Foto)
     {
         
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-           string query = "UPDATE Usuario SET Username = @pUsername, Mail = @pMail, pFechaNacimiento = @ppFechaNacimiento, Contraseña = @pContraseña WHERE IdUsuario = @pIdUsuario";
-           connection.Execute(query, new { pIdUsuario = IdUsuario, pUsername = Username, pMail = Mail, pFechaNacimiento = FechaNacimiento, pContraseña = Contraseña, pFoto = Foto });
+           string query = "UPDATE Usuario SET Username = @pUsername, Mail = @pMail, pFechaNacimiento = @ppFechaNacimiento, Contraseña = @pContraseña WHERE IDUsuario = @pIDUsuario";
+           connection.Execute(query, new { pIDUsuario = IDUsuario, pUsername = Username, pMail = Mail, pFechaNacimiento = FechaNacimiento, pContraseña = Contraseña, pFoto = Foto });
         }
 
     }
-    public static void EliminarUsuario(int IdUsuario)
+    public static void EliminarUsuario(int IDUsuario)
     {
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string query = "DELETE FROM Usuario WHERE IdUsuario = @pIdUsuario";
+            string query = "DELETE FROM Usuario WHERE IDUsuario = @pIDUsuario";
 
-            connection.Execute(query, new { pIdUsuario = IdUsuario});
+            connection.Execute(query, new { pIDUsuario = IDUsuario});
         }
     }
-    public static void ActLogin(int IdUsuarios)
+    public static void ActLogin(int IDUsuario) 
     {
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string query = "UPDATE Usuarios SET username, password WHERE IdUsuarios = @pUsusarios";
+            string query = "UPDATE Usuario SET username, password WHERE IDUsuario = @pIDUsuario";
 
-            connection.Execute(query, new { pUsuarios = IdUsuarios});
+            connection.Execute(query, new { pIDUsuario = IDUsuario});
         }
 
     }
