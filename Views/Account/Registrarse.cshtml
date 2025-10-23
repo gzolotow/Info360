@@ -1,19 +1,36 @@
 @{
-    ViewData["Title"] = "Registrarse";
+    ViewData["Title"] = "Registrarse - EcoPlay";
 }
-<body>
-    <header>
-        <img src="" alt="EcoPlay">
-    </header>
-    <main>
-        <form method="post">
-        <input type="text" placeholder="Username" required> 
-        <input type="text" placeholder="Correo Electronico (tutor)" required> 
-        <input type="password" placeholder="Contraseña" required> 
-        <input type="date" placeholder="dd/mm/aa" required> 
-        </form>
 
-        <button> Registrarse</button>
-        <a href="IniciarSesion.cshtml">¿Ya tenés una cuenta?</a>
-    </main>
+<body>
+  <header>
+    <img src="Logo.png" alt="EcoPlay Logo">
+    <nav></nav>
+  </header>
+
+  <main>
+    <section class="Registrarse">
+      <h1>Bienvenido</h1>
+      <form action="#" method="post">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="fecha">Fecha de nacimiento (dd/mm/aa):</label>
+        <input type="text" id="fecha" name="fecha" placeholder="dd/mm/aa" required>
+
+        <input type="submit" value="Registrarse">
+
+        <div>
+          <a href="IniciarSesion.html">¿Ya tienes cuenta?</a>
+        </div>
+      </form>
+    </section>
+  </main>
 </body>
+</html>

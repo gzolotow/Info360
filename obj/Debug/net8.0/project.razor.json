@@ -19359,11 +19359,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\49189314\\Downloads\\info360\\Info360-1\\Views\\Home\\IniciarSesion.cshtml",
-      "TargetPath": "Views\\Home\\IniciarSesion.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\49189314\\Downloads\\info360\\Info360-1\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -19374,8 +19369,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\49189314\\Downloads\\info360\\Info360-1\\Views\\Home\\Registrarse.cshtml",
-      "TargetPath": "Views\\Home\\Registrarse.cshtml",
+      "FilePath": "c:\\Users\\49189314\\Downloads\\info360\\Info360-1\\Views\\Home\\Inventario.cshtml",
+      "TargetPath": "Views\\Home\\Inventario.cshtml",
       "FileKind": "mvc"
     }
   ],

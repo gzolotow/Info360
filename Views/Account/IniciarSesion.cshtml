@@ -1,18 +1,30 @@
 @{
-    ViewData["Title"] = "Iniciar Sesión";
+    ViewData["Title"] = "Iniciar Sesión - EcoPlay";
 }
 <body>
-    <header>
-        <img src="" alt="EcoPlay">
-    </header>
-    <main>
-        <form method="post">
-        <input type="text" placeholder="Correo Electronico (tutor)" required> 
-        <input type="password" placeholder="Contraseña" required> 
-        </form>
+  <header>
+    <img src="Logo.png" alt="EcoPlay Logo">
+    <nav></nav>
+  </header>
 
-        <button> Log in</button>
-        <a href="">¿Olvidaste tu contraseña?</a>
-        <a href="Registrarse.cshtml">¿No tenés cuenta?</a>
-    </main>
+  <main>
+    <section class="Iniciar">
+      <h1>Bienvenido</h1>
+      <form action="#" method="post">
+        <label for="usuario">Correo electrónico / Username:</label>
+        <input type="text" id="usuario" name="usuario" required>
+
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" required>
+
+        <input type="submit" value="Log In">
+
+        <div>
+          <a href="#">¿Olvidaste tu contraseña?</a>
+          <a href="Registrarse.html">¿No tienes cuenta?</a>
+        </div>
+      </form>
+    </section>
+  </main>
 </body>
+</html>
