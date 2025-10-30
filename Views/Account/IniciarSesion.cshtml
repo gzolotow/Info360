@@ -1,16 +1,23 @@
 @{
     ViewData["Title"] = "Iniciar Sesión - EcoPlay";
 }
+
 <body>
   <header>
-    <img src="Logo.png" alt="EcoPlay Logo">
-    <nav></nav>
+    <img src="~/img/Logo.png" alt="EcoPlay Logo">
   </header>
 
   <main>
     <section class="Iniciar">
       <h1>Bienvenido</h1>
-      <form action="#" method="post">
+
+      <!-- Si hay error, se muestra -->
+      @if(ViewBag.Error != null)
+      {
+        <div style="color:red;">@ViewBag.Error</div>
+      }
+
+      <form asp-action="IniciarSesion" asp-controller="Account" method="post">
         <label for="usuario">Correo electrónico / Username:</label>
         <input type="text" id="usuario" name="usuario" required>
 
@@ -21,7 +28,7 @@
 
         <div>
           <a href="#">¿Olvidaste tu contraseña?</a>
-          <a href="Registrarse.html">¿No tienes cuenta?</a>
+          <a asp-controller="Account" asp-action="Registrarse">¿No tienes cuenta?</a>
         </div>
       </form>
     </section>

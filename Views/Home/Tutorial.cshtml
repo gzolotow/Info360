@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial - EcoPlay</title>
+  <link rel="stylesheet" href="tutorial.css">
+</head>
+<body>
+  <!-- Fondo del juego (solo de ejemplo) -->
+  <div class="fondo-juego">
+    <button class="btn-abrir">Mostrar tutorial</button>
+  </div>
+
+  <!-- Ventana flotante del tutorial -->
+  <div class="tutorial-modal" id="tutorial">
+    <button class="cerrar" onclick="cerrarTutorial()">✖</button>
+    <h2>¿En qué tacho debo poner mi basura?</h2>
+
+    <div class="contenedor-tachos">
+      <div class="tacho">
+        <img src="tacho-gris.png" alt="Tacho gris">
+        <div class="basura">
+          <img src="cascara.png" alt="Cáscara">
+          <img src="manzana.png" alt="Manzana">
+          <img src="hamburguesa.png" alt="Hamburguesa">
+        </div>
+      </div>
+
+      <div class="tacho">
+        <img src="tacho-verde.png" alt="Tacho verde">
+        <div class="basura">
+          <img src="botella.png" alt="Botella">
+          <img src="frasco.png" alt="Frasco">
+          <img src="caja.png" alt="Caja">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('tutorial');
+    const btnAbrir = document.querySelector('.btn-abrir');
+
+    btnAbrir.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+
+    function cerrarTutorial() {
+      modal.style.display = 'none';
+    }
+  </script>
+</body>
+</html>

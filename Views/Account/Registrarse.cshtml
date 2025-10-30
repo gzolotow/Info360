@@ -4,14 +4,20 @@
 
 <body>
   <header>
-    <img src="Logo.png" alt="EcoPlay Logo">
-    <nav></nav>
+    <img src="~/img/Logo.png" alt="EcoPlay Logo">
   </header>
 
   <main>
     <section class="Registrarse">
-      <h1>Bienvenido</h1>
-      <form action="#" method="post">
+      <h1>Crear Cuenta</h1>
+
+      <!-- Si hay error, se muestra -->
+      @if(ViewBag.Error != null)
+      {
+        <div style="color:red;">@ViewBag.Error</div>
+      }
+
+      <form asp-action="Registrarse" asp-controller="Account" method="post">
         <label for="username">Nombre de usuario:</label>
         <input type="text" id="username" name="username" required>
 
@@ -27,7 +33,7 @@
         <input type="submit" value="Registrarse">
 
         <div>
-          <a href="IniciarSesion.html">¿Ya tienes cuenta?</a>
+          <a asp-controller="Account" asp-action="IniciarSesion">¿Ya tienes cuenta?</a>
         </div>
       </form>
     </section>

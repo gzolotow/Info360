@@ -81,6 +81,74 @@ main {
     max-width: 700px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+.offcanvas {
+  background-color: #ffecc8;
+}
+
+.config-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.config-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.config-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.config-slider {
+  color: #00bcd4;
+  font-weight: bold;
+}
+
+.config-label {
+  background: #00bcd4;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.btn-terminos {
+  background-color: #00bcd4;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.salir {
+  width: 60px;
+  height: 60px;
+  color: red;
+}
+
+.btn-submenu {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-offcanvas-cerrar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-offcanvas-cerrar img {
+  width: 60px;
+  height: 60px;
+}
+
 .section h2 {
     color: #3cae3c;
     background-color: #fff4bf;
@@ -719,4 +787,224 @@ body {
   background-color: #2196f3;
   left: 600px;
   top: 120px;
+}
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+/* Fondo del juego (solo para mostrar detrás) */
+.fondo-juego {
+  background: url("fondo.png") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-abrir {
+  background-color: #3cb34a;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+/* --- VENTANA FLOTANTE --- */
+.tutorial-modal {
+  display: none; /* se activa con JS */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #a7e8a1;
+  border: 4px solid #3cb34a;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  width: 600px;
+  max-width: 90%;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Botón de cerrar */
+.cerrar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  color: #e53e3e;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Título */
+.tutorial-modal h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 10px;
+  color: #000;
+}
+
+/* Contenedor de tachos */
+.contenedor-tachos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  margin-top: 20px;
+}
+
+/* Tacho y basura */
+.tacho {
+  text-align: center;
+}
+
+.tacho img {
+  width: 80px;
+}
+
+.basura {
+  background-color: #5dc16a;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.basura img {
+  width: 35px;
+  height: 35px;
+}
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+/* Fondo del juego (de ejemplo) */
+.fondo-juego {
+  background: url("fondo.png") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-abrir {
+  background-color: #3cb34a;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+/* --- MODAL FLOTANTE --- */
+.misiones-modal {
+  display: none; /* Se muestra con JS */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #a7e8a1;
+  border: 4px solid #3cb34a;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  width: 500px;
+  max-width: 90%;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Botón de cerrar */
+.cerrar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  color: #e53e3e;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Título */
+.titulo {
+  background-color: #ffce00;
+  padding: 5px 30px;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+.titulo h2 {
+  margin: 0;
+  color: #1a1a1a;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+}
+
+/* Lista de misiones */
+.misiones-lista {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mision {
+  background-color: #fff9e6;
+  border-radius: 8px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.mision p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.estado {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-transform: lowercase;
+}
+
+.completado {
+  background-color: #3cb34a;
+}
+
+.incompleto {
+  background-color: #e53e3e;
+}
+
+/* Temporizador */
+.temporizador {
+  background-color: #fdd835;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
