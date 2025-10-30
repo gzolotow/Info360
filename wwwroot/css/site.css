@@ -590,3 +590,133 @@ bottom: 40px;
 .btn-entrar:hover {
   background-color: #2ea450;
 }
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', sans-serif;
+  overflow: hidden;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  background-color: #3cb34a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu-derecha {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icono-perfil {
+  height: 35px;
+  border-radius: 50%;
+}
+
+.btn-misiones {
+  background-color: #f8f8f8;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-misiones:hover {
+  background-color: #ddd;
+}
+
+/* --- FONDO --- */
+.fondo {
+  background: url("fondo.png") no-repeat center center;
+  background-size: cover;
+  height: calc(100vh - 60px);
+  position: relative;
+}
+
+/* --- BOTÓN VOLVER --- */
+.btn-volver {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #e53e3e;
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* --- SECCIÓN DE NIVELES --- */
+.niveles {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Líneas SVG */
+.conexiones {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.conexiones line {
+  stroke: black;
+  stroke-width: 2;
+  opacity: 0.5;
+}
+
+/* Círculos de niveles */
+.nivel {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.nivel:hover {
+  transform: scale(1.1);
+}
+
+/* Colores y posiciones */
+.tutorial {
+  background-color: #39c463;
+  left: 100px;
+  top: 200px;
+}
+
+.nivel1 {
+  background-color: #f44336;
+  left: 320px;
+  top: 190px;
+}
+
+.nivel2 {
+  background-color: #fdd835;
+  left: 460px;
+  top: 290px;
+}
+
+.nivel3 {
+  background-color: #2196f3;
+  left: 600px;
+  top: 120px;
+}
