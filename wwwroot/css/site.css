@@ -445,12 +445,8 @@ body {
   color: #d9534f;
 }
 
-
-
-
-
-/* INDEX */
-.index .layout {
+/* LAYOUT GENERAL */
+.index .layout {  
   width: 100%;
 
   display: grid;
@@ -475,10 +471,8 @@ body {
 
 /* LAYOUT GENERAL */
 .index {
-  width: 100%;
-  height: 100%;
-  padding: 20px 5%;
-  background: url('/img/FondoLanding.jpg') no-repeat center center/cover;
+padding: 20px 5%;
+background: url('/img/FondoLanding.jpg') no-repeat center center/cover;
 }
 
 

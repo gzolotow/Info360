@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\img\\perfil.png"
     },
     {
+      "Id": "C:\\Users\\48861075\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\tutorial.png",
+      "PackagePath": "staticwebassets\\img\\tutorial.png"
+    },
+    {
       "Id": "C:\\Users\\48861075\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
