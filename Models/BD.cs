@@ -5,81 +5,83 @@ namespace EcoPlay.Models;
 
 public static class BD
 {
-    private static string _connectionString = @"Server=localhost; DataBase=Ecoplay3_BD;Integrated Security=True;TrustServerCertificate=True;";
+    private static string _connectionString = @"Server=localhost; DataBase=Ecoplay;Integrated Security=True;TrustServerCertificate=True;";
 
-    public static bool Registrarse(string Username, string Mail, DateTime FechaNacimiento, string Contraseña, string Foto)
+    // REGISTRAR USUARIO
+    public static bool Registrarse( string Username, string Mail, DateTime FechaNacimiento, string Contraseña, string Foto)
     {
-        if(!BuscarUsuario(Username))
+        if (!BuscarUsuario(Username))
         {
-            string query = "INSERT INTO Usuario (Username, Mail, FechaNacimiento, Contraseña, Foto) VALUES (@pUsername, @pMail, @pFechaNacimiento, @pContraseña, @pFoto)";
-
-            using(SqlConnection connection = new SqlConnection(_connectionString))
+            string query = @"INSERT INTO Usuario (Username, Mail, FechaNacimiento, Contraseña, Foto) VALUES (@pUsername, @pMail, @pFechaNacimiento, @pContraseña, @pFoto)";
+            using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                connection.Execute(query, new { pUsername = Username, pMail = Mail, pFechaNacimiento = FechaNacimiento, pContraseña = Contraseña, pFoto = Foto });
+                connection.Execute(query, new{
+                    
+                    pUsername = Username,
+                    pMail = Mail,
+                    pFechaNacimiento = FechaNacimiento,
+                    pContraseña = Contraseña,
+                    pFoto = Foto
+                });
             }
             return true;
-        }else{
+        }
+        else
+        {
             return false;
         }
     }
-    
+
+    // BUSCAR USUARIO POR USERNAME
     public static bool BuscarUsuario(string Username)
     {
-        Usuario miUsuario;
-        using(SqlConnection connection = new SqlConnection(_connectionString))
+        using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string query = "SELECT * FROM Usuario WHERE Username = @pUsername";
-            miUsuario = connection.QueryFirstOrDefault<Usuario>(query, new { pUsername = Username });
-        }
-        if(miUsuario == null)
-        {
-            return false;
-        }else{
-            return true;
+            var usuario = connection.QueryFirstOrDefault<Usuario>(query, new { pUsername = Username });
+            return usuario != null;
         }
     }
+
+    // LOGIN
     public static Usuario Login(string Username, string Contraseña)
     {
-        Usuario miUsuario = null;
-        using(SqlConnection connection = new SqlConnection(_connectionString))
+        using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string query = "SELECT * FROM Usuario WHERE Username = @pUsername AND Contraseña = @pContraseña";
-            if(query == null){
-
-            }else{
-                miUsuario = connection.QueryFirstOrDefault<Usuario>(query, new { pUsername = Username, pContraseña = Contraseña });
-            }
+            return connection.QueryFirstOrDefault<Usuario>(query, new { pUsername = Username, pContraseña = Contraseña });
         }
-        return miUsuario;
     }
+
+    // MODIFICAR USUARIO
     public static void ModificarUsuario(int IDUsuario, string Username, string Mail, DateTime FechaNacimiento, string Contraseña, string Foto)
     {
-        
-        using(SqlConnection connection = new SqlConnection(_connectionString))
-        {
-           string query = "UPDATE Usuario SET Username = @pUsername, Mail = @pMail, pFechaNacimiento = @ppFechaNacimiento, Contraseña = @pContraseña WHERE IDUsuario = @pIDUsuario";
-           connection.Execute(query, new { pIDUsuario = IDUsuario, pUsername = Username, pMail = Mail, pFechaNacimiento = FechaNacimiento, pContraseña = Contraseña, pFoto = Foto });
-        }
+        string query = @"UPDATE Usuario 
+                         SET Username = @pUsername, Mail = @pMail, FechaNacimiento = @pFechaNacimiento, 
+                             Contraseña = @pContraseña, Foto = @pFoto 
+                         WHERE IDUsuario = @pIDUsuario";
 
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            connection.Execute(query, new
+            {
+                pIDUsuario = IDUsuario,
+                pUsername = Username,
+                pMail = Mail,
+                pFechaNacimiento = FechaNacimiento,
+                pContraseña = Contraseña,
+                pFoto = Foto
+            });
+        }
     }
+
+    // ELIMINAR USUARIO
     public static void EliminarUsuario(int IDUsuario)
     {
-        using(SqlConnection connection = new SqlConnection(_connectionString))
+        string query = "DELETE FROM Usuario WHERE IDUsuario = @pIDUsuario";
+        using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string query = "DELETE FROM Usuario WHERE IDUsuario = @pIDUsuario";
-
-            connection.Execute(query, new { pIDUsuario = IDUsuario});
+            connection.Execute(query, new { pIDUsuario = IDUsuario });
         }
     }
-    public static void ActLogin(int IDUsuario) 
-    {
-        using(SqlConnection connection = new SqlConnection(_connectionString))
-        {
-            string query = "UPDATE Usuario SET username, password WHERE IDUsuario = @pIDUsuario";
-
-            connection.Execute(query, new { pIDUsuario = IDUsuario});
-        }
-
-    }
- 
 }

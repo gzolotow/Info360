@@ -11,10 +11,11 @@
     <section class="Registrarse">
       <h1>Crear Cuenta</h1>
 
-      <!-- Si hay error, se muestra -->
-      @if(ViewBag.Error != null)
+      @if (ViewBag.Error != null)
       {
-        <div style="color:red;">@ViewBag.Error</div>
+        <div class="alert alert-danger text-center" id="errorMensaje">
+          @ViewBag.Error
+        </div>
       }
 
       <form asp-action="Registrarse" asp-controller="Account" method="post">
@@ -30,7 +31,7 @@
         <label for="fecha">Fecha de nacimiento (dd/mm/aa):</label>
         <input type="text" id="fecha" name="fecha" placeholder="dd/mm/aa" required>
 
-        <input type="submit" value="Registrarse">
+        <input type="submit" onclick=ValidarContraseña(event) value="Registrarse">
 
         <div>
           <a asp-controller="Account" asp-action="IniciarSesion">¿Ya tienes cuenta?</a>
@@ -39,4 +40,3 @@
     </section>
   </main>
 </body>
-</html>

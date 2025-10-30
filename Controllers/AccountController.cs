@@ -8,6 +8,8 @@ namespace EcoPlay.Controllers
         // GET: /Account/IniciarSesion
         public IActionResult IniciarSesion()
         {
+            ViewBag.Mensaje = TempData["Mensaje"];
+            ViewBag.Error = TempData["Error"];
             return View();
         }
 
@@ -19,16 +21,14 @@ namespace EcoPlay.Controllers
 
             if (user != null)
             {
-                // Si el login es correcto, redirigimos al Home
-                // (Podés cambiarlo por otra vista o página de bienvenida)
-                ViewBag.Mensaje = "Inicio de sesión exitoso. ¡Bienvenido " + user.Username + "!";
-                return RedirectToAction("Index", "Home");
+                TempData["Mensaje"] = $"Inicio de sesión exitoso. ¡Bienvenido {user.Username}!";
+                return RedirectToAction("Home", "Home");
             }
             else
             {
-                // Si falla, mostramos un mensaje de error
-                ViewBag.Error = "Usuario o contraseña incorrectos.";
-                return View();
+                // Guardamos un error temporal para mostrarlo en la vista
+                TempData["Error"] = "❌ Usuario o contraseña incorrectos. Por favor, intenta nuevamente.";
+                return RedirectToAction("IniciarSesion");
             }
         }
 
@@ -42,8 +42,7 @@ namespace EcoPlay.Controllers
         [HttpPost]
         public IActionResult Registrarse(string username, string email, string password, string fecha)
         {
-            DateTime fechaNacimiento;
-            if (!DateTime.TryParse(fecha, out fechaNacimiento))
+            if (!DateTime.TryParse(fecha, out DateTime fechaNacimiento))
             {
                 ViewBag.Error = "La fecha no tiene un formato válido (dd/mm/aa).";
                 return View();
@@ -53,7 +52,7 @@ namespace EcoPlay.Controllers
 
             if (registro)
             {
-                // Si se registra bien, lo mandamos al login
+                TempData["Mensaje"] = "Registro exitoso. Ahora puedes iniciar sesión.";
                 return RedirectToAction("IniciarSesion");
             }
             else

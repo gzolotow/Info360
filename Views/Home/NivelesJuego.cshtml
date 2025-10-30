@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Juego - " + ViewData["TituloNivel"];
+}
+
+<main style="text-align:center; margin-top:50px;">
+    <h2>@ViewData["TituloNivel"]</h2>
+    <p>Acá irá el contenido o imagen del nivel seleccionado.</p>
+
+    <div style="margin-top:30px;">
+        <img src="~/images/nivel-placeholder.png" alt="Imagen del nivel" style="width:300px; height:auto;">
+    </div>
+
+    <button style="margin-top:20px;" onclick="location.href='@Url.Action("Niveles","Home")'">Volver a niveles</button>
+</main>

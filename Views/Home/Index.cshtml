@@ -4,44 +4,34 @@
 
 <body>
   <header>
-    <img src="~/img/Logo.png" alt="EcoPlay Logo">
+    <img src="img/Logo.png" alt="">
     <nav>
-        <!-- ✅ Links correctos a las vistas dentro del controlador Account -->
-        <a asp-controller="Account" asp-action="IniciarSesion">Iniciar Sesión</a>
-        <a asp-controller="Account" asp-action="Registrarse">Registrarse</a>
+        <a href="IniciarSesion.html">Iniciar Sesion</a>
+        <a href="Registrarse.html">Registrarse</a>
     </nav>
-  </header>
+</header>
 
-  <main class="index">
+
+  <main>
     <section class="layout">
-      <div class="col4Span6 row1"><h2>♻️ El Problema</h2></div>
-      <div class="col1Span12 row2Span2">
-        <p>
-          A veces, las personas ensucian el mundo tirando basura y no separando lo que puede reciclarse. 
-          Esto hace que la Tierra se ponga triste. Pero si aprendemos juntos a reciclar y a cuidar el medio ambiente, 
-          podremos cambiarlo y darle una gran sonrisa al planeta.
-        </p>
-      </div>
-      <div class="col2Span6 row5"><h2>🌍 Nuestro Objetivo</h2></div>
-      <div class="col1Span10 row6Span2">
-        <p>
-          Queremos cuidar la Tierra, nuestro gran hogar. Aquí podrás jugar y aprender cómo proteger la naturaleza 
-          mientras te diviertes. ¡Cada pequeño gesto cuenta para que el planeta siga lleno de árboles, ríos limpios 
-          y animales felices!
-        </p>
-      </div>
-
-      <!-- 🔹 Botón "ENTRAR" que también lleva al login -->
-      <div class="col2Span6 row9Span2">
-        <a asp-controller="Account" asp-action="IniciarSesion" class="btn btn-success entrar">
-          ENTRAR
-        </a>
-      </div>
-
-      <div class="col10Span3 row7Span5">
-        <img src="~/img/Mascota 2.png" alt="Tacho reciclador" class="tacho" />
-      </div>
-    </section>
+        <div class="col4Span6 row1"><h2>♻️ El Problema</h2></div>
+        <div class="col1Span12 row2Span2">
+          <p>
+            A veces, las personas ensucian el mundo tirando basura y no separando lo que puede reciclarse. 
+            Esto hace que la Tierra se ponga triste. Pero si aprendemos juntos a reciclar y a cuidar el medio ambiente, 
+            podremos cambiarlo y darle una gran sonrisa al planeta.
+          </p>
+        </div>
+        <div class="col2Span6 row5"><h2>🌍 Nuestro Objetivo</h2></div>
+        <div class="col1Span10 row6Span2">
+          <p>
+            Queremos cuidar la Tierra, nuestro gran hogar. Aquí podrás jugar y aprender cómo proteger la naturaleza 
+            mientras te diviertes. ¡Cada pequeño gesto cuenta para que el planeta siga lleno de árboles, ríos limpios 
+            y animales felices!
+          </p>
+        </div>
+    <div class="col2Span6 row9Span2"><button class="entrar">ENTRAR</button></div>
+    <div class="col10Span3 row7Span5"><img src="img/Mascota 2.png" alt="Tacho reciclador" class="tacho" /></div>
   </main>
 </body>
 </html>

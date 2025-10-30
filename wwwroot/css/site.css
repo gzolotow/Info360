@@ -73,6 +73,7 @@ header .inicio {
 main {
     text-align: center;
 }
+
 .section {
     background-color: #fff8e6;
     border-radius: 10px;
@@ -217,7 +218,7 @@ nav a:hover {
 
 /* Fondo general */
 body {
-
+ background-color: #ffe699; 
   font-family: 'Poppins', sans-serif;
 }
 
@@ -1007,4 +1008,92 @@ body {
   font-weight: bold;
   margin-top: 25px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+body.home-body {
+    background: url('/img/fondo_home.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding-top: 70px; /* espacio para el header fijo */
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-logo {
+    margin-top: 60px;
+}
+
+.logo-ecoplay {
+    width: 300px;
+}
+
+.subtitulo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #4b4b4b;
+    margin-top: 10px;
+}
+
+.home-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 80px;
+}
+
+.btn-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-home img {
+    width: 100px;
+    transition: transform 0.2s ease;
+}
+
+.btn-home:hover img {
+    transform: scale(1.1);
+}
+
+.btn-home p {
+    color: #333;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.play img {
+    width: 160px;
+}
+
+.decoracion {
+    position: relative;
+    margin-top: 60px;
+}
+
+.tacho {
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+    width: 120px;
+}
+
+.planeta {
+    position: absolute;
+    right: 15%;
+    bottom: 0;
+    width: 130px;
+}
+
+.icono-menu {
+    width: 25px;
+    margin-right: 10px;
 }
