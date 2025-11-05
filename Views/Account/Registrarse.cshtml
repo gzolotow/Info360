@@ -7,9 +7,9 @@
     <img src="~/img/Logo.png" alt="EcoPlay Logo">
   </header>
 
-  <main>
-    <section class="Registrarse">
-      <h1>Crear Cuenta</h1>
+  <main class="Registrarse">
+    <section class="layout">
+      <h1>Bienvenido</h1>
 
       @if (ViewBag.Error != null)
       {
@@ -19,17 +19,13 @@
       }
 
       <form asp-action="Registrarse" asp-controller="Account" method="post">
-        <label for="username">Nombre de usuario:</label>
-        <input type="text" id="username" name="username" required>
+        <input type="text" id="username" name="username" placeholder="usuario" required>
 
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" placeholder="correo electrónico (tutor)" required>
 
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" placeholder="contraseña" required>
 
-        <label for="fecha">Fecha de nacimiento (dd/mm/aa):</label>
-        <input type="text" id="fecha" name="fecha" placeholder="dd/mm/aa" required>
+        <input type="text" id="fecha" name="fecha" placeholder="fecha de nacimiento (dd/mm/aa)" required>
 
         <input type="submit" onclick=ValidarContraseña(event) value="Registrarse">
 

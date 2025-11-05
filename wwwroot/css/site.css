@@ -1,7 +1,24 @@
+@import url('https://fonts.cdnfonts.com/css/cute-dino');
+@font-face {
+  font-family: 'Cute Sunrise'; /* set name */
+  src: url('/fonts/CuteSunrise.otf') format('opentype'); /* url of the font */
+  font-weight: bold;
+  font-style: normal;
+}
+
 *{
   margin: 0%;
   padding: 0%;
-  font-family: 'Comic Sans MS', Arial, sans-serif;
+  font-family: 'Cute Sunrise','Comic Sans MS', 'Poppins', sans-serif;
+}
+
+html{
+  --piel: #FFEECA;
+  --verde: #34C759;
+  --azul: #0BA2DB;
+  --rojo: #E6251E;
+  --amarillo: #FDD900;
+  --verdeClarito: #7BD792;
 }
 
 main{
@@ -13,7 +30,7 @@ main{
 header {
   position: sticky;
   top: 0px;
-  background-color: #34C759; /* verde similar al del ejemplo */
+  background-color: var(--verde); 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,21 +53,21 @@ header nav {
 }
 
 header nav a {
-    text-decoration: none;
-    background-color: #FFEECA; /* color crema */
-    color: #4a4a4a;
-    font-weight: 600;
-    font-family: 'Comic Sans MS', 'Poppins', sans-serif;
-    padding: 8px 20px;
-    border-radius: 12px;
-    border: none;
-    transition: all 0.2s ease-in-out;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.555);
+  text-decoration: none;
+  background-color: var(--piel); /* color crema */
+  color: black;
+  font-weight: 600;
+  font-family: 'Cute Sunrise','Comic Sans MS', 'Poppins', sans-serif;
+  padding: 8px 20px;
+  border-radius: 12px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.555);
 }
 
 header nav a:hover {
-    background-color: #FFEECA;
-    transform: translateY(-2px);
+  background-color: var(--piel);
+  transform: translateY(-2px);
 }
 
 /* Responsive */
@@ -75,15 +92,14 @@ main {
 }
 
 .section {
-    background-color: #fff8e6;
+    background-color: var(--piel);
     border-radius: 10px;
-    
     padding: 20px;
     max-width: 700px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 .offcanvas {
-  background-color: #ffecc8;
+  background-color: var(--piel);
 }
 
 .config-body {
@@ -105,19 +121,19 @@ main {
 }
 
 .config-slider {
-  color: #00bcd4;
+  color: var(--azul);
   font-weight: bold;
 }
 
 .config-label {
-  background: #00bcd4;
-  color: #fff;
+  background: var(--azul);
+  color: white;
   padding: 5px 10px;
   border-radius: 10px;
 }
 
 .btn-terminos {
-  background-color: #00bcd4;
+  background-color: var(--azul);
   border: none;
   color: white;
   padding: 10px 20px;
@@ -129,7 +145,7 @@ main {
 .salir {
   width: 60px;
   height: 60px;
-  color: red;
+  color: var(--rojo);
 }
 
 .btn-submenu {
@@ -151,8 +167,8 @@ main {
 }
 
 .section h2 {
-    color: #3cae3c;
-    background-color: #fff4bf;
+    color: var(--verde);
+    background-color: var(--piel);
     display: inline-block;
     padding: 8px 16px;
     border-radius: 10px;
@@ -161,18 +177,18 @@ main {
 .section p {
     margin-top: 15px;
     font-size: 16px;
-    color: #333;
+    color: black;
 }
 .objective-title {
-    background-color: #fff4bf;
+    background-color: var(--piel);
     border-radius: 10px;
     display: inline-block;
     padding: 8px 16px;
     font-size: 20px;
-    color: #3cae3c;
+    color: var(--verde);
 }
 .btn-entrar {
-    background-color: #3cae3c;
+    background-color: var(--verde);
     color: white;
     font-weight: bold;
     font-size: 22px;
@@ -200,8 +216,8 @@ nav {
 
 nav a {
   text-decoration: none;
-  background-color: #fff2cc;
-  color: #4a4a4a;
+  background-color: var(--piel);
+  color: black;
   font-weight: 600;
   font-family: 'Comic Sans MS', 'Poppins', sans-serif;
   padding: 8px 20px;
@@ -220,14 +236,14 @@ nav a:hover {
 
 /* Fondo general */
 .Iniciar{
- background-color: #ffe699;
+ background-color: var(--piel);
  height: 91.2vh;
  overflow: hidden;
 }
 
 /* Contenedor del formulario */
 .Iniciar .layout {
-  background-color: #3cae3c; /* verde fuerte */
+  background-color: var(--verde);
   padding: 2rem;
   border-radius: 10px;
   width: 90%;
@@ -242,6 +258,7 @@ nav a:hover {
 /* Título */
 .Iniciar .layout h1 {
   text-align: center;
+  font-family: 'Cute Dino','Comic Sans MS', Arial, sans-serif;
   font-size: 3rem;
   margin-bottom: 1.5rem;
   color: white;
@@ -263,8 +280,8 @@ nav a:hover {
 /* Botón de login */
 .Iniciar .layout input[type="submit"] {
   margin-top: 5%;
-  background-color: #f5f5dc; /* beige */
-  color: #0d4d0d;
+  background-color: var(--piel);
+  color: black;
   font-weight: bold;
   border: none;
   padding-top: 2%;
@@ -292,73 +309,84 @@ nav a:hover {
 }
 /* /////////////////////////////////////////////////////////INICIO SESION FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
+/* /////////////////////////////////////////////////////////REGISTRARSE INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 .Registrarse {
-  background-color: #3cae3c;
-  color: white;
+  background-color: var(--piel);
+  height: 91.2vh;
+  overflow: hidden;
+}
+
+.Registrarse .layout {
+  background-color: var(--verde);
   padding: 2rem;
   border-radius: 10px;
   width: 90%;
-  max-width: 400px;
-  margin: 5% auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  margin: auto;
+  margin-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
 }
 
-.Registrarse h1 {
+.Registrarse .layout h1 {
+  font-family: 'Cute Dino','Comic Sans MS', Arial, sans-serif;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
   color: white;
   border-radius: 10px;
 }
 
-.Registrarse form {
+.Registrarse .layout form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.Registrarse label {
-  align-self: flex-start;
-  margin: 1% 0 0.5%;
-  font-size: 110%;
-  font-weight: bold;
-  color: white;
-}
-
-.Registrarse input[type="text"],
-.Registrarse input[type="email"],
-.Registrarse input[type="password"] {
+.Registrarse .layout input[type="text"],
+.Registrarse .layout input[type="email"],
+.Registrarse .layout input[type="password"] {
   width: 100%;
   padding: 0.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5%;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 1rem;
 }
 
-.Registrarse input[type="submit"] {
-  background-color: #f5f5dc;
-  color: #0d4d0d;
+.Registrarse .layout input[type="submit"] {
+  margin-top: 5%;
+  background-color: var(--piel);
+  color: black;
   font-weight: bold;
   border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 5px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 15%;
+  padding-right: 15%;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1rem;
 }
 
-.Registrarse input[type="submit"]:hover {
+.Registrarse .layout input[type="submit"]:hover {
   background-color: #e0dbb5;
 }
 
-.Registrarse a {
-  color: #f5f5dc;
+.Registrarse .layout a {
+  color: black;
   text-align: center;
   display: block;
   margin-top: 0.5rem;
-  text-decoration: underline;
   font-size: 0.9rem;
+  text-decoration: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+/* /////////////////////////////////////////////////////////REGISTRARSE FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 /* Fondo con imagen */
 .Aspectos {
   background-image: url('fondo-locker.png');
@@ -371,7 +399,7 @@ nav a:hover {
 
 /* Botón de volver */
 .volver-menu {
-  background-color: #d9534f;
+  background-color: var(--rojo);
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -496,11 +524,12 @@ text-align: center;
 padding: 10px;
 border-radius: 10px;
 font-size: 2.9em;
-font-weight: bold;
 color: #262626;
 box-shadow: 0 2px 4px rgba(0,0,0,0.555);
 width: 100%;
 height: 100%;
+font-family: 'Cute Dino','Comic Sans MS', Arial, sans-serif;
+font-weight: lighter;
 }
 
 .index p {
