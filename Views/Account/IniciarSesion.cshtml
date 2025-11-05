@@ -7,8 +7,8 @@
     <img src="~/img/Logo.png" alt="EcoPlay Logo">
   </header>
 
-  <main>
-    <section class="Iniciar">
+  <main class="Iniciar">
+    <section class="layout">
       <h1>Bienvenido</h1>
 
       <!-- Mensajes -->
@@ -31,16 +31,14 @@
       }
 
       <form asp-action="IniciarSesion" asp-controller="Account" method="post">
-        <label for="usuario">Usuario o correo:</label>
-        <input type="text" id="usuario" name="usuario" required>
+        <input type="text" id="usuario" name="usuario" placeholder="usuario" required >
 
-        <label for="contraseña">Contraseña:</label>
-        <input type="password" id="contraseña" name="contraseña" required>
+        <input type="password" id="contraseña" name="contraseña" placeholder="contraseña" required>
 
         <input type="submit" value="Iniciar sesión">
 
         <div>
-          <a href="#">¿Olvidaste tu contraseña?</a> |
+          <a href="#">¿Olvidaste tu contraseña?</a>
           <a asp-controller="Account" asp-action="Registrarse">¿No tienes cuenta?</a>
         </div>
       </form>

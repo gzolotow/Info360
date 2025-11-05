@@ -71,7 +71,7 @@ header .inicio {
     gap: 10px;
 }
 main {
-    text-align: center;
+  text-align: center;
 }
 
 .section {
@@ -216,69 +216,82 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
+/* /////////////////////////////////////////////////////////INICIO SESION INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 /* Fondo general */
-body {
- background-color: #ffe699; 
-  font-family: 'Poppins', sans-serif;
+.Iniciar{
+ background-color: #ffe699;
+ height: 91.2vh;
+ overflow: hidden;
 }
 
 /* Contenedor del formulario */
-.Iniciar {
+.Iniciar .layout {
   background-color: #3cae3c; /* verde fuerte */
-  color: white;
   padding: 2rem;
   border-radius: 10px;
   width: 90%;
-  max-width: 400px;
-  margin: 5% auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  margin: auto;
+  margin-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Título */
-.Iniciar h1 {
+.Iniciar .layout h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
   color: white;
   border-radius: 10px;
 }
 
 /* Campos de entrada */
-.Iniciar input[type="text"],
-.Iniciar input[type="password"] {
+.Iniciar .layout input[type="text"],
+.Iniciar .layout input[type="password"] {
   width: 100%;
   padding: 0.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5%;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 1rem;
 }
 
+
 /* Botón de login */
-.Iniciar input[type="submit"] {
+.Iniciar .layout input[type="submit"] {
+  margin-top: 5%;
   background-color: #f5f5dc; /* beige */
   color: #0d4d0d;
   font-weight: bold;
   border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 5px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 15%;
+  padding-right: 15%;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1rem;
 }
 
-.Iniciar input[type="submit"]:hover {
+.Iniciar .layout input[type="submit"]:hover {
   background-color: #e0dbb5;
 }
 
 /* Enlaces */
-.Iniciar a {
-  color: #f5f5dc;
+.Iniciar .layout a {
+  color: black;
   text-align: center;
   display: block;
   margin-top: 0.5rem;
-  text-decoration: underline;
   font-size: 0.9rem;
+  text-decoration: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+/* /////////////////////////////////////////////////////////INICIO SESION FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 .Registrarse {
   background-color: #3cae3c;
   color: white;
@@ -445,7 +458,7 @@ body {
   color: #d9534f;
 }
 
-/* LAYOUT GENERAL */
+/* /////////////////////////////////////////////////////////INDEX INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .index .layout {  
   width: 100%;
 
@@ -512,26 +525,27 @@ border: none;
 border-radius: 10px;
 font-weight: 800;
 font-size: 3em;
-padding: 15px 30px;
 cursor: pointer;
 box-shadow: 0 4px #2b7d33;
 transition: background-color 0.3s ease, transform 0.1s ease-in;
 width: 100%;
 height: 100%;
+text-decoration: none;
+padding-left: 30%;
+padding-right: 30%;
+padding-top: 5%;
+padding-bottom: 5%;
 }
 
 .index .entrar:hover {
   background-color: #2aa148;
-  transform: scale(1.05);
 }
 
 /* IMAGEN TACHO */
 .index .img{
-width: 160px;
-position: absolute;
-right: 80px;
-bottom: 40px;
+  width: 100%;
 }
+/* /////////////////////////////////////////////////////////INDEX FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* --- NAVBAR --- */
 .navbar {
@@ -656,7 +670,6 @@ bottom: 40px;
 body {
   margin: 0;
   font-family: 'Comic Sans MS', sans-serif;
-  overflow: hidden;
 }
 
 /* --- NAVBAR --- */

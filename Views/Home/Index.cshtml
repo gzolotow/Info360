@@ -14,33 +14,40 @@
 
   <main class="index">
     <section class="layout">
-      <div class="col4Span6 row1"><h2>♻️ El Problema</h2></div>
-      <div class="col1Span12 row2Span2">
-        <p>
-          A veces, las personas ensucian el mundo tirando basura y no separando lo que puede reciclarse. 
-          Esto hace que la Tierra se ponga triste. Pero si aprendemos juntos a reciclar y a cuidar el medio ambiente, 
-          podremos cambiarlo y darle una gran sonrisa al planeta.
-        </p>
-      </div>
-      <div class="col2Span6 row5"><h2>🌍 Nuestro Objetivo</h2></div>
-      <div class="col1Span10 row6Span2">
-        <p>
-          Queremos cuidar la Tierra, nuestro gran hogar. Aquí podrás jugar y aprender cómo proteger la naturaleza 
-          mientras te diviertes. ¡Cada pequeño gesto cuenta para que el planeta siga lleno de árboles, ríos limpios 
-          y animales felices!
-        </p>
-      </div>
+       <!-- EL PROBLEMA -->
+        <div class="row1 col4Span6">
+            <h2>♻️ El Problema</h2>
+        </div>
 
-      <!-- 🔹 Botón "ENTRAR" que también lleva al login -->
-      <div class="col2Span6 row9Span2">
-        <a asp-controller="Account" asp-action="IniciarSesion" class="entrar">
-          ENTRAR
-        </a>
-      </div>
+        <div class="row2Span2 col1Span12">
+            <p>
+                A veces, las personas ensucian el mundo tirando basura y no separando lo que puede reciclarse. 
+                Esto hace que la Tierra se ponga triste. Pero si aprendemos juntos a reciclar y a cuidar el medio ambiente, 
+                podremos cambiarlo y darle una gran sonrisa al planeta.
+            </p>
+        </div>
 
-      <div class="col10Span3 row7Span5">
-        <img src="/img/Mascota 2.png" alt="Tacho reciclador" class="tacho" />
-      </div>
+        <!-- NUESTRO OBJETIVO -->
+        <div class="row5 col2Span6">
+            <h2>🌎 Nuestro Objetivo</h2>
+        </div>
+
+        <div class="row6Span2 col1Span10">
+            <p>
+                Queremos cuidar la Tierra, nuestro gran hogar. Aquí podrás jugar y aprender cómo proteger la naturaleza mientras te diviertes. 
+                ¡Cada pequeño gesto cuenta para que el planeta siga lleno de árboles, ríos limpios y animales felices!
+            </p>
+        </div>
+
+        <!-- BOTÓN ENTRAR -->
+        <div class="row9Span2 col2Span6">
+          <a asp-controller="Account" asp-action="IniciarSesion" class="entrar">ENTRAR</a>
+        </div>
+
+        <!-- IMAGEN TACHO -->
+        <div class="col10Span3 row7Span5">
+          <img src="/img/Mascota 2.png" alt="Tacho reciclador"/>
+        </div>
     </section>
   </main>
 </body>
