@@ -2,214 +2,30 @@
     ViewData["Title"] = "Home";
 }
 
-<body class="home-body">
-    <!-- 🟢 HEADER con menú hamburguesa -->
-    <header>
-            <nav class="navbar bg-body-tertiary">
-                <div class="container">
-                    <a class="navbar-brand" href="#">
-                    <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="perfil" width="30" height="24">
-                    </a>
-                </div>
-            </nav>
-
-
-         <!-- Nav inicio -->
-         <nav class="navbar bg-body-tertiary fixed-top">
-            <div class="container-fluid">
-            <!-- Logo -->
-                <nav class="navbar bg-body-tertiary">
-                    <div class="container">
-                        <a class="navbar-brand" href="#">
-                            <img src="/img/logo.png" alt="Ecoplay">
-                        </a>
-                    </div>
-                </nav>
-            <!-- Termina Logo -->
-            <!-- Overlay inicio -->
-            <!-- Botón para abrir el menú -->
-<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-    aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-    <img src="/img/abrir.png" alt="Abrir menú">
-</button>
-
-
-<!-- Offcanvas -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-    </div>
-
-
-    <div class="offcanvas-body d-flex flex-column justify-content-between">
-        <ul class="navbar-nav flex-grow-1 pe-3">
-   <li class="nav-item">
-    <a class="Inicio" asp-controller="Home" asp-action="Home">
-        <img src="/img/inicio.png" alt="Inicio">
-    </a>
-    <h4>Inicio</h4>
-</li>
-
-
-<li class="nav-item">
-    <a class="perfil" asp-controller="Home" asp-action="Perfil">
-        <img src="/img/Perfil.png" alt="Perfil">
-    </a>
-    <h4>Perfil</h4>
-</li>
- <li class="nav-item">
-    <a class="Inicio" asp-controller="Home" asp-action="niveles">
-        <img src="/img/inicio.png" alt="Inicio">
-    </a>
-    <h4>Niveles</h4>
-</li>
-
-
-           <li class="nav-item">
-                <!-- BOTÓN QUE ABRE EL SUBOVERLAY -->
-                <button class="btn-submenu" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasConfig" aria-controls="offcanvasConfig">
-                    <img src="/img/configuracion.png" alt="Configuración">
-                </button>
-                <h2>Configuración</h2>
-            </li>
-           
-            <button type="button" class="btn-offcanvas-cerrar" data-bs-dismiss="offcanvas" aria-label="Cerrar">
-            <img src="wwwroot/img/cerrar.png" alt="Cerrar menú">
-            <h4>Cerrar</h4>
-            </button>
-        </ul>
-
-
-        <!-- Botón de cerrar abajo -->
-       
-    </div>
-</div>
-<!-- 🧩 SUBOVERLAY de CONFIGURACIÓN -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasConfig" aria-labelledby="offcanvasConfigLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasConfigLabel">Configuración</h5>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas" aria-label="Close">Cerrar</button>
-    </div>
-
-
-    <div class="offcanvas-body config-body text-center">
-
-
-        <!-- Opción Música -->
-        <div class="config-item">
-            <img src="/img/musica.png" alt="Música" class="config-icon">
-            <img src="/img/check.png" alt="Activado" class="config-icon">
+<body class="Home">
+    <section class="layout">
+        <div class="col4Span6 row1Span3">            
+            <img src="/img/logo.png" alt="EcoPlay">
+            <p>Aprendé Divirtiéndote</p>
         </div>
-
-
-        <!-- Opción Volumen -->
-        <div class="config-item">
-            <img src="/img/volumen.png" alt="Volumen" class="config-icon">
-
-
-            <!-- Slider funcional -->
-            <input type="range" id="volumeSlider" min="0" max="100" value="80" class="config-slider">
-
-
-            <!-- Texto dinámico -->
-            <span id="volumeLabel" class="config-label">Alto</span>
+        <div class="col5Span4 row5Span4">
+            <a asp-controller="Home" asp-action="niveles">
+                <img src="/img/play.png" alt="Jugar">
+            </a>
         </div>
-
-
-        <button class="btn-terminos" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTerminos">
-            Términos y condiciones
-        </button>
-
-
-        <!-- Botón Salir -->
-        <img src="/img/salir.png" alt="Salir" class="config-icon salir">
-    </div>
-</div>
-
-
-<!-- 🎵 Script de volumen -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const slider = document.getElementById('volumeSlider');
-    const label = document.getElementById('volumeLabel');
-
-
-    if (slider && label) {
-        slider.addEventListener('input', () => {
-            const value = slider.value;
-
-
-            // Cambiar texto según valor
-            if (value >= 70) {
-                label.textContent = 'Alto';
-            } else if (value >= 40) {
-                label.textContent = 'Medio';
-            } else if (value > 0) {
-                label.textContent = 'Bajo';
-            } else {
-                label.textContent = 'Mute';
-            }
-
-
-            // 🔊 Aquí puedes controlar un audio real:
-            // const audio = document.getElementById('miAudio');
-            // if (audio) audio.volume = value / 100;
-        });
-    }
-});
-</script>
-
-
-<!-- Bootstrap JS (muy importante) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-                        <!-- Termina Overlay -->
-                    </div>
-                </div>
-            </div>
-        </nav>
-         <!-- Nav final -->
-
-
-    </header>
-
-    <!-- 🟢 CONTENIDO PRINCIPAL -->
-    <main class="home-container">
-        <!-- Logo central y subtítulo -->
-        <div class="home-logo">
-            <img src="/img/EcoPlay.png" alt="EcoPlay" class="logo-ecoplay">
-            <p class="subtitulo">Aprendé Divirtiéndote</p>
-        </div>
-
-        <!-- Botones principales -->
-        <div class="home-buttons">
-            <!-- Botón izquierdo (Inventario) -->
-            <a asp-controller="Home" asp-action="Inventario" class="btn-home inventario">
+        <div class="col1Span2 row5Span3">
+            <a asp-controller="Home" asp-action="Inventario">
                 <img src="/img/inventario.png" alt="Inventario">
                 <p>Inventario</p>
             </a>
-
-            <!-- Botón central (Play) -->
-            <a asp-controller="Home" asp-action="niveles" class="btn-home play">
-                <img src="/img/play.png" alt="Jugar">
-            </a>
-
-            <!-- Botón derecho (Perfil) -->
-            <a asp-controller="Home" asp-action="Perfil" class="btn-home perfil">
+        </div>
+        <div class="col11Span2 row5Span3">
+            <a asp-controller="Home" asp-action="Perfil">
                 <img src="/img/perfil.png" alt="Perfil">
                 <p>Perfil</p>
             </a>
         </div>
+    </section>
 
-        <!-- Elementos decorativos -->
-        <div class="decoracion">
-            <img src="/img/tacho.png" alt="Tacho reciclaje" class="tacho">
-            <img src="/img/tierra.png" alt="Planeta feliz" class="planeta">
-        </div>
-    </main>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>

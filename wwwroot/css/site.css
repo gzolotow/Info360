@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/cute-dino');
 @font-face {
   font-family: 'Cute Sunrise'; /* set name */
-  src: url('/fonts/CuteSunrise.otf') format('opentype'); /* url of the font */
+  src: url('/fonts/CuteSunrise.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
@@ -26,7 +26,18 @@ main{
   width: 100%;
   padding: 0%;
   text-align: center;
+  padding: 20px 5%;
 }
+
+.layout {  
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  gap: 8px;
+}
+
 /* /////////////////////////////////////////////////////////HEADER INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 header {
@@ -488,14 +499,6 @@ nav a:hover {
 }
 
 /* /////////////////////////////////////////////////////////INDEX INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-.index .layout {  
-  width: 100%;
-
-  display: grid;
-  grid-template-rows: repeat(11, 1fr);
-  grid-template-columns: repeat(12, 1fr);
-  gap: 8px;
-}
 
 .index .row1 { grid-row: 1; }
 .index .col4Span6 { grid-column: 4 / span 6; }
@@ -513,8 +516,7 @@ nav a:hover {
 
 /* LAYOUT GENERAL */
 .index {
-padding: 20px 5%;
-background: url('/img/FondoLanding.jpg') no-repeat center center/cover;
+  background: url('/img/FondoLanding.jpg') no-repeat center center/cover;
 }
 
 
@@ -1046,66 +1048,44 @@ body {
   margin-top: 25px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
-body.home-body {
-    background: url('/img/fondo_home.png') no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    margin: 0;
-    padding-top: 70px; /* espacio para el header fijo */
+/* /////////////////////////////////////////////////////////HOME INICO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.Home{
+  background-image: url('/img/FondoHome.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.Home p{
+color: black;
+text-decoration: none;
 }
 
-.home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+.row1Span3 { grid-row: 1 / span 3; }
+.col4Span6 { grid-column: 4 / span 6; }
+.row5Span4 { grid-row: 4 / span 4; }
+.col5Span4 { grid-column: 5 / span 4; }
+.row5Span3 { grid-row: 5 / span 3; }
+.col1Span2 { grid-column: 1 / span 2; }
+.col11Span2 { grid-column: 11 / span 2; }
+.row5 { grid-row: 5; }
 
-.home-logo {
-    margin-top: 60px;
+.Home .layout img{
+  width: 127px;
+  height: 133px;
 }
+.Home .layout .col5Span4 img{
+  width: 300px;
+  height: 300px;
 
-.logo-ecoplay {
-    width: 300px;
 }
+.Home .layout .col4Span6 img{
+  width: 535px;
+  height: 171px;
 
-.subtitulo {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #4b4b4b;
-    margin-top: 10px;
 }
-
-.home-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 60px;
-    gap: 80px;
-}
-
-.btn-home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-}
-
-.btn-home img {
-    width: 100px;
-    transition: transform 0.2s ease;
-}
-
-.btn-home:hover img {
-    transform: scale(1.1);
-}
-
-.btn-home p {
-    color: #333;
-    font-weight: bold;
-    margin-top: 8px;
-}
+/* /////////////////////////////////////////////////////////HOME FINAL ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .play img {
     width: 160px;
@@ -1135,219 +1115,188 @@ body.home-body {
     margin-right: 10px;
 }
 /* /////////////////////////////////////////////////////////Nivel 1 inicio////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-.ecoplay-level1-container {
-    position: relative;
-    width: 100%;
-    height: 80vh; /* Altura relativa para que se adapte */
-    background: url('/imagenes/fondo-parque.png') no-repeat center center;
+.main-container {
+    min-height: 100vh;
     background-size: cover;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    user-select: none;
-}
-
-.ecoplay-level1-header {
-    text-align: center;
-    margin: 2% 0 1%;
-    color: #000;
-    font-size: 2.5vw;
-}
-
-.ecoplay-level1-instruction {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 3%;
-    font-size: 1.5vw;
-    text-decoration: underline;
-}
-
-/* Personaje a la izquierda en 8% ancho y altura automática */
-.ecoplay-level1-character {
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-    width: 8%;
-    height: auto;
-    user-select: none;
-}
-
-/* Bancos en 15% ancho y posición absoluta con su % */
-.ecoplay-level1-bench {
-    width: 15%;
-    height: 6%;
-    background: #a0522d;
-    border-radius: 1%;
-}
-
-/* Contenedor bancos en línea con separación */
-.ecoplay-level1-benches {
-    position: absolute;
-    bottom: 15%;
-    width: 100%;
+    background-position: center;
     display: flex;
     justify-content: space-around;
-    pointer-events: none;
+    align-items: center;
+    padding: 20px;
+    gap: 40px; /* espacio entre objetos y tachos */
 }
-
-/* Objetos con ancho 6% y cursor */
-.ecoplay-level1-object {
-    width: 6%;
+.objetos-juego {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;    
+    max-width: 50%;
+}
+.objeto {
+    width: 80px;
+    height: 80px;
     cursor: grab;
     user-select: none;
 }
-
-.ecoplay-level1-object.dragging {
-    opacity: 0.6;
+.objeto:active {
     cursor: grabbing;
 }
-
-/* Contenedor objetos - centrado con separación */
-.ecoplay-level1-objects {
-    position: absolute;
-    bottom: 25%;
-    width: 100%;
+.tachos-container {
     display: flex;
+    gap: 60px; /* espacio amplio entre ambos tachos */
+    flex: 1;
     justify-content: center;
-    gap: 5%;
 }
-
-/* Tachitos de basura tamaño y posicion relativa */
-.ecoplay-level1-trashcans {
-    position: absolute;
-    bottom: 10%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 12%;
-}
-
-.ecoplay-level1-trashcan {
-    width: 6%;
-    height: auto;
-    border-radius: 2%;
-    cursor: pointer;
+.tacho {
+    width: 160px;
+    height: 180px;
+    border: 3px solid transparent;
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 5%;
+    padding-bottom: 10px;
     box-sizing: border-box;
-    border: 0.4vw solid transparent;
-    transition: border-color 0.3s ease;
 }
-
-.ecoplay-level1-trashcan.green {
-    background-color: #3cb371;
-    border-color: #2e8b57;
+.tacho.drag-over {
+    border-color: #36b337;
+    background-color: rgba(54,179,55,0.2);
 }
-
-.ecoplay-level1-trashcan.gray {
-    background-color: #696969;
-    border-color: #555;
+.tacho img {
+    max-height: 150px;
+    user-select: none;
 }
-
-.ecoplay-level1-trashcan svg {
-    width: 60%;
-    height: auto;
-    fill: white;
-}
-
-/* Outline cuando haces dragover */
-.ecoplay-level1-trashcan.dragover {
-    border-color: yellow;
-}
-
-/* Mensaje éxito */
-.ecoplay-level1-message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255,255,255,0.9);
-    padding: 2% 4%;
-    font-size: 2.5vw;
-    font-weight: bold;
-    border: 0.5vw solid #4CAF50;
-    border-radius: 2%;
-    display: none;
-    z-index: 1000;
-}
-/* /////////////////////////////////////////////////////////Mensaje al terminar el nivel////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-#resumenNivelContainer {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100vw; height: 100vh;
-        background: rgba(0, 0, 0, 0.2);
-        display: none; /* Invisible hasta que se muestre */
-        justify-content: center;
-        align-items: center;
-        z-index: 10000;
-        font-family: 'Comic Sans MS', cursive, sans-serif;
-    }
-    #resumenNivel {
-        background: #95d88f;
-        border-radius: 10px;
-        padding: 2rem 5vw;
-        width: 90vw;
-        max-width: 400px;
-        text-align: center;
-        box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    }
-    .resumen-estrellas {
-        display: flex;
-        justify-content: space-around;
-        background: #3cb371;
-        border-radius: 5px;
-        padding: 0.5rem 0;
-        margin-bottom: 1rem;
-        box-shadow: inset 0 4px 8px rgba(255 255 255 / 0.3);
-    }
-    .resumen-estrellas img {
-        width: 40px;
-        user-select: none;
-    }
-    .resumen-datos {
-        display: flex;
-        justify-content: space-around;
-        font-weight: bold;
-        margin-bottom: 1rem;
-        font-size: 1.3rem;
-    }
-    #resumenTitulo {
-        font-weight: 900;
-        font-size: 2.2rem;
-        margin-bottom: 1.5rem;
-    }
-    .resumen-botones {
-        display: flex;
-        justify-content: space-around;
-        gap: 1.5rem;
-    }
-    .btn-resumen {
-        width: 60px;
-        height: 60px;
-        border-radius: 12px;
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 4px 6px rgb(0 0 0 / 0.15);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: box-shadow 0.3s ease;
-    }
-    .btn-resumen:active {
-        box-shadow: 0 2px 3px rgb(0 0 0 / 0.25);
-    }
-    .btn-casa {
-        background-color: #f44336;
-    }
-    .btn-reiniciar {
-        background-color: #2196f3;
-    }
-    .btn-siguiente {
-        background-color: #ffc107;
-    }
-    .btn-resumen img {
-        width: 28px;
-        user-select: none;
-    }
 
 /* /////////////////////////////////////////////////////////Nivel 1 FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* /////////////////////////////////////////////////////////Nivel 2 inicio////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Reset básico */
+
+/* Contenedor principal del juego */
+.nivel2-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url('~/img/fondonivel2.png') no-repeat center bottom;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Para poner muñeco abajo */
+    align-items: center;
+    color: #000;
+    user-select: none;
+}
+
+/* Header ficticio (sin código, solo espacio para el texto) */
+.nivel2-header {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.nivel2-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 3px rgba(255,255,255,0.6);
+}
+
+.nivel2-header h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+/* Contenedor de objetos que caen */
+.nivel2-objetos-container {
+    position: relative;
+    flex: 1; /* Ocupa espacio entre header y player */
+    width: 100%;
+    overflow: visible;
+    pointer-events: none; /* No bloquea eventos */
+}
+
+/* Cada objeto que cae */
+.nivel2-objeto {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    pointer-events: auto;
+    user-select: none;
+}
+
+/* Contenedor del jugador y tacho */
+.nivel2-player-container {
+    position: relative;
+    width: 180px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+    cursor: grab;
+    user-select: none;
+    /* Se posiciona en la parte baja con flex en nivel2-container */
+    z-index: 10;
+}
+
+/* Imagen muñeco */
+.nivel2-player {
+    height: 130px;
+    pointer-events: auto;
+}
+
+/* Imagen tacho */
+.nivel2-tacho {
+    height: 130px;
+    pointer-events: auto;
+}
+
+/* Efecto cuando está “agarrado” */
+.nivel2-player-container.dragging {
+    cursor: grabbing;
+}
+
+/* Texto estilo botón o etiqueta (Misiones, flecha) */
+/* Esto es opcional, basándome en la UI que viste */
+.nivel2-button-misiones {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #f9d97b;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    color: #000;
+    font-size: 1rem;
+    z-index: 20;
+}
+
+.nivel2-button-back {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background-color: #de2e2e;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    z-index: 20;
+}
+
+.nivel2-button-back img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Texto para título y subtítulo ajustado para web */
+
+/* /////////////////////////////////////////////////////////Nivel 2 FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */

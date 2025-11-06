@@ -174,116 +174,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     </header>
 
-    <div class="ecoplay-level1-container" id="ecoplayLevel1">
-    <h2 class="ecoplay-level1-header">Nivel 1</h2>
-    <p class="ecoplay-level1-instruction">Deslizá el objeto al tacho correspondiente</p>
 
-    <!-- Personaje -->
-    <img src="/imagenes/personaje-skin.png" alt="Personaje" class="ecoplay-level1-character" draggable="false" />
 
-    <!-- Bancos -->
-    <div class="ecoplay-level1-benches">
-        <div class="ecoplay-level1-bench"></div>
-        <div class="ecoplay-level1-bench"></div>
+    <main class="main-container" style="background-image: url('~/img/fondonivel1.png');">
+        <section class="objetos-juego">
+            <img src="~/img/banana.png" alt="Banana" class="objeto draggable" data-tacho="inorganico" />
+            <img src="~/img/bollo.png" alt="Bollo" class="objeto draggable" data-tacho="organico" />
+            <img src="~/img/bolsa.png" alt="Bolsa" class="objeto draggable" data-tacho="organico" />
+            <img src="~/img/botella.png" alt="Botella" class="objeto draggable" data-tacho="organico" />
+            <img src="~/img/pizza.png" alt="Pizza" class="objeto draggable" data-tacho="inorganico" />
+            <img src="~/img/manzana.png" alt="Manzana" class="objeto draggable" data-tacho="inorganico" />
+            <img src="~/img/vaso.png" alt="Vaso" class="objeto draggable" data-tacho="inorganico" />
+            <img src="~/img/vasoespecial.png" alt="Vaso Especial" class="objeto draggable" data-tacho="organico" />
+            <img src="~/img/diario.png" alt="Diario" class="objeto draggable" data-tacho="organico" />
+            <img src="~/img/tupper.png" alt="Tupper" class="objeto draggable" data-tacho="inorganico" />
+            <!-- Puedes agregar más si deseas -->
+        </section>
+
+        <section class="tachos-container">
+    <div class="tacho" data-tacho="organico">
+        <img src="~/img/tachoverde.png" alt="Tacho Orgánico" />
     </div>
-
-    <!-- Objetos para arrastrar -->
-    <div class="ecoplay-level1-objects">
-        <img src="/imagenes/porcion-pizza.png" alt="Porcion Pizza" class="ecoplay-level1-object" draggable="true" data-trash="green" id="objPizza" />
-        <img src="/imagenes/botella-plastica.png" alt="Botella Plástica" class="ecoplay-level1-object" draggable="true" data-trash="green" id="objBotella" />
-        <img src="/imagenes/servilleta.png" alt="Servilleta" class="ecoplay-level1-object" draggable="true" data-trash="gray" id="objServilleta" />
-        <img src="/imagenes/vaso.png" alt="Vaso" class="ecoplay-level1-object" draggable="true" data-trash="gray" id="objVaso" />
+    <div class="tacho" data-tacho="inorganico">
+        <img src="~/img/tachonegro.png" alt="Tacho Inorgánico" />
     </div>
+</section>
+    </main>
 
-    <!-- Tachitos de basura -->
-    <div class="ecoplay-level1-trashcans">
-        <div class="ecoplay-level1-trashcan green" data-trash="green" id="trashGreen" title="Tacho Verde - Reciclables">
-            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <path d="M32 12L24 32H40L32 52" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
-                <circle cx="32" cy="32" r="30" stroke="white" stroke-width="3" fill="none"/>
-            </svg>
-        </div>
-        <div class="ecoplay-level1-trashcan gray" data-trash="gray" id="trashGray" title="Tacho Gris - No reciclables">
-            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <rect x="18" y="12" width="28" height="40" stroke="white" stroke-width="3" fill="none" rx="6" ry="6"/>
-                <line x1="18" y1="12" x2="46" y2="12" stroke="white" stroke-width="3"/>
-            </svg>
-        </div>
-    </div>
+    <script src="~/js/nivel1.js"></script>
 
-    <!-- Mensaje de éxito -->
-    <div class="ecoplay-level1-message" id="successMessage">
-        ¡Muy bien! Completaste el nivel.
-    </div>
-</div>
-
-<script>
-(() => {
-    const container = document.getElementById('ecoplayLevel1');
-    const objects = container.querySelectorAll('.ecoplay-level1-object');
-    const trashcans = container.querySelectorAll('.ecoplay-level1-trashcan');
-    const successMessage = document.getElementById('successMessage');
-
-    let draggedObject = null;
-
-    objects.forEach(obj => {
-        obj.addEventListener('dragstart', e => {
-            draggedObject = e.target;
-            e.dataTransfer.effectAllowed = 'move';
-            e.dataTransfer.setData('text/plain', draggedObject.id);
-            setTimeout(() => {
-                draggedObject.classList.add('dragging');
-            }, 0);
-        });
-
-        obj.addEventListener('dragend', e => {
-            if (draggedObject) {
-                draggedObject.classList.remove('dragging');
-                draggedObject = null;
-            }
-        });
-    });
-
-    trashcans.forEach(trashcan => {
-        trashcan.addEventListener('dragover', e => {
-            e.preventDefault();
-            e.dataTransfer.dropEffect = 'move';
-            trashcan.classList.add('dragover');
-        });
-
-        trashcan.addEventListener('dragleave', e => {
-            trashcan.classList.remove('dragover');
-        });
-
-        trashcan.addEventListener('drop', e => {
-            e.preventDefault();
-            trashcan.classList.remove('dragover');
-
-            const id = e.dataTransfer.getData('text/plain');
-            const dragged = document.getElementById(id);
-
-            if (!dragged) return;
-
-            const expectedTrash = dragged.getAttribute('data-trash');
-            const trashType = trashcan.getAttribute('data-trash');
-
-            if (expectedTrash === trashType) {
-                // Éxito - ocultar objeto
-                dragged.style.display = 'none';
-
-                // Chequear si quedan objetos visibles
-                const remaining = Array.from(objects).some(o => o.style.display !== 'none');
-                if (!remaining) {
-                    successMessage.style.display = 'block';
-                }
-            } else {
-                alert('Objeto incorrecto para este tacho. Intenta con el otro.');
-            }
-        });
-    });
-})();
-</script>
-@{
-    var resumen = ViewData["ResumenNivel"] as EcoPlay.Models.ResumenNivelView ?? new EcoPlay.Models.ResumenNivelView();
-}
-@await Html.PartialAsync("_ResumenNivel", resumen)

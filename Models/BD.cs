@@ -12,17 +12,7 @@ public static class BD
     {
         if (!BuscarUsuario(Username))
         {
-            string query = @"INSERT INTO Aspectos (Nombre, Precio, Imagen) VALUES (@pNombre, @pPrecio, @pImagen)";
-            using (SqlConnection connection = new SqlConnection(_connectionString))
-            {
-                connection.Execute(query, new{
-                    pNombre = "Pedro",
-                    pPrecio = 0,
-                    pImagen = ""
-                });
-            }
-            
-            query = @"INSERT INTO NivelUsuario (IDNivel, AspectoEquipado, Estrellas) VALUES (@pIDNivel, @pAspectoEquipado, @pEstrellas)";
+            string query = @"INSERT INTO NivelUsuario (IDNivel, AspectoEquipado, Estrellas) VALUES (@pIDNivel, @pAspectoEquipado, @pEstrellas)";
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Execute(query, new{

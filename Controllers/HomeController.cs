@@ -16,7 +16,7 @@ namespace EcoPlay.Controllers
 
         public IActionResult Index()
         {
-            return View("Nivel1");
+            return View("Home");
         }
 
         public IActionResult Home()
@@ -70,7 +70,7 @@ namespace EcoPlay.Controllers
                     titulo = "Nivel 3: Agua y Contaminación";
                     break;
                 default:
-                    titulo = "Nivel desconocido";
+                    titulo = "???";
                     break;
             }
 

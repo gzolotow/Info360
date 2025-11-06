@@ -365,3 +365,7 @@ C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\refint\EcoPla
 C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\EcoPlay.pdb
 C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\EcoPlay.genruntimeconfig.cache
 C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\ref\EcoPlay.dll
+C:\Users\49189314\Downloads\Nueva carpeta\Info360\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\49189314\Downloads\Nueva carpeta\Info360\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\49189314\Downloads\Nueva carpeta\Info360\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\49189314\Downloads\Nueva carpeta\Info360\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll

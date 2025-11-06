@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\fonts\\CuteSunrise.otf"
     },
     {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\FondoHome.png",
+      "PackagePath": "staticwebassets\\img\\FondoHome.png"
+    },
+    {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\FondoLanding.jpg",
       "PackagePath": "staticwebassets\\img\\FondoLanding.jpg"
     },
@@ -25,6 +29,22 @@
       "PackagePath": "staticwebassets\\img\\abrir.png"
     },
     {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\banana.png",
+      "PackagePath": "staticwebassets\\img\\banana.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\bollo.png",
+      "PackagePath": "staticwebassets\\img\\bollo.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\bolsa.png",
+      "PackagePath": "staticwebassets\\img\\bolsa.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\botella.png",
+      "PackagePath": "staticwebassets\\img\\botella.png"
+    },
+    {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\cerrar.png",
       "PackagePath": "staticwebassets\\img\\cerrar.png"
     },
@@ -33,20 +53,76 @@
       "PackagePath": "staticwebassets\\img\\configuracion.png"
     },
     {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\diario.png",
+      "PackagePath": "staticwebassets\\img\\diario.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondonivel1.png",
+      "PackagePath": "staticwebassets\\img\\fondonivel1.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondonivel2.png",
+      "PackagePath": "staticwebassets\\img\\fondonivel2.png"
+    },
+    {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\inicio.png",
       "PackagePath": "staticwebassets\\img\\inicio.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\inventario.png",
+      "PackagePath": "staticwebassets\\img\\inventario.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\lata.png",
+      "PackagePath": "staticwebassets\\img\\lata.png"
     },
     {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\manzana.png",
+      "PackagePath": "staticwebassets\\img\\manzana.png"
+    },
+    {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\perfil.png",
       "PackagePath": "staticwebassets\\img\\perfil.png"
     },
     {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\pizza.png",
+      "PackagePath": "staticwebassets\\img\\pizza.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\play.png",
+      "PackagePath": "staticwebassets\\img\\play.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tachonegro.png",
+      "PackagePath": "staticwebassets\\img\\tachonegro.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tachoverde.png",
+      "PackagePath": "staticwebassets\\img\\tachoverde.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tupper.png",
+      "PackagePath": "staticwebassets\\img\\tupper.png"
+    },
+    {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tutorial.png",
       "PackagePath": "staticwebassets\\img\\tutorial.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\vaso.png",
+      "PackagePath": "staticwebassets\\img\\vaso.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\vasoespecial.png",
+      "PackagePath": "staticwebassets\\img\\vasoespecial.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\js\\nivel1.js",
+      "PackagePath": "staticwebassets\\js\\nivel1.js"
     },
     {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\js\\site.js",

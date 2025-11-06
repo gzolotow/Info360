@@ -1,0 +1,193 @@
+@{
+  ViewData["Title"] = "Nivel2";
+}
+
+    <!-- 🟢 HEADER con menú hamburguesa -->
+    <header>
+            <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                    <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="perfil" width="30" height="24">
+                    </a>
+                </div>
+            </nav>
+
+
+         <!-- Nav inicio -->
+         <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+            <!-- Logo -->
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">
+                            <img src="/img/logo.png" alt="Ecoplay">
+                        </a>
+                    </div>
+                </nav>
+            <!-- Termina Logo -->
+            <!-- Overlay inicio -->
+            <!-- Botón para abrir el menú -->
+<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+    aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <img src="/img/abrir.png" alt="Abrir menú">
+</button>
+
+
+<!-- Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+    </div>
+
+
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+        <ul class="navbar-nav flex-grow-1 pe-3">
+   <li class="nav-item">
+    <a class="Inicio" asp-controller="Home" asp-action="Home">
+        <img src="/img/inicio.png" alt="Inicio">
+    </a>
+    <h4>Inicio</h4>
+</li>
+
+
+<li class="nav-item">
+    <a class="perfil" asp-controller="Home" asp-action="Perfil">
+        <img src="/img/Perfil.png" alt="Perfil">
+    </a>
+    <h4>Perfil</h4>
+</li>
+ <li class="nav-item">
+    <a class="Inicio" asp-controller="Home" asp-action="niveles">
+        <img src="/img/inicio.png" alt="Inicio">
+    </a>
+    <h4>Niveles</h4>
+</li>
+
+
+           <li class="nav-item">
+                <!-- BOTÓN QUE ABRE EL SUBOVERLAY -->
+                <button class="btn-submenu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasConfig" aria-controls="offcanvasConfig">
+                    <img src="/img/configuracion.png" alt="Configuración">
+                </button>
+                <h2>Configuración</h2>
+            </li>
+           
+            <button type="button" class="btn-offcanvas-cerrar" data-bs-dismiss="offcanvas" aria-label="Cerrar">
+            <img src="wwwroot/img/cerrar.png" alt="Cerrar menú">
+            <h4>Cerrar</h4>
+            </button>
+        </ul>
+
+
+        <!-- Botón de cerrar abajo -->
+       
+    </div>
+</div>
+<!-- 🧩 SUBOVERLAY de CONFIGURACIÓN -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasConfig" aria-labelledby="offcanvasConfigLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasConfigLabel">Configuración</h5>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas" aria-label="Close">Cerrar</button>
+    </div>
+
+
+    <div class="offcanvas-body config-body text-center">
+
+
+        <!-- Opción Música -->
+        <div class="config-item">
+            <img src="/img/musica.png" alt="Música" class="config-icon">
+            <img src="/img/check.png" alt="Activado" class="config-icon">
+        </div>
+
+
+        <!-- Opción Volumen -->
+        <div class="config-item">
+            <img src="/img/volumen.png" alt="Volumen" class="config-icon">
+
+
+            <!-- Slider funcional -->
+            <input type="range" id="volumeSlider" min="0" max="100" value="80" class="config-slider">
+
+
+            <!-- Texto dinámico -->
+            <span id="volumeLabel" class="config-label">Alto</span>
+        </div>
+
+
+        <button class="btn-terminos" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTerminos">
+            Términos y condiciones
+        </button>
+
+
+        <!-- Botón Salir -->
+        <img src="/img/salir.png" alt="Salir" class="config-icon salir">
+    </div>
+</div>
+
+
+                            <!-- 🎵 Script de volumen -->
+                            <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const slider = document.getElementById('volumeSlider');
+                                const label = document.getElementById('volumeLabel');
+
+
+                                if (slider && label) {
+                                    slider.addEventListener('input', () => {
+                                        const value = slider.value;
+
+
+                                        // Cambiar texto según valor
+                                        if (value >= 70) {
+                                            label.textContent = 'Alto';
+                                        } else if (value >= 40) {
+                                            label.textContent = 'Medio';
+                                        } else if (value > 0) {
+                                            label.textContent = 'Bajo';
+                                        } else {
+                                            label.textContent = 'Mute';
+                                        }
+
+
+                                        // 🔊 Aquí puedes controlar un audio real:
+                                        // const audio = document.getElementById('miAudio');
+                                        // if (audio) audio.volume = value / 100;
+                                    });
+                                }
+                            });
+                            </script>
+
+                        <!-- Termina Overlay -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+         <!-- Nav final -->
+
+
+    </header>
+<div class="nivel2-container">
+    <div class="nivel2-header">
+        <h1>Nivel 2</h1>
+        <h2>Agarra los objetos reciclables</h2>
+    </div>
+
+    <div class="nivel2-objetos-container" id="objetos-container">
+        <!-- Objetos que caen por JS aquí -->
+    </div>
+
+    <div class="nivel2-player-container" id="player-container">
+        <img src="~/img/muñeco.png" alt="Muñeco" class="nivel2-player" />
+        <img src="~/img/tacho-reciclable.png" alt="Tacho Reciclable" class="nivel2-tacho" />
+    </div>
+
+    <div class="nivel2-button-misiones">Misiones</div>
+
+    <div class="nivel2-button-back">
+        <img src="~/img/flecha-atras.png" alt="Volver" />
+    </div>
+</div>
+
+    <script src="~/js/nivel2.js"></script>
