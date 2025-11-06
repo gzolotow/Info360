@@ -8,14 +8,10 @@
   </header>
 
   <main class="Iniciar">
-    <section class="layout">
+    <section>
       <h1>Bienvenido de Vuelta</h1>
 
       <!-- Mensajes -->
-      @if(ViewBag.Mensaje != null)
-      {
-        <div style="color:green; font-weight:bold;">@ViewBag.Mensaje</div>
-      }
       @if (ViewBag.Mensaje != null)
       {
         <div class="alert alert-success text-center">
@@ -26,7 +22,7 @@
       @if (ViewBag.Error != null)
       {
         <div class="alert alert-danger text-center" id="errorMensaje">
-            @ViewBag.Error
+          @ViewBag.Error
         </div>
       }
 

@@ -7,14 +7,16 @@ public class Usuario
     public DateTime FechaNacimiento { get; set; }
     public string Contraseña { get; set; }
     public string Foto { get; set; }
+    public int IDNivelUsuario { get; set; }
 
     public Usuario (){}
-    public Usuario (string Username, string Mail, DateTime FechaNacimiento, string Contraseña, string Foto)
+    public Usuario (string Username, string Mail, DateTime FechaNacimiento, string Contraseña, string Foto, int IDNivelUsuario)
     {
         this.Username = Username;
         this.Mail = Mail;
         this.FechaNacimiento = FechaNacimiento;
         this.Contraseña = Contraseña;
         this.Foto = Foto;
+        this.IDNivelUsuario = IDNivelUsuario;
     }
 }

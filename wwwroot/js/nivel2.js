@@ -4,8 +4,9 @@ const objetos = [
     { src: '~/img/botella.png', reciclable: true }, 
     { src: '~/img/pizza.png', reciclable: false },
     { src: '~/img/manzana.png', reciclable: false },
+    { src: '~/img/vasito.png', reciclable: true }
     { src: '~/img/vaso.png', reciclable: true },
-    { src: '~/img/tupper.png', reciclable: false },
+    { src: '~/img/taper.png', reciclable: false },
     { src: '~/img/diario.png', reciclable: true },
 ];
 
