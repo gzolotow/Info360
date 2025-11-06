@@ -1,0 +1,289 @@
+@{
+  ViewData["Title"] = "Nivel1";
+}
+
+
+<header>
+            <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                    <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="perfil" width="30" height="24">
+                    </a>
+                </div>
+            </nav>
+
+
+         <!-- Nav inicio -->
+         <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+            <!-- Logo -->
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">
+                            <img src="/img/logo.png" alt="Ecoplay">
+                        </a>
+                    </div>
+                </nav>
+            <!-- Termina Logo -->
+            <!-- Overlay inicio -->
+            <!-- Botón para abrir el menú -->
+<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+    aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <img src="/img/abrir.png" alt="Abrir menú">
+</button>
+
+
+<!-- Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+    </div>
+
+
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+        <ul class="navbar-nav flex-grow-1 pe-3">
+   <li class="nav-item">
+    <a class="Inicio" asp-controller="Home" asp-action="Home">
+        <img src="/img/inicio.png" alt="Inicio">
+    </a>
+    <h4>Inicio</h4>
+</li>
+
+
+<li class="nav-item">
+    <a class="perfil" asp-controller="Home" asp-action="Perfil">
+        <img src="/img/Perfil.png" alt="Perfil">
+    </a>
+    <h4>Perfil</h4>
+</li>
+ <li class="nav-item">
+    <a class="Inicio" asp-controller="Home" asp-action="niveles">
+        <img src="/img/inicio.png" alt="Inicio">
+    </a>
+    <h4>Niveles</h4>
+</li>
+
+
+           <li class="nav-item">
+                <!-- BOTÓN QUE ABRE EL SUBOVERLAY -->
+                <button class="btn-submenu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasConfig" aria-controls="offcanvasConfig">
+                    <img src="/img/configuracion.png" alt="Configuración">
+                </button>
+                <h2>Configuración</h2>
+            </li>
+           
+            <button type="button" class="btn-offcanvas-cerrar" data-bs-dismiss="offcanvas" aria-label="Cerrar">
+            <img src="wwwroot/img/cerrar.png" alt="Cerrar menú">
+            <h4>Cerrar</h4>
+            </button>
+        </ul>
+
+
+        <!-- Botón de cerrar abajo -->
+       
+    </div>
+</div>
+<!-- 🧩 SUBOVERLAY de CONFIGURACIÓN -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasConfig" aria-labelledby="offcanvasConfigLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasConfigLabel">Configuración</h5>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas" aria-label="Close">Cerrar</button>
+    </div>
+
+
+    <div class="offcanvas-body config-body text-center">
+
+
+        <!-- Opción Música -->
+        <div class="config-item">
+            <img src="/img/musica.png" alt="Música" class="config-icon">
+            <img src="/img/check.png" alt="Activado" class="config-icon">
+        </div>
+
+
+        <!-- Opción Volumen -->
+        <div class="config-item">
+            <img src="/img/volumen.png" alt="Volumen" class="config-icon">
+
+
+            <!-- Slider funcional -->
+            <input type="range" id="volumeSlider" min="0" max="100" value="80" class="config-slider">
+
+
+            <!-- Texto dinámico -->
+            <span id="volumeLabel" class="config-label">Alto</span>
+        </div>
+
+
+        <button class="btn-terminos" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTerminos">
+            Términos y condiciones
+        </button>
+
+
+        <!-- Botón Salir -->
+        <img src="/img/salir.png" alt="Salir" class="config-icon salir">
+    </div>
+</div>
+
+
+<!-- 🎵 Script de volumen -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.getElementById('volumeSlider');
+    const label = document.getElementById('volumeLabel');
+
+
+    if (slider && label) {
+        slider.addEventListener('input', () => {
+            const value = slider.value;
+
+
+            // Cambiar texto según valor
+            if (value >= 70) {
+                label.textContent = 'Alto';
+            } else if (value >= 40) {
+                label.textContent = 'Medio';
+            } else if (value > 0) {
+                label.textContent = 'Bajo';
+            } else {
+                label.textContent = 'Mute';
+            }
+
+
+            // 🔊 Aquí puedes controlar un audio real:
+            // const audio = document.getElementById('miAudio');
+            // if (audio) audio.volume = value / 100;
+        });
+    }
+});
+</script>
+
+
+<!-- Bootstrap JS (muy importante) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+                        <!-- Termina Overlay -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+         <!-- Nav final -->
+
+
+    </header>
+
+    <div class="ecoplay-level1-container" id="ecoplayLevel1">
+    <h2 class="ecoplay-level1-header">Nivel 1</h2>
+    <p class="ecoplay-level1-instruction">Deslizá el objeto al tacho correspondiente</p>
+
+    <!-- Personaje -->
+    <img src="/imagenes/personaje-skin.png" alt="Personaje" class="ecoplay-level1-character" draggable="false" />
+
+    <!-- Bancos -->
+    <div class="ecoplay-level1-benches">
+        <div class="ecoplay-level1-bench"></div>
+        <div class="ecoplay-level1-bench"></div>
+    </div>
+
+    <!-- Objetos para arrastrar -->
+    <div class="ecoplay-level1-objects">
+        <img src="/imagenes/porcion-pizza.png" alt="Porcion Pizza" class="ecoplay-level1-object" draggable="true" data-trash="green" id="objPizza" />
+        <img src="/imagenes/botella-plastica.png" alt="Botella Plástica" class="ecoplay-level1-object" draggable="true" data-trash="green" id="objBotella" />
+        <img src="/imagenes/servilleta.png" alt="Servilleta" class="ecoplay-level1-object" draggable="true" data-trash="gray" id="objServilleta" />
+        <img src="/imagenes/vaso.png" alt="Vaso" class="ecoplay-level1-object" draggable="true" data-trash="gray" id="objVaso" />
+    </div>
+
+    <!-- Tachitos de basura -->
+    <div class="ecoplay-level1-trashcans">
+        <div class="ecoplay-level1-trashcan green" data-trash="green" id="trashGreen" title="Tacho Verde - Reciclables">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32 12L24 32H40L32 52" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
+                <circle cx="32" cy="32" r="30" stroke="white" stroke-width="3" fill="none"/>
+            </svg>
+        </div>
+        <div class="ecoplay-level1-trashcan gray" data-trash="gray" id="trashGray" title="Tacho Gris - No reciclables">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <rect x="18" y="12" width="28" height="40" stroke="white" stroke-width="3" fill="none" rx="6" ry="6"/>
+                <line x1="18" y1="12" x2="46" y2="12" stroke="white" stroke-width="3"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Mensaje de éxito -->
+    <div class="ecoplay-level1-message" id="successMessage">
+        ¡Muy bien! Completaste el nivel.
+    </div>
+</div>
+
+<script>
+(() => {
+    const container = document.getElementById('ecoplayLevel1');
+    const objects = container.querySelectorAll('.ecoplay-level1-object');
+    const trashcans = container.querySelectorAll('.ecoplay-level1-trashcan');
+    const successMessage = document.getElementById('successMessage');
+
+    let draggedObject = null;
+
+    objects.forEach(obj => {
+        obj.addEventListener('dragstart', e => {
+            draggedObject = e.target;
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/plain', draggedObject.id);
+            setTimeout(() => {
+                draggedObject.classList.add('dragging');
+            }, 0);
+        });
+
+        obj.addEventListener('dragend', e => {
+            if (draggedObject) {
+                draggedObject.classList.remove('dragging');
+                draggedObject = null;
+            }
+        });
+    });
+
+    trashcans.forEach(trashcan => {
+        trashcan.addEventListener('dragover', e => {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+            trashcan.classList.add('dragover');
+        });
+
+        trashcan.addEventListener('dragleave', e => {
+            trashcan.classList.remove('dragover');
+        });
+
+        trashcan.addEventListener('drop', e => {
+            e.preventDefault();
+            trashcan.classList.remove('dragover');
+
+            const id = e.dataTransfer.getData('text/plain');
+            const dragged = document.getElementById(id);
+
+            if (!dragged) return;
+
+            const expectedTrash = dragged.getAttribute('data-trash');
+            const trashType = trashcan.getAttribute('data-trash');
+
+            if (expectedTrash === trashType) {
+                // Éxito - ocultar objeto
+                dragged.style.display = 'none';
+
+                // Chequear si quedan objetos visibles
+                const remaining = Array.from(objects).some(o => o.style.display !== 'none');
+                if (!remaining) {
+                    successMessage.style.display = 'block';
+                }
+            } else {
+                alert('Objeto incorrecto para este tacho. Intenta con el otro.');
+            }
+        });
+    });
+})();
+</script>
+@{
+    var resumen = ViewData["ResumenNivel"] as EcoPlay.Models.ResumenNivelView ?? new EcoPlay.Models.ResumenNivelView();
+}
+@await Html.PartialAsync("_ResumenNivel", resumen)

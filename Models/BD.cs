@@ -8,11 +8,31 @@ public static class BD
     private static string _connectionString = @"Server=localhost; DataBase=Ecoplay;Integrated Security=True;TrustServerCertificate=True;";
 
     // REGISTRAR USUARIO
-    public static bool Registrarse( string Username, string Mail, DateTime FechaNacimiento, string Contraseña, string Foto)
+    public static bool Registrarse(string Username, string Mail, DateTime FechaNacimiento, string Contraseña, string Foto)
     {
         if (!BuscarUsuario(Username))
         {
-            string query = @"INSERT INTO Usuario (Username, Mail, FechaNacimiento, Contraseña, Foto) VALUES (@pUsername, @pMail, @pFechaNacimiento, @pContraseña, @pFoto)";
+            string query = @"INSERT INTO Aspectos (Nombre, Precio, Imagen) VALUES (@pNombre, @pPrecio, @pImagen)";
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Execute(query, new{
+                    pNombre = "Pedro",
+                    pPrecio = 0,
+                    pImagen = ""
+                });
+            }
+            
+            query = @"INSERT INTO NivelUsuario (IDNivel, AspectoEquipado, Estrellas) VALUES (@pIDNivel, @pAspectoEquipado, @pEstrellas)";
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Execute(query, new{
+                    pIDNivel = 1,
+                    pAspectoEquipado = 1,
+                    pEstrellas = 0
+                });
+            }
+            
+            query = @"INSERT INTO Usuario (Username, Mail, FechaNacimiento, Contraseña, Foto) VALUES (@pUsername, @pMail, @pFechaNacimiento, @pContraseña, @pFoto)";
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Execute(query, new{
@@ -24,6 +44,7 @@ public static class BD
                     pFoto = Foto
                 });
             }
+            
             return true;
         }
         else

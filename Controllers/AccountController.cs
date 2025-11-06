@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using EcoPlay.Models;
 
 namespace EcoPlay.Controllers
@@ -21,13 +22,20 @@ namespace EcoPlay.Controllers
 
             if (user != null)
             {
+                // ✅ Guardar datos del usuario en la sesión
+                HttpContext.Session.SetString("NombreUsuario", user.Username);
+                HttpContext.Session.SetString("MailUsuario", user.Mail);
+                HttpContext.Session.SetInt32("IDUsuario", user.IDUsuario);
+
                 TempData["Mensaje"] = $"Inicio de sesión exitoso. ¡Bienvenido {user.Username}!";
+
+                // Redirige al Home principal
                 return RedirectToAction("Home", "Home");
             }
             else
             {
-                // Guardamos un error temporal para mostrarlo en la vista
-                TempData["Error"] = "❌ Usuario o contraseña incorrectos. Por favor, intenta nuevamente.";
+                // ❌ Guardamos un error temporal para mostrarlo en la vista
+                TempData["Error"] = "Usuario o contraseña incorrectos. Por favor, intenta nuevamente.";
                 return RedirectToAction("IniciarSesion");
             }
         }
@@ -35,6 +43,7 @@ namespace EcoPlay.Controllers
         // GET: /Account/Registrarse
         public IActionResult Registrarse()
         {
+            ViewBag.Error = TempData["Error"];
             return View();
         }
 
@@ -60,6 +69,14 @@ namespace EcoPlay.Controllers
                 ViewBag.Error = "El nombre de usuario ya existe. Elija otro.";
                 return View();
             }
+        }
+
+        // ✅ Cerrar sesión
+        public IActionResult CerrarSesion()
+        {
+            HttpContext.Session.Clear();
+            TempData["Mensaje"] = "Has cerrado sesión correctamente.";
+            return RedirectToAction("IniciarSesion");
         }
     }
 }

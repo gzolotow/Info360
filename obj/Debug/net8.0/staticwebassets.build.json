@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/HlD2geW0N+eOaHCL6czNnAEcwpD9afYbVQyLXiyKcA=",
+  "Hash": "X9A3i2xTGfkQZe2dDOUfHeAlDGMbFApQeB6CbLP9yac=",
   "Source": "EcoPlay",
   "BasePath": "_content/EcoPlay",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\fonts\\CuteSunrise.otf",
+      "SourceId": "EcoPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
+      "BasePath": "_content/EcoPlay",
+      "RelativePath": "fonts/CuteSunrise.otf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\CuteSunrise.otf"
     },
     {
       "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\abrir.png",

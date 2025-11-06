@@ -25,7 +25,9 @@ main{
   height: 100%;
   width: 100%;
   padding: 0%;
+  text-align: center;
 }
+/* /////////////////////////////////////////////////////////HEADER INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 header {
   position: sticky;
@@ -87,9 +89,8 @@ header .inicio {
     display: flex;
     gap: 10px;
 }
-main {
-  text-align: center;
-}
+/* /////////////////////////////////////////////////////////HEADER FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 
 .section {
     background-color: var(--piel);
@@ -1133,3 +1134,220 @@ body.home-body {
     width: 25px;
     margin-right: 10px;
 }
+/* /////////////////////////////////////////////////////////Nivel 1 inicio////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.ecoplay-level1-container {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Altura relativa para que se adapte */
+    background: url('/imagenes/fondo-parque.png') no-repeat center center;
+    background-size: cover;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    user-select: none;
+}
+
+.ecoplay-level1-header {
+    text-align: center;
+    margin: 2% 0 1%;
+    color: #000;
+    font-size: 2.5vw;
+}
+
+.ecoplay-level1-instruction {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3%;
+    font-size: 1.5vw;
+    text-decoration: underline;
+}
+
+/* Personaje a la izquierda en 8% ancho y altura automática */
+.ecoplay-level1-character {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 8%;
+    height: auto;
+    user-select: none;
+}
+
+/* Bancos en 15% ancho y posición absoluta con su % */
+.ecoplay-level1-bench {
+    width: 15%;
+    height: 6%;
+    background: #a0522d;
+    border-radius: 1%;
+}
+
+/* Contenedor bancos en línea con separación */
+.ecoplay-level1-benches {
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    pointer-events: none;
+}
+
+/* Objetos con ancho 6% y cursor */
+.ecoplay-level1-object {
+    width: 6%;
+    cursor: grab;
+    user-select: none;
+}
+
+.ecoplay-level1-object.dragging {
+    opacity: 0.6;
+    cursor: grabbing;
+}
+
+/* Contenedor objetos - centrado con separación */
+.ecoplay-level1-objects {
+    position: absolute;
+    bottom: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+/* Tachitos de basura tamaño y posicion relativa */
+.ecoplay-level1-trashcans {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12%;
+}
+
+.ecoplay-level1-trashcan {
+    width: 6%;
+    height: auto;
+    border-radius: 2%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5%;
+    box-sizing: border-box;
+    border: 0.4vw solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.ecoplay-level1-trashcan.green {
+    background-color: #3cb371;
+    border-color: #2e8b57;
+}
+
+.ecoplay-level1-trashcan.gray {
+    background-color: #696969;
+    border-color: #555;
+}
+
+.ecoplay-level1-trashcan svg {
+    width: 60%;
+    height: auto;
+    fill: white;
+}
+
+/* Outline cuando haces dragover */
+.ecoplay-level1-trashcan.dragover {
+    border-color: yellow;
+}
+
+/* Mensaje éxito */
+.ecoplay-level1-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255,0.9);
+    padding: 2% 4%;
+    font-size: 2.5vw;
+    font-weight: bold;
+    border: 0.5vw solid #4CAF50;
+    border-radius: 2%;
+    display: none;
+    z-index: 1000;
+}
+/* /////////////////////////////////////////////////////////Mensaje al terminar el nivel////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+#resumenNivelContainer {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background: rgba(0, 0, 0, 0.2);
+        display: none; /* Invisible hasta que se muestre */
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    #resumenNivel {
+        background: #95d88f;
+        border-radius: 10px;
+        padding: 2rem 5vw;
+        width: 90vw;
+        max-width: 400px;
+        text-align: center;
+        box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+    .resumen-estrellas {
+        display: flex;
+        justify-content: space-around;
+        background: #3cb371;
+        border-radius: 5px;
+        padding: 0.5rem 0;
+        margin-bottom: 1rem;
+        box-shadow: inset 0 4px 8px rgba(255 255 255 / 0.3);
+    }
+    .resumen-estrellas img {
+        width: 40px;
+        user-select: none;
+    }
+    .resumen-datos {
+        display: flex;
+        justify-content: space-around;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+    #resumenTitulo {
+        font-weight: 900;
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+    .resumen-botones {
+        display: flex;
+        justify-content: space-around;
+        gap: 1.5rem;
+    }
+    .btn-resumen {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgb(0 0 0 / 0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: box-shadow 0.3s ease;
+    }
+    .btn-resumen:active {
+        box-shadow: 0 2px 3px rgb(0 0 0 / 0.25);
+    }
+    .btn-casa {
+        background-color: #f44336;
+    }
+    .btn-reiniciar {
+        background-color: #2196f3;
+    }
+    .btn-siguiente {
+        background-color: #ffc107;
+    }
+    .btn-resumen img {
+        width: 28px;
+        user-select: none;
+    }
+
+/* /////////////////////////////////////////////////////////Nivel 1 FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
