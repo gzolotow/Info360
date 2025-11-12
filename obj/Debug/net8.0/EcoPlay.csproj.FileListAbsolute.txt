@@ -363,10 +363,9 @@ C:\Users\49189314\Downloads\Nueva carpeta\Info360\bin\Debug\net8.0\Microsoft.Ext
 C:\Users\49189314\Downloads\Nueva carpeta\Info360\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\49189314\Downloads\Nueva carpeta\Info360\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\49189314\Downloads\Nueva carpeta\Info360\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
-C:\Users\49189314\Downloads\Nueva carpeta\Info360\bin\Debug\net8.0\EcoPlay.staticwebassets.endpoints.json
-C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\rjimswa.dswa.cache.json
-C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\staticwebassets.build.json.cache
-C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\49189314\Downloads\Nueva carpeta\Info360\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\staticwebassets\msbuild.EcoPlay.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\staticwebassets\msbuild.build.EcoPlay.props
+C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.EcoPlay.props
+C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.EcoPlay.props
+C:\Users\49189314\Downloads\Nueva carpeta\Info360\obj\Debug\net8.0\staticwebassets.pack.json
