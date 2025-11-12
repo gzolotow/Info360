@@ -9,44 +9,45 @@ public static class BD
 
     // REGISTRAR USUARIO
     public static bool Registrarse(string Username, string Mail, DateTime FechaNacimiento, string Contraseña, string Foto)
-{
-    if (!BuscarUsuario(Username))
     {
-        int idNivelUsuario;
-
-        using (SqlConnection connection = new SqlConnection(_connectionString))
+        if (!BuscarUsuario(Username))
         {
-            string queryNivel = @"INSERT INTO NivelUsuario (IDNivel, AspectoEquipado, Estrellas) VALUES (@pIDNivel, @pAspectoEquipado, @pEstrellas);
-            SELECT CAST(SCOPE_IDENTITY() AS INT);";
+            int idNivelUsuario;
 
-            idNivelUsuario = connection.QuerySingle<int>(queryNivel, new {
-                pIDNivel = 1,
-                pAspectoEquipado = 1,
-                pEstrellas = 0
-            });
-        }
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string queryNivel = @"INSERT INTO NivelUsuario (IDNivel, AspectoEquipado, Estrellas, MisionesCompletadas) VALUES (@pIDNivel, @pAspectoEquipado, @pEstrellas, @pMisionesCompletadas);
+                SELECT CAST(SCOPE_IDENTITY() AS INT);";
 
-        using (SqlConnection connection = new SqlConnection(_connectionString))
-        {
-            string queryUsuario = @"INSERT INTO Usuario (Username, Mail, FechaNacimiento, Contraseña, Foto, IDNivelUsuario) VALUES (@pUsername, @pMail, @pFechaNacimiento, @pContraseña, @pFoto, @pIDNivelUsuario)";
+                idNivelUsuario = connection.QuerySingle<int>(queryNivel, new {
+                    pIDNivel = 1,
+                    pAspectoEquipado = 1,
+                    pEstrellas = 0,
+                    pMisionesCompletadas = 0
+                });
+            }
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string queryUsuario = @"INSERT INTO Usuario (Username, Mail, FechaNacimiento, Contraseña, Foto, IDNivelUsuario) VALUES (@pUsername, @pMail, @pFechaNacimiento, @pContraseña, @pFoto, @pIDNivelUsuario)";
 
                 connection.Execute(queryUsuario, new {
-                pUsername = Username,
-                pMail = Mail,
-                pFechaNacimiento = FechaNacimiento,
-                pContraseña = Contraseña,
-                pFoto = Foto,
-                pIDNivelUsuario = idNivelUsuario
-            });
-        }
+                    pUsername = Username,
+                    pMail = Mail,
+                    pFechaNacimiento = FechaNacimiento,
+                    pContraseña = Contraseña,
+                    pFoto = Foto,
+                    pIDNivelUsuario = idNivelUsuario
+                });
+            }
 
-        return true;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
-    else
-    {
-        return false;
-    }
-}
 
 
     // BUSCAR USUARIO POR USERNAME

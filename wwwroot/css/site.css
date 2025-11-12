@@ -105,6 +105,7 @@ header .inicio {
 }
 /* /////////////////////////////////////////////////////////HEADER FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
+/* /////////////////////////////////////////////////////////HEADER MENU INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .section {
     background-color: var(--piel);
@@ -247,6 +248,8 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
+/* /////////////////////////////////////////////////////////HEADER MENU FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 /* /////////////////////////////////////////////////////////INICIO SESION INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* Fondo general */
@@ -277,6 +280,7 @@ nav a:hover {
   margin-bottom: 1.5rem;
   color: white;
   border-radius: 10px;
+  text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Campos de entrada */
@@ -288,6 +292,7 @@ nav a:hover {
   border: none;
   border-radius: 10px;
   font-size: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -305,10 +310,12 @@ nav a:hover {
   border-radius: 10px;
   cursor: pointer;
   font-size: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .Iniciar section input[type="submit"]:hover {
   background-color: #e0dbb5;
+  box-shadow: 0px 0px;
 }
 
 /* Enlaces */
@@ -351,6 +358,7 @@ nav a:hover {
   margin-bottom: 1.5rem;
   color: white;
   border-radius: 10px;
+  text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
 }
 
 .Registrarse section form {
@@ -368,6 +376,7 @@ nav a:hover {
   border: none;
   border-radius: 10px;
   font-size: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .Registrarse section input[type="submit"] {
@@ -383,10 +392,12 @@ nav a:hover {
   border-radius: 10px;
   cursor: pointer;
   font-size: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .Registrarse section input[type="submit"]:hover {
   background-color: #e0dbb5;
+  box-shadow: 0px 0px;
 }
 
 .Registrarse section a {
@@ -1052,24 +1063,21 @@ body {
 }
 /* /////////////////////////////////////////////////////////HOME INICO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
+.Home *{
+
+}
+
 .Home{
   background-image: url('/img/FondoHome.png');
   background-position: center;
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
-  
 }
 .Home .layout .col4Span6{
   background-color: var(--piel);
   border-radius: 50px;
-  width: 70%;
-  margin-left: 15%;
-  padding: 3%;
-}
-
-.Home .layout p{
-  color: black;
-  text-decoration: none;
+  width: 100%;
+  padding: 5%;
 }
 
 .Home .layout h2{
@@ -1089,6 +1097,30 @@ body {
 .col1Span2 { grid-column: 1 / span 2; }
 .col11Span2 { grid-column: 11 / span 2; }
 .row5 { grid-row: 5; }
+
+.Home .layout .row5Span3{
+  background-color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  width: 90%;
+  padding: 5%;
+}
+.Home .layout .row5Span3 div{
+  width: 100%;
+  height: 100%;
+}
+.Home .layout .row5Span3 img{
+  width: 151px;
+  height: 151px;
+}
+.Home .layout .row5Span3 p{
+  color: black;
+  font-size:2.8rem;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  margin-top: 5%;
+}
+
 
 .Home .layout img{
   width: 127px;

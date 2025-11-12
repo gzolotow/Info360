@@ -3,24 +3,27 @@
 
 // Write your JavaScript code.
 
-function ValidarContraseña()
+function Validar(event)
 {
   event.preventDefault();
 
   let password = document.getElementById("password").value;
+  let usuario = document.getElementById("username").value;
   let tieneMayuscula = /[A-Z]/.test(password);
 
   if (password.length < 4 && !tieneMayuscula) {
-    alert("⚠️ La contraseña debe tener al menos una letra mayúscula y al menos 4 caracteres.");
+    alert("⚠️ La Contraseña debe tener al menos una letra mayúscula y al menos 4 caracteres.");
     return false;
   }else if (!tieneMayuscula) {
-    alert("⚠️ La contraseña debe tener al menos una letra mayúscula.");
+    alert("⚠️ La Contraseña debe tener al menos una letra mayúscula.");
     return false;
   }else if (password.length < 4){
-    alert("⚠️ La contraseña debe tener al menos 4 caracteres.");
+    alert("⚠️ La Contraseña debe tener al menos 4 caracteres.");
+    return false;
+  }else if (usuario == password){
+    alert("⚠️ La Contraseña debe ser distinta al nombre de Usuario.");
     return false;
   }
 
   document.querySelector("form").submit();
-
 }
