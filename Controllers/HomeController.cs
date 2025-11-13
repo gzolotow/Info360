@@ -44,8 +44,6 @@ namespace EcoPlay.Controllers
 
         public IActionResult Inventario()
         {
-            int? items = HttpContext.Session.GetInt32("ItemsRecolectados");
-            ViewData["ItemsRecolectados"] = items ?? 0;
             return View();
         }
 

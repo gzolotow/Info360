@@ -13,243 +13,6 @@
 }
 
 
-.fondo{
- 
-      background-image: url('img/fondo.jpg');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-}
-Header {
-
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px ;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* 🔹 NAVBAR */
-  .navbar{
-background-color: #34C759 !important; /* Verde principal */
-}
-.offcanvas-body{
-  background-color: #FFEECA;
-}
-
-.navbar{
-margin: 0%;
-padding: 0%;
-background-color: #34C759;
-}
-.btn-submenu{
-  background-color: #FFEECA;
-  border: none;
-}
-.cerrar{
-  background-color: #FFEECA;
-  border: none;
-}
-
-/* 🔹 OFFCANVAS (menú lateral) */
-.offcanvas {
-background-color: #FFEECA; /* Verde con leve transparencia */
-
-}
-.navbar-nav h4{
-font-size: 4ex;
-  text-align: center;
-}
-
-
-
-/* Logo */
-header img {
-  padding-left: 25%;
-  height: 75px;
-  width: auto;
-}
-
-/* Navegación */
-nav {
-  display: flex;
-  gap: 15px;
-}
-
-
-
-/* Responsive */
-@media (max-width: 600px) {
-   header {
-      flex-direction: column;
-      gap: 10px;
-  }
-
-   nav {
-      flex-wrap: wrap;
-      justify-content: center;
-  }
-}
-.inventario .boton{
-  float: left;
-  width: 5%;
-  text-align: center;
-  background-color: #E6251E;
-  margin: 1%;
-  padding: 0.5%; 
-  border-radius: 10px ;
-  box-shadow: 0px 5px 10px rgba(151, 151, 151, 0.5); 
-  clear: both;
-}
-.inventario .boton img{
-  width: 50px;
-  height: auto;
-  margin: 0%;
-}
-.inventario .Seleccion {
-  width: 100%;
-
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  display: grid;
-  place-items: center;
-  padding-bottom: 10%;
-  padding-top: 10%;
-}
-.inventario .Seleccion div{
-  box-shadow: 0px 1px 10px grey;
-  border-radius: 10px;
-  padding: 3%;
-  background-color: #FFEECA;
-  transition: all 0.2s ease-in-out;
-}
-.inventario .Seleccion div:hover{
-  background-color: #f5d38b;
-  transform: translateY(-2px);
-}
-.inventario .Seleccion div img{
-  width: 30ex;
-  height: 30ex;
- 
-}
- .close{
-  border: none;
-  background-color: #FFEECA;
-}
- .foto {  
-  text-decoration: none;
-  margin-left: 70%;
-  background-color: #34C759;
-  border: none;
-  
-}
- .foto img{  
-  border-radius: 50%;
- width: 70px;
-  height: auto;
- 
-}
-li{
-text-decoration: none;
-}
-.inventario .Todo {
-
-  margin-top: 2% ;
-  width: 90%;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 200px;
-  margin-bottom: 5%;
-}
-.inventario .Seleccionado{
-  position: relative;
-  margin: 0%;
-  width: 80%;
-  display: grid;
-  grid-template-rows: repeat(2, 2fr);
-  grid-template-columns: 1fr;
-  gap: 8px;
-    
-}
-.plataforma{
-  width: 100%;
-  position: absolute;
-  top: 6000%;
-  left: 40%;
-}
-.rango{
-accent-color: #0BA2DB;
-}
-
-.terminos{
-border: none;
-border-radius: 10px;
-padding: 3%;
-color: white;
-background-color: #0BA2DB;
-}
-.inventario .Aspecto{
-margin-top: 3%;
-  width: 80%;
-  background-color: #7BD792;
-  border-radius: 10px;
-}
-.inventario .skin{
-  width: 70%;
-  height: auto;
-  position: absolute;
-  top: 1000%;
-  left: 53%;
-}
-.inventario .Aspecto h1{
-  box-shadow: 0px 1px 10px grey;
-  border-radius: 10px;
-  font-size: 8ex;
-  color: #FDD900;
-  text-align: center;
-  background-color: #34C759;
-}
-.Menu{
-margin-right: 1%;
-background-color: #34C759;
-border: none;
-}
-.icon{
-padding: 0%;
-margin-left: 35%;
-width: 30%;
-height: auto;
-}
-.btn-submenu .config{
-padding: 0%;
-margin-left: 2%;
-width: 30%;
-height: auto;
-}
-
-.cerrar{
-padding: 0%;
-margin-right: 20%;
-width: 75%;
-height: auto;
-}
-.block{
-width: 10%;
-height: auto;
-}
-.offcanvas-center {
-top: 50% !important;
-left: 50% !important;
-transform: translate(-50%, -50%) !important;
-width: 400px;
-height: auto;
-border-radius: 1rem;
-}
 
 html{
   --piel: #FFEECA;
@@ -654,104 +417,238 @@ nav a:hover {
 
 /* /////////////////////////////////////////////////////////INVENTARIO INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* Fondo con imagen */
-.Aspectos {
-  background-image: url('fondo-locker.png');
+.aspecto-view {
+  --piel: #FFEECA;
+  --verde: #34C759;
+  --azul: #0BA2DB;
+  --rojo: #E6251E;
+  --amarillo: #FDD900;
+  --verdeClarito: #7BD792;
+}
+
+/* Fondo */
+.aspecto-view.fondo {
+  background-image: url('img/fondo.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  padding: 2rem;
-  color: white;
 }
 
-/* Botón de volver */
-.volver-menu {
-  background-color: var(--rojo);
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin-bottom: 1.5rem;
-}
-
-/* Contenedor principal */
-.contenedor {
+/* Header y navbar */
+.aspecto-view header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.aspecto-view .navbar {
+  background-color: var(--verde) !important;
+  margin: 0;
+  padding: 0;
+}
+.aspecto-view .offcanvas-body {
+  background-color: var(--piel);
+}
+.aspecto-view .btn-submenu,
+.aspecto-view .cerrar {
+  background-color: var(--piel);
+  border: none;
 }
 
-/* Personaje central */
-.personaje-central {
-  flex: 1;
+/* Menú lateral */
+.aspecto-view .offcanvas {
+  background-color: var(--piel);
+}
+.aspecto-view .navbar-nav h4 {
+  font-size: 4ex;
   text-align: center;
 }
 
-.personaje-central img {
-  width: 200px;
-  height: auto;
+/* Logo */
+.aspecto-view header img {
+  padding-left: 25%;
+  height: 75px;
+  width: auto;
 }
 
-/* Panel de skins */
-.panel-skins {
-  flex: 1;
-  max-width: 400px;
-  background-color: #0d4d0d;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+/* Navegación */
+.aspecto-view nav {
+  display: flex;
+  gap: 15px;
+}
+@media (max-width: 600px) {
+  .aspecto-view header {
+      flex-direction: column;
+      gap: 10px;
+  }
+  .aspecto-view nav {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
 }
 
-.panel-skins h2 {
+/* Botón salir */
+.aspecto-view .inventario .boton {
+  float: left;
+  width: 5%;
   text-align: center;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-/* Grid de skins */
-.skins-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.skin {
-  background-color: #f5f5dc;
+  background-color: var(--rojo);
+  margin: 1%;
+  padding: 0.5%;
   border-radius: 10px;
-  padding: 0.8rem;
-  text-align: center;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  box-shadow: 0px 5px 10px rgba(151, 151, 151, 0.5);
+  clear: both;
 }
-
-.skin img {
-  width: 80px;
+.aspecto-view .inventario .boton img {
+  width: 50px;
   height: auto;
-  margin-bottom: 0.5rem;
 }
 
-.skin p {
-  color: #0d4d0d;
-  font-weight: bold;
-  font-size: 0.9rem;
+/* Selección de aspectos */
+.aspecto-view .inventario .Seleccion {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  place-items: center;
+  padding: 10% 0;
+}
+.aspecto-view .inventario .Seleccion div {
+  box-shadow: 0px 1px 10px grey;
+  border-radius: 10px;
+  padding: 3%;
+  background-color: var(--piel);
+  transition: all 0.2s ease-in-out;
+}
+.aspecto-view .inventario .Seleccion div:hover {
+  background-color: #f5d38b;
+  transform: translateY(-2px);
+}
+.aspecto-view .inventario .Seleccion div img {
+  width: 30ex;
+  height: 30ex;
 }
 
-/* Skin bloqueada */
-.skin.bloqueado {
-  opacity: 0.5;
+/* Botones generales */
+.aspecto-view .close {
+  border: none;
+  background-color: var(--piel);
+}
+.aspecto-view .foto {
+  text-decoration: none;
+  margin-left: 70%;
+  background-color: var(--verde);
+  border: none;
+}
+.aspecto-view .foto img {
+  border-radius: 50%;
+  width: 70px;
+  height: auto;
+}
+.aspecto-view li {
+  text-decoration: none;
+}
+
+/* Contenedor principal */
+.aspecto-view .inventario .Todo {
+  margin-top: 2%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 200px;
+  margin-bottom: 5%;
+}
+.aspecto-view .inventario .Seleccionado {
   position: relative;
+  margin: 0;
+  width: 80%;
+  display: grid;
+  grid-template-rows: repeat(2, 2fr);
+  gap: 8px;
 }
 
-.skin.bloqueado::after {
-  content: "🔒";
+/* Personaje y plataforma */
+.aspecto-view .plataforma {
+  width: 100%;
   position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 1.5rem;
-  color: #d9534f;
+  top: 6000%;
+  left: 40%;
 }
+.aspecto-view .inventario .skin {
+  width: 70%;
+  height: auto;
+  position: absolute;
+  top: 1000%;
+  left: 53%;
+}
+
+/* Botones de configuración */
+.aspecto-view .rango {
+  accent-color: var(--azul);
+}
+.aspecto-view .terminos {
+  border: none;
+  border-radius: 10px;
+  padding: 3%;
+  color: white;
+  background-color: var(--azul);
+}
+
+/* Cuadro de “Aspecto” */
+.aspecto-view .inventario .Aspecto {
+  margin-top: 3%;
+  width: 80%;
+  background-color: var(--verdeClarito);
+  border-radius: 10px;
+}
+.aspecto-view .inventario .Aspecto h1 {
+  box-shadow: 0px 1px 10px grey;
+  border-radius: 10px;
+  font-size: 8ex;
+  color: var(--amarillo);
+  text-align: center;
+  background-color: var(--verde);
+}
+
+/* Menú */
+.aspecto-view .Menu {
+  margin-right: 1%;
+  background-color: var(--verde);
+  border: none;
+}
+.aspecto-view .icon {
+  padding: 0;
+  margin-left: 35%;
+  width: 30%;
+  height: auto;
+}
+.aspecto-view .btn-submenu .config {
+  padding: 0;
+  margin-left: 2%;
+  width: 30%;
+  height: auto;
+}
+.aspecto-view .cerrar {
+  padding: 0;
+  margin-right: 20%;
+  width: 75%;
+  height: auto;
+}
+
+/* Offcanvas centrado */
+.aspecto-view .offcanvas-center {
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 400px;
+  height: auto;
+  border-radius: 1rem;
+}
+
+
 /* /////////////////////////////////////////////////////////INVENTARIO FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 

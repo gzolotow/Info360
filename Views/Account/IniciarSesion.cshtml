@@ -12,13 +12,6 @@
       <h1>Bienvenido de Vuelta</h1>
 
       <!-- Mensajes -->
-      @if (ViewBag.Mensaje != null)
-      {
-        <div class="alert alert-success text-center">
-          @ViewBag.Mensaje
-        </div>
-      }
-
       @if (ViewBag.Error != null)
       {
         <div class="alert alert-danger text-center" id="errorMensaje">

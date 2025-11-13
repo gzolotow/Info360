@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\img\\Heroe.png"
     },
     {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\Inicio.png",
+      "PackagePath": "staticwebassets\\img\\Inicio.png"
+    },
+    {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\Mascota 2.png",
       "PackagePath": "staticwebassets\\img\\Mascota 2.png"
     },
@@ -57,16 +61,36 @@
       "PackagePath": "staticwebassets\\img\\botella.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\cerrar.png",
-      "PackagePath": "staticwebassets\\img\\cerrar.png"
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\cerrarMenu.png",
+      "PackagePath": "staticwebassets\\img\\cerrarMenu.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\configuracion.png",
-      "PackagePath": "staticwebassets\\img\\configuracion.png"
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\cerrarOverlay.png",
+      "PackagePath": "staticwebassets\\img\\cerrarOverlay.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\check.png",
+      "PackagePath": "staticwebassets\\img\\check.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\config.png",
+      "PackagePath": "staticwebassets\\img\\config.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\default.png",
+      "PackagePath": "staticwebassets\\img\\default.png"
     },
     {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\diario.png",
       "PackagePath": "staticwebassets\\img\\diario.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondo.jpg",
+      "PackagePath": "staticwebassets\\img\\fondo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondoInv.jpg",
+      "PackagePath": "staticwebassets\\img\\fondoInv.jpg"
     },
     {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondonivel1.png",
@@ -75,14 +99,6 @@
     {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondoniveles.png",
       "PackagePath": "staticwebassets\\img\\fondoniveles.png"
-    },
-    {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\image.png",
-      "PackagePath": "staticwebassets\\img\\image.png"
-    },
-    {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\inicio.png",
-      "PackagePath": "staticwebassets\\img\\inicio.png"
     },
     {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\inventario.png",
@@ -99,6 +115,14 @@
     {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\manzana.png",
       "PackagePath": "staticwebassets\\img\\manzana.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\menu.png",
+      "PackagePath": "staticwebassets\\img\\menu.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\musica.png",
+      "PackagePath": "staticwebassets\\img\\musica.png"
     },
     {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\perfil.png",
@@ -137,8 +161,16 @@
       "PackagePath": "staticwebassets\\img\\taper.png"
     },
     {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tierra.png",
+      "PackagePath": "staticwebassets\\img\\tierra.png"
+    },
+    {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tutorial.png",
       "PackagePath": "staticwebassets\\img\\tutorial.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\undo.png",
+      "PackagePath": "staticwebassets\\img\\undo.png"
     },
     {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\vasito.png",
@@ -147,6 +179,10 @@
     {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\vaso.png",
       "PackagePath": "staticwebassets\\img\\vaso.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\volumen.png",
+      "PackagePath": "staticwebassets\\img\\volumen.png"
     },
     {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\js\\nivel1.js",

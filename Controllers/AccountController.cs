@@ -27,8 +27,6 @@ namespace EcoPlay.Controllers
                 HttpContext.Session.SetString("MailUsuario", user.Mail);
                 HttpContext.Session.SetInt32("IDUsuario", user.IDUsuario);
 
-                TempData["Mensaje"] = $"Inicio de sesión exitoso. ¡Bienvenido {user.Username}!";
-
                 // Redirige al Home principal
                 return RedirectToAction("Home", "Home");
             }

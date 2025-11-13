@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 residuo.classList.add("correcto");
                 setTimeout(() => residuo.remove(), 500);
             } else {
-                alert("Tacho incorrecto");
+                alert("Vuelve a intentar");
             }
         });
     });
