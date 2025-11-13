@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EcoPlay")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2937537177ca4945264f4764536ac32510537fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+581e54531d5fcebc1b71acc1e000c124ddf47e5a")]
 [assembly: System.Reflection.AssemblyProductAttribute("EcoPlay")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EcoPlay")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

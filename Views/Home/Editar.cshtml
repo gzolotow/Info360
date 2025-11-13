@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Editar - EcoPlay";
+}
+
+<body>
+  <main class="Editar">
+    <section>
+      <h1>Editar Cuenta</h1>
+
+      @if (ViewBag.Error != null)
+      {
+        <div class="alert alert-danger text-center" id="errorMensaje">
+          @ViewBag.Error
+        </div>
+      }
+
+      <form asp-action="Registrarse" asp-controller="Account" method="post">
+        <input type="text" id="username" name="username" placeholder="usuario" required>
+
+        <input type="email" id="email" name="email" placeholder="correo electrónico (tutor)" required>
+
+        <input type="password" id="password" name="password" placeholder="contraseña" required>
+
+        <input type="text" id="fecha" name="fecha" placeholder="fecha de nacimiento (dd/mm/aa)" required>
+
+        <input type="file" name="image" id="image">
+
+        <input type="submit" onclick=Validar(event) value="Registrarse">
+
+      </form>
+    </section>
+  </main>
+</body>

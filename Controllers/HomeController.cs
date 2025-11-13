@@ -16,7 +16,7 @@ namespace EcoPlay.Controllers
 
         public IActionResult Index()
         {
-            return View("Nivel1");
+            return View();
         }
 
         public IActionResult Home()
@@ -124,5 +124,25 @@ namespace EcoPlay.Controllers
             HttpContext.Session.SetInt32("ItemsRecolectados", itemsActuales + estrellas);  // Ej: +1 ítem por estrella
             return Json(new { success = true, message = "Resultado guardado." });
         }
+
+        public IActionResult Editar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult EditarUsuario(int IDUsuario, string username, string email, string password, string fecha)
+        {
+            if (!DateTime.TryParse(fecha, out DateTime fechaNacimiento))
+            {
+                ViewBag.Error = "La fecha no tiene un formato válido (dd/mm/aa).";
+                return View("Editar");
+            }
+
+            BD.ModificarUsuario(IDUsuario, username, email, fechaNacimiento, password, "default.png");
+
+            return View("Perfil");
+        }
+
     }
 }

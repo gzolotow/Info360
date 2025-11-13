@@ -69,12 +69,12 @@
       "PackagePath": "staticwebassets\\img\\diario.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondo.jpg",
-      "PackagePath": "staticwebassets\\img\\fondo.jpg"
-    },
-    {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondonivel1.png",
       "PackagePath": "staticwebassets\\img\\fondonivel1.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondoniveles.png",
+      "PackagePath": "staticwebassets\\img\\fondoniveles.png"
     },
     {
       "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\image.png",

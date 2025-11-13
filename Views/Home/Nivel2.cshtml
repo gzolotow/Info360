@@ -191,3 +191,13 @@
 </div>
 
     <script src="~/js/nivel2.js"></script>
+    @section Scripts {
+<script>
+function completarNivel(nivel) {
+  let completados = JSON.parse(localStorage.getItem("nivelesCompletados")) || [];
+  if (!completados.includes(nivel)) completados.push(nivel);
+  localStorage.setItem("nivelesCompletados", JSON.stringify(completados));
+  window.location.href = "/Home/Niveles";
+}
+</script>
+}

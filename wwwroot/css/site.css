@@ -413,6 +413,8 @@ nav a:hover {
 
 /* /////////////////////////////////////////////////////////REGISTRARSE FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
+/* /////////////////////////////////////////////////////////INVENTARIO INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 /* Fondo con imagen */
 .Aspectos {
   background-image: url('fondo-locker.png');
@@ -511,6 +513,8 @@ nav a:hover {
   font-size: 1.5rem;
   color: #d9534f;
 }
+/* /////////////////////////////////////////////////////////INVENTARIO FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 
 /* /////////////////////////////////////////////////////////INDEX INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -534,52 +538,53 @@ nav a:hover {
 
 /* CAJAS DE TEXTO */
 .index h2 {
-background-color: #FFEECA;
-text-align: center;
-padding: 10px;
-border-radius: 10px;
-font-size: 2.9em;
-color: #262626;
-box-shadow: 0 2px 4px rgba(0,0,0,0.555);
-width: 100%;
-height: 100%;
-font-family: 'Cute Dino','Comic Sans MS', Arial, sans-serif;
-font-weight: lighter;
-padding-top: 3%;
+  background-color: #FFEECA;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 2.9em;
+  color: #262626;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.555);
+  width: 100%;
+  height: 100%;
+  font-family: 'Cute Dino','Comic Sans MS', Arial, sans-serif;
+  font-weight: lighter;
+  padding-top: 3%;
 }
 
 .index p {
-background-color: #0BA2DB;
-color: #111;
-padding: 20px;
-font-size: 2em;
-border-radius: 10px;
-line-height: 1.5em;
-font-weight: 600;
-box-shadow: 0 2px 4px rgba(0,0,0,0.555);
-width: 100%;
-height: 100%;
-text-align: center;
+  background-color: #0BA2DB;
+  color: #111;
+  padding: 20px;
+  font-size: 2em;
+  border-radius: 10px;
+  line-height: 1.5em;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.555);
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
 /* BOTÓN ENTRAR */
 .index .entrar {
-background-color: #34C759;
-color: #1e1e1e;
-border: none;
-border-radius: 10px;
-font-weight: 800;
-font-size: 3em;
-cursor: pointer;
-box-shadow: 0 4px #2b7d33;
-transition: background-color 0.3s ease, transform 0.1s ease-in;
-width: 100%;
-height: 100%;
-text-decoration: none;
-padding-left: 30%;
-padding-right: 30%;
-padding-top: 5%;
-padding-bottom: 5%;
+  background-color: var(--verde);
+  color: black;
+  border: none;
+  font-family: 'Cute Dino','Comic Sans MS', Arial, sans-serif;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 3em;
+  cursor: pointer;
+  box-shadow: 0 4px #2b7d33;
+  transition: background-color 0.3s ease, transform 0.1s ease-in;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-top: 6%;
+  padding-bottom: 5%;
 }
 
 .index .entrar:hover {
@@ -599,17 +604,13 @@ padding-bottom: 5%;
 .Perfil .col1Span6 { grid-column: 1 / span 6; }
 .Perfil .col8Span5 { grid-column: 8 / span 5; }
 
-.Perfil *{
-  border: 1px solid black;
-}
-
 .Perfil {
   background-color: var(--piel);
   height: 100vh;
 }
 
 /* Botón volver */
-.col1{
+.Perfil .col1{
   background-color: var(--rojo);
   border: none;
   font-size: xx-large;
@@ -617,87 +618,123 @@ padding-bottom: 5%;
   text-decoration: none;
   width: 75%;
   height: 75%;
+  border-radius: 10px;
+  padding: 2%;
+  transition: background-color 0.3s ease, transform 0.1s ease-in;
 }
-.col1 p{
+
+.Perfil .col1:hover {
+  background-color: #ad1c17;
+  transform: scale(0.95)
+}
+
+.Perfil .col1 p{
   color: black;
   text-align: center;
 }
 /* Avatar */
-.col1Span6 {
+.Perfil .col1Span6 {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.col1Span6 img {
+.Perfil .col1Span6 img {
   width: 70%;
   height: 95%;
   border-radius: 50%;
-  border: 5px solid var(--verde);
+  border: 10px solid var(--verde);
 }
 
-.cerrar-sesion {
-  color: var(--azul);
+.Perfil .cerrar-sesion {
+  color: black;
   text-decoration: none;
   margin-top: 2%;
   font-weight: bold;
   font-size: x-large;
+  background-color: var(--rojo);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 2%;
+  transition: background-color 0.3s ease, transform 0.1s ease-in;
+}
+
+.Perfil .cerrar-sesion:hover {
+  background-color: #ad1c17;
+  transform: scale(0.95)
 }
 
 /* Datos */
-.col8Span5 {
-  background-color: #9ef29c;
+.Perfil .col8Span5 {
+  background-color: var(--verdeClarito);
   border-radius: 10px;
   box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+  width: 75%;
+  margin-left: 20%;
 }
 
-.col8Span5 h2 {
+.Perfil .col8Span5 h2 {
   font-family: 'Cute Dino','Comic Sans MS', Arial, sans-serif;
   color: #ffce00;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 5%;
-  font-size: 15fer;
+  margin-bottom: 10%;
+  font-size: 7rex;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: var(--verde);
   width: 100%;
   border-radius: 10px 10px 0px 0px;
   padding: 2%;
+  padding-bottom: 0%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.col8Span5 p {
-  font-size: 18px;
-  color: #1a1a1a;
-  margin: 10px 0;
+.Perfil .col8Span5 div{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 20%;
 }
 
-.col8Span5 strong {
+.Perfil .col8Span5 div p {
+  font-size: xx-large;
+  color: black;
+  margin: 3%;
+  margin-bottom: 8%;
+  text-align: start;
+}
+
+.Perfil .col8Span5 strong {
   text-decoration: underline;
 }
 
-/* Boton ENTRAR */
-.col8Span5 button{
-  display: block;
-  width: 100%;
-  background-color: #39c463;
+.Perfil .col8Span5 a{
+  background-color: var(--verde);
+  color: black;
   border: none;
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #1a1a1a;
-  margin-top: 15px;
-  box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+  font-family: 'Cute Dino','Comic Sans MS', Arial, sans-serif;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 3em;
   cursor: pointer;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, transform 0.1s ease-in;
+  text-decoration: none;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 4%;
+  padding-bottom: 3%;
 }
-
-.col8Span5 button:hover {
-  background-color: #2ea450;
+  
+.Perfil .col8Span5 a:hover {
+  background-color: #2aa148;
 }
+  
 
 /* /////////////////////////////////////////////////////////PERFIL FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* /////////////////////////////////////////////////////////MISIONES FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////MISIONES INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .btn-misiones {
   background-color: #f8f8f8;
@@ -735,94 +772,112 @@ padding-bottom: 5%;
 }
 
 /* --- SECCIÓN DE NIVELES --- */
-.niveles {
+.niveles-container {
+  background-image: url("/img/fondoniveles.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
   position: relative;
-  width: 100%;
-  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Líneas SVG */
-.conexiones {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.niveles-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 0.7fr); /* menos alto que antes */
+  width: 90%;
+  height: 80%;
+  position: relative;
+  gap: 8px;
 }
 
-.conexiones line {
-  stroke: black;
-  stroke-width: 2;
-  opacity: 0.5;
-}
-
-/* Círculos de niveles */
-.nivel {
-  position: absolute;
-  width: 120px;
-  height: 120px;
+/* -------- BOTONES -------- */
+.niveles-btn {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  color: #000;
-  font-weight: bold;
+  background-color: var(--verdeClarito);
+  color: white;
+  font-family: 'Cute Sunrise', sans-serif;
+  font-size: 18px;
+  border: 3px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  cursor: pointer;
-  transition: transform 0.2s;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: transform 0.2s, background 0.3s;
 }
 
-.nivel:hover {
+.niveles-btn:hover {
+  transform: scale(1.08);
+}
+
+.bloqueado {
+  background-color: gray !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* -------- POSICIÓN DE LOS BOTONES -------- */
+.tutorial-btn { grid-row: 4; grid-column: 3; }
+.nivel1-btn   { grid-row: 3; grid-column: 5; }
+.nivel2-btn   { grid-row: 2; grid-column: 7; }
+.nivel3-btn   { grid-row: 1; grid-column: 9; }
+
+/* -------- LÍNEAS ENTRE NIVELES -------- */
+.niveles-layout::before,
+.niveles-layout::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: var(--verde);
+  border-radius: 4px;
+}
+
+/* Línea Tutorial → Nivel 1 */
+.niveles-layout::before {
+  left: 35%;
+  top: 62%;
+  height: 17%;
+  transform: rotate(-25deg);
+}
+
+/* Línea Nivel 1 → Nivel 2 → Nivel 3 */
+.niveles-layout::after {
+  left: 50%;
+  top: 28%;
+  width: 35%;
+  height: 4px;
+  transform: rotate(-10deg);
+  background-color: var(--verde);
+}
+
+/* -------- BOTÓN VOLVER -------- */
+.niveles-volver {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--verde);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  font-family: 'Cute Sunrise', sans-serif;
+  transition: transform 0.2s ease;
+}
+.niveles-volver:hover {
   transform: scale(1.1);
 }
 
-/* Colores y posiciones */
-.tutorial {
-  background-color: #39c463;
-  left: 100px;
-  top: 200px;
-}
-
-.nivel1 {
-  background-color: #f44336;
-  left: 320px;
-  top: 190px;
-}
-
-.nivel2 {
-  background-color: #fdd835;
-  left: 460px;
-  top: 290px;
-}
-
-.nivel3 {
-  background-color: #2196f3;
-  left: 600px;
-  top: 120px;
-}
-body {
-  margin: 0;
-  font-family: 'Comic Sans MS', sans-serif;
-}
-
-/* Fondo del juego (solo para mostrar detrás) */
-.fondo-juego {
-  background: url("fondo.png") center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-abrir {
-  background-color: #3cb34a;
-  border: none;
-  padding: 12px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 10px;
-  cursor: pointer;
-  color: white;
-}
 
 /* --- VENTANA FLOTANTE --- */
 .tutorial-modal {
@@ -1032,8 +1087,9 @@ body {
   background-color: var(--piel);
   border-radius: 50px;
   width: 80%;
+  height: 100%;
   padding: 5%;
-  padding-top: 3%;
+  padding-top: 2%;
   padding-bottom: 0%;
   margin-left: 10%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -1066,7 +1122,7 @@ body {
   border-radius: 20px;
   text-decoration: none;
   width: 70%;
-  height: 92%;
+  height: 95%;
   padding: 5%;
   margin-left: 15%;
   border: 1px solid #D9D9D9;
@@ -1108,7 +1164,7 @@ body {
 .Home .layout .col5Span4{
   background-color: white;
   width: 60%;
-  height: 100%;
+  height: 105%;
   border: 1px solid #D9D9D9;
   border-radius: 50%;
   margin-left: 20%;
@@ -1397,6 +1453,96 @@ body {
     height: 20px;
 }
 
-/* Texto para título y subtítulo ajustado para web */
 
 /* /////////////////////////////////////////////////////////Nivel 2 FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* /////////////////////////////////////////////////////////EDITAR FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.Editar {
+  background-color: var(--piel);
+  height: 91.2vh;
+  overflow: hidden;
+}
+
+.Editar section {
+  background-color: var(--verde);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  width: 30%;
+  margin: auto;
+  margin-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Editar section h1 {
+  font-family: 'Cute Dino','Comic Sans MS', Arial, sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  border-radius: 10px;
+  text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Editar section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Editar section input[type="text"],
+.Editar section input[type="email"],
+.Editar section input[type="password"] {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 5%;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Editar section input[type="file"] {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 5%;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--verdeClarito);
+}
+
+.Editar section input[type="submit"] {
+  margin-top: 5%;
+  background-color: var(--piel);
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 15%;
+  padding-right: 15%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Editar section input[type="submit"]:hover {
+  background-color: #e0dbb5;
+  box-shadow: 0px 0px;
+}
+
+.Editar section a {
+  color: black;
+  text-align: center;
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

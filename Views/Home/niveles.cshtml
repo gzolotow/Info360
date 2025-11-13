@@ -1,21 +1,56 @@
 @{
-    ViewData["Title"] = "Seleccionar Nivel";
+    ViewData["Title"] = "Niveles - EcoPlay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<main class="fondo">
-    <button class="btn-volver" onclick="location.href='@Url.Action("Index","Home")'">⬅</button>
+<link rel="stylesheet" href="~/css/niveles.css" />
 
-    <section class="niveles">
-        <a href="@Url.Action("NivelesJuego", "Home", new { id = 0 })" class="nivel tutorial">Tutorial</a>
-        <a href="@Url.Action("NivelesJuego", "Home", new { id = 1 })" class="nivel nivel1">NIVEL 1</a>
-        <a href="@Url.Action("NivelesJuego", "Home", new { id = 2 })" class="nivel nivel2">NIVEL 2</a>
-        <a href="@Url.Action("NivelesJuego", "Home", new { id = 3 })" class="nivel nivel3">NIVEL 3</a>
+<div class="niveles-container">
+    <div class="niveles-layout">
+        <a href="/Home/Tutorial" class="niveles-btn tutorial-btn" data-nivel="tutorial">Tutorial</a>
+        <a href="/Home/Nivel1" class="niveles-btn nivel1-btn" data-nivel="1">Nivel 1</a>
+        <a href="#" class="niveles-btn nivel2-btn bloqueado" data-nivel="2">Nivel 2 🔒</a>
+        <a href="#" class="niveles-btn nivel3-btn bloqueado" data-nivel="3">Nivel 3 🔒</a>
+    </div>
 
-        <svg class="conexiones" viewBox="0 0 800 400">
-            <line x1="200" y1="220" x2="400" y2="220" />
-            <line x1="400" y1="220" x2="600" y2="150" />
-            <line x1="400" y1="220" x2="550" y2="320" />
-        </svg>
-    </section>
-</main>
+    <button class="niveles-volver" onclick="window.history.back();">←</button>
+</div>
 
+@section Scripts {
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const completado = JSON.parse(localStorage.getItem("nivelesCompletados")) || [];
+
+    const btnNivel2 = document.querySelector('.nivel2-btn');
+    const btnNivel3 = document.querySelector('.nivel3-btn');
+
+    if (completado.includes(1)) {
+        btnNivel2.classList.remove('bloqueado');
+        btnNivel2.textContent = 'Nivel 2';
+        btnNivel2.setAttribute('href', '/Home/Nivel2');
+    }
+    if (completado.includes(2)) {
+        btnNivel3.classList.remove('bloqueado');
+        btnNivel3.textContent = 'Nivel 3';
+        btnNivel3.setAttribute('href', '/Home/Nivel3');
+    }
+
+    document.querySelectorAll(".niveles-btn").forEach(btn => {
+        btn.addEventListener("click", e => {
+            const nivel = btn.getAttribute("data-nivel");
+            if (btn.classList.contains("bloqueado")) {
+                e.preventDefault();
+                alert("⚠️ Debes completar el nivel anterior primero.");
+                return;
+            }
+            switch (nivel) {
+                case "tutorial": window.location.href = "/Home/Tutorial"; break;
+                case "1": window.location.href = "/Home/Nivel1"; break;
+                case "2": window.location.href = "/Home/Nivel2"; break;
+                case "3": window.location.href = "/Home/Nivel3"; break;
+            }
+        });
+    });
+});
+</script>
+}

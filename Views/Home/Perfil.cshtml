@@ -6,21 +6,23 @@
 
   <main class="Perfil">
     <section class="layout">
-      <a asp-controller="Home" asp-action="Perfil" class="col1 row1"><p>⬅</p></a>
+      <a asp-controller="Home" asp-action="Home" class="col1 row1"><p>⬅</p></a>
 
       <div class="col1Span6 row2Span8">
         <img src="avatar.png" alt="Avatar del usuario">
-        <a href="#" class="cerrar-sesion">Cerrar sesión</a>
+        <a asp-controller="Home" asp-action="CerrarSesion" class="cerrar-sesion">Cerrar sesión</a>
       </div>
 
       <div class="col8Span5 row2Span8">
         <h2>Perfil</h2>
+
         <div>
           <p><strong>Username:</strong> nombre</p>
           <p><strong>E-mail:</strong> mail</p>
           <p><strong>Fecha de nacimiento:</strong> fecha</p>
-          <button>EDITAR</button>
         </div>
+
+        <a href='@Url.Action("Editar", "Home" , new {IDUsuario = @ViewBag.IDUsuario})'>EDITAR</a>
       </div>
     </section>
   </main>
