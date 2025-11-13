@@ -34,6 +34,7 @@ section{
 
 .layout {  
   width: 100%;
+  height: 100%;
 
   display: grid;
   grid-template-rows: repeat(11, 1fr);
@@ -70,7 +71,7 @@ header nav {
 
 header nav a {
   text-decoration: none;
-  background-color: var(--piel); /* color crema */
+  background-color: var(--piel);
   color: black;
   font-weight: 600;
   font-family: 'Cute Sunrise','Comic Sans MS', 'Poppins', sans-serif;
@@ -591,109 +592,91 @@ padding-bottom: 5%;
 }
 /* /////////////////////////////////////////////////////////INDEX FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* --- NAVBAR --- */
-.navbar {
-  background-color: #3cb34a;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px;
+/* /////////////////////////////////////////////////////////PERFIL INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.Perfil .row1 { grid-row: 1; }
+.Perfil .col1 { grid-column: 1; }
+.Perfil .row2Span8 { grid-row: 2 / span 8; }
+.Perfil .col1Span6 { grid-column: 1 / span 6; }
+.Perfil .col8Span5 { grid-column: 8 / span 5; }
+
+.Perfil *{
+  border: 1px solid black;
 }
 
-.logo img {
-  height: 40px;
-}
-
-.perfil-icono img {
-  height: 35px;
-  border-radius: 50%;
-}
-
-/* --- CONTENIDO PRINCIPAL --- */
-.contenido {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 30px;
-  gap: 30px;
+.Perfil {
+  background-color: var(--piel);
+  height: 100vh;
 }
 
 /* Botón volver */
-.btn-volver {
-  position: absolute;
-  top: 70px;
-  left: 20px;
-  background-color: #e53e3e;
+.col1{
+  background-color: var(--rojo);
   border: none;
-  color: white;
-  font-size: 22px;
-  padding: 5px 10px;
-  border-radius: 8px;
+  font-size: xx-large;
   cursor: pointer;
+  text-decoration: none;
+  width: 75%;
+  height: 75%;
 }
-
-/* --- PERFIL USUARIO --- */
-.perfil-usuario {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+.col1 p{
+  color: black;
+  text-align: center;
 }
-
 /* Avatar */
-.avatar {
+.col1Span6 {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.avatar img {
-  width: 160px;
-  height: 160px;
+.col1Span6 img {
+  width: 70%;
+  height: 95%;
   border-radius: 50%;
-  border: 5px solid #3cb34a;
+  border: 5px solid var(--verde);
 }
 
 .cerrar-sesion {
-  color: #007bff;
+  color: var(--azul);
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 2%;
   font-weight: bold;
-}
-
-.cerrar-sesion:hover {
-  text-decoration: underline;
+  font-size: x-large;
 }
 
 /* Datos */
-.datos {
+.col8Span5 {
   background-color: #9ef29c;
   border-radius: 10px;
-  padding: 20px 30px;
   box-shadow: 0 4px 4px rgba(0,0,0,0.2);
 }
 
-.datos h2 {
+.col8Span5 h2 {
+  font-family: 'Cute Dino','Comic Sans MS', Arial, sans-serif;
   color: #ffce00;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 0px #333;
+  margin-bottom: 5%;
+  font-size: 15fer;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--verde);
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  padding: 2%;
 }
 
-.datos p {
+.col8Span5 p {
   font-size: 18px;
   color: #1a1a1a;
   margin: 10px 0;
 }
 
-.datos strong {
+.col8Span5 strong {
   text-decoration: underline;
 }
 
 /* Boton ENTRAR */
-.btn-entrar {
+.col8Span5 button{
   display: block;
   width: 100%;
   background-color: #39c463;
@@ -708,37 +691,13 @@ padding-bottom: 5%;
   cursor: pointer;
 }
 
-.btn-entrar:hover {
+.col8Span5 button:hover {
   background-color: #2ea450;
 }
-body {
-  margin: 0;
-  font-family: 'Comic Sans MS', sans-serif;
-}
 
-/* --- NAVBAR --- */
-.navbar {
-  background-color: #3cb34a;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px;
-}
+/* /////////////////////////////////////////////////////////PERFIL FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-.logo img {
-  height: 40px;
-}
-
-.menu-derecha {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.icono-perfil {
-  height: 35px;
-  border-radius: 50%;
-}
+/* /////////////////////////////////////////////////////////MISIONES FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .btn-misiones {
   background-color: #f8f8f8;
@@ -1112,12 +1071,15 @@ body {
   margin-left: 15%;
   border: 1px solid #D9D9D9;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, transform 0.1s ease-in;
 }
 .Home .layout .row5Span3:hover{
   box-shadow: 0px 0px;
   background-color: #D9D9D9;
+  transform: scale(0.95);
   p {
     background-color: #777575;
+    transform: scale(0.95);
   }
 }  
 
@@ -1135,6 +1097,7 @@ body {
   background-color: #D9D9D9;
   border-radius: 10px;
   margin-top: 5%;
+  transition: background-color 0.3s ease, transform 0.1s ease-in;
 }
 
 .Home .layout img{
@@ -1151,12 +1114,20 @@ body {
   margin-left: 20%;
   margin-top: 10%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, transform 0.1s ease-in;
 }
 .Home .layout .col5Span4 img{
   width: 50%;
   height: auto;
   margin-top: 21%;
   margin-left: 7%;
+  transition: background-color 0.3s ease, transform 0.1s ease-in;
+}
+
+.Home .layout .col5Span4:hover{
+  background-color: #D9D9D9;
+  box-shadow: 0px 0px;
+  transform: scale(0.95);
 }
 
 
@@ -1190,59 +1161,113 @@ body {
     margin-right: 10px;
 }
 /* /////////////////////////////////////////////////////////Nivel 1 inicio////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-.main-container {
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    gap: 40px; /* espacio entre objetos y tachos */
-}
-.objetos-juego {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;    
-    max-width: 50%;
-}
-.objeto {
-    width: 80px;
-    height: 80px;
-    cursor: grab;
-    user-select: none;
-}
-.objeto:active {
-    cursor: grabbing;
-}
-.tachos-container {
-    display: flex;
-    gap: 60px; /* espacio amplio entre ambos tachos */
-    flex: 1;
-    justify-content: center;
-}
-.tacho {
-    width: 160px;
-    height: 180px;
-    border: 3px solid transparent;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 10px;
-    box-sizing: border-box;
-}
-.tacho.drag-over {
-    border-color: #36b337;
-    background-color: rgba(54,179,55,0.2);
-}
-.tacho img {
-    max-height: 150px;
-    user-select: none;
+/* Contenedor principal */
+.nivel-container {
+    background: url('/img/fondonivel1.png')  no-repeat center center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Título */
+.titulo-container {
+    text-align: center;
+    margin: 10px 0;
+}
+.titulo-nivel {
+    font-size: 28px;
+    font-weight: bold;
+}
+.subtitulo {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Fondo */
+.nivel-fondo {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+.fondo {
+    width: 100%;
+    height: auto;
+}
+
+/* Personaje */
+.personaje {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 120px;
+}
+
+/* Tachos */
+.tacho {
+    position: absolute;
+    bottom: 20px;
+    width: 100px;
+}
+.tacho.verde { left: 40%; }
+.tacho.negro { left: 60%; }
+
+/* Residuos posicionados */
+.residuo {
+    position: absolute;
+    width: 60px;
+    cursor: grab;
+}
+
+/* Posiciones según imagen */
+.banana { top: 50px; left: 10%; }
+.bollo { top: 80px; left: 20%; }
+.botella { bottom: 100px; left: 25%; }
+.pizza { bottom: 90px; left: 35%; }
+.lata { bottom: 90px; left: 45%; }
+.taper { bottom: 120px; left: 60%; }
+.vasito { bottom: 120px; left: 70%; }
+.diario { bottom: 80px; left: 85%; }
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay.hidden { display: none; }
+.overlay-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Animación al arrastrar */
+.residuo.dragging {
+    opacity: 0.6;
+    transform: scale(1.2);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Animación al desaparecer */
+.residuo.correcto {
+    animation: desaparecer 0.5s forwards;
+}
+@keyframes desaparecer {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+/* Highlight en tacho */
+.tacho.highlight {
+    border: 3px solid yellow;
+    border-radius: 8px;
+}
 /* /////////////////////////////////////////////////////////Nivel 1 FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* /////////////////////////////////////////////////////////Nivel 2 inicio////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */

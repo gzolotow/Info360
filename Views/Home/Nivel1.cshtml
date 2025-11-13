@@ -1,205 +1,45 @@
 @{
-  ViewData["Title"] = "Nivel1";
+    ViewData["Title"] = "Nivel 1";
 }
-
-
-<header>
-            <nav class="navbar bg-body-tertiary">
-                <div class="container">
-                    <a class="navbar-brand" href="#">
-                    <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="perfil" width="30" height="24">
-                    </a>
-                </div>
-            </nav>
-
-
-         <!-- Nav inicio -->
-         <nav class="navbar bg-body-tertiary fixed-top">
-            <div class="container-fluid">
-            <!-- Logo -->
-                <nav class="navbar bg-body-tertiary">
-                    <div class="container">
-                        <a class="navbar-brand" href="#">
-                            <img src="/img/logo.png" alt="Ecoplay">
-                        </a>
-                    </div>
-                </nav>
-            <!-- Termina Logo -->
-            <!-- Overlay inicio -->
-            <!-- Botón para abrir el menú -->
-<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-    aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-    <img src="/img/abrir.png" alt="Abrir menú">
-</button>
-
-
-<!-- Offcanvas -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+ <!-- Fondo del nivel -->
+    
+<div class="nivel-container">
+    <!-- Título y subtítulo -->
+    <div class="titulo-container">
+        <h1 class="titulo-nivel">Nivel 1</h1>
+        <p class="subtitulo">Deslizá el objeto al tacho correspondiente</p>
     </div>
 
-
-    <div class="offcanvas-body d-flex flex-column justify-content-between">
-        <ul class="navbar-nav flex-grow-1 pe-3">
-   <li class="nav-item">
-    <a class="Inicio" asp-controller="Home" asp-action="Home">
-        <img src="/img/inicio.png" alt="Inicio">
-    </a>
-    <h4>Inicio</h4>
-</li>
-
-
-<li class="nav-item">
-    <a class="perfil" asp-controller="Home" asp-action="Perfil">
-        <img src="/img/Perfil.png" alt="Perfil">
-    </a>
-    <h4>Perfil</h4>
-</li>
- <li class="nav-item">
-    <a class="Inicio" asp-controller="Home" asp-action="niveles">
-        <img src="/img/inicio.png" alt="Inicio">
-    </a>
-    <h4>Niveles</h4>
-</li>
-
-
-           <li class="nav-item">
-                <!-- BOTÓN QUE ABRE EL SUBOVERLAY -->
-                <button class="btn-submenu" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasConfig" aria-controls="offcanvasConfig">
-                    <img src="/img/configuracion.png" alt="Configuración">
-                </button>
-                <h2>Configuración</h2>
-            </li>
-           
-            <button type="button" class="btn-offcanvas-cerrar" data-bs-dismiss="offcanvas" aria-label="Cerrar">
-            <img src="wwwroot/img/cerrar.png" alt="Cerrar menú">
-            <h4>Cerrar</h4>
-            </button>
-        </ul>
-
-
-        <!-- Botón de cerrar abajo -->
-       
-    </div>
-</div>
-<!-- 🧩 SUBOVERLAY de CONFIGURACIÓN -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasConfig" aria-labelledby="offcanvasConfigLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasConfigLabel">Configuración</h5>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas" aria-label="Close">Cerrar</button>
-    </div>
-
-
-    <div class="offcanvas-body config-body text-center">
-
-
-        <!-- Opción Música -->
-        <div class="config-item">
-            <img src="/img/musica.png" alt="Música" class="config-icon">
-            <img src="/img/check.png" alt="Activado" class="config-icon">
+    <!-- Overlay Misiones -->
+    <div id="overlayMisiones" class="overlay hidden">
+        <div class="overlay-content">
+            <h2>Misiones</h2>
+            <p>Arrastrá los residuos al tacho correcto.</p>
+            <button id="cerrarOverlay">Cerrar</button>
         </div>
-
-
-        <!-- Opción Volumen -->
-        <div class="config-item">
-            <img src="/img/volumen.png" alt="Volumen" class="config-icon">
-
-
-            <!-- Slider funcional -->
-            <input type="range" id="volumeSlider" min="0" max="100" value="80" class="config-slider">
-
-
-            <!-- Texto dinámico -->
-            <span id="volumeLabel" class="config-label">Alto</span>
-        </div>
-
-
-        <button class="btn-terminos" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTerminos">
-            Términos y condiciones
-        </button>
-
-
-        <!-- Botón Salir -->
-        <img src="/img/salir.png" alt="Salir" class="config-icon salir">
     </div>
-</div>
 
+   
 
-<!-- 🎵 Script de volumen -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const slider = document.getElementById('volumeSlider');
-    const label = document.getElementById('volumeLabel');
+        <!-- Personaje -->
+        <img src="~/img/Heroe.png" alt="Personaje" class="personaje" />
 
+        <!-- Tachos -->
+        <img src="~/img/tachoverde.png" alt="Tacho verde" class="tacho verde" />
+        <img src="~/img/tachonegro.png" alt="Tacho negro" class="tacho negro" />
 
-    if (slider && label) {
-        slider.addEventListener('input', () => {
-            const value = slider.value;
-
-
-            // Cambiar texto según valor
-            if (value >= 70) {
-                label.textContent = 'Alto';
-            } else if (value >= 40) {
-                label.textContent = 'Medio';
-            } else if (value > 0) {
-                label.textContent = 'Bajo';
-            } else {
-                label.textContent = 'Mute';
-            }
-
-
-            // 🔊 Aquí puedes controlar un audio real:
-            // const audio = document.getElementById('miAudio');
-            // if (audio) audio.volume = value / 100;
-        });
-    }
-});
-</script>
-
-
-<!-- Bootstrap JS (muy importante) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-                        <!-- Termina Overlay -->
-                    </div>
-                </div>
-            </div>
-        </nav>
-         <!-- Nav final -->
-
-
-    </header>
-
-
-
-    <main class="main-container" style="background-image: url('~/img/fondonivel1.png');">
-        <section class="objetos-juego">
-            <img src="~/img/banana.png" alt="Banana" class="objeto draggable" data-tacho="inorganico" />
-            <img src="~/img/bollo.png" alt="Bollo" class="objeto draggable" data-tacho="organico" />
-            <img src="~/img/bolsa.png" alt="Bolsa" class="objeto draggable" data-tacho="organico" />
-            <img src="~/img/botella.png" alt="Botella" class="objeto draggable" data-tacho="organico" />
-            <img src="~/img/pizza.png" alt="Pizza" class="objeto draggable" data-tacho="inorganico" />
-            <img src="~/img/manzana.png" alt="Manzana" class="objeto draggable" data-tacho="inorganico" />
-            <img src="~/img/vaso.png" alt="Vasito" class="objeto draggable" data-tacho="inorganico" />
-            <img src="~/img/vasoespecial.png" alt="Vaso" class="objeto draggable" data-tacho="organico" />
-            <img src="~/img/diario.png" alt="Diario" class="objeto draggable" data-tacho="organico" />
-            <img src="~/img/tupper.png" alt="Taper" class="objeto draggable" data-tacho="inorganico" />
-            <!-- Puedes agregar más si deseas -->
-        </section>
-
-        <section class="tachos-container">
-    <div class="tacho" data-tacho="organico">
-        <img src="~/img/tachoverde.png" alt="Tacho Orgánico" />
+        <!-- Residuos -->
+        <img id="banana" src="~/img/banana.png" alt="Banana" class="residuo banana" draggable="true" data-tipo="negro" />
+        <img id="bollo" src="~/img/bollo.png" alt="Bollo" class="residuo bollo" draggable="true" data-tipo="negro" />
+        <img id="botella" src="~/img/botella.png" alt="Botella" class="residuo botella" draggable="true" data-tipo="verde" />
+        <img id="lata" src="~/img/lata.png" alt="Lata" class="residuo lata" draggable="true" data-tipo="verde" />
+        <img id="pizza" src="~/img/pizza.png" alt="Pizza" class="residuo pizza" draggable="true" data-tipo="negro" />
+        <img id="taper" src="~/img/taper.png" alt="Taper" class="residuo taper" draggable="true" data-tipo="negro" />
+        <img id="vasito" src="~/img/vasito.png" alt="Vasito" class="residuo vasito" draggable="true" data-tipo="negro" />
+        <img id="diario" src="~/img/diario.png" alt="Diario" class="residuo diario" draggable="true" data-tipo="verde" />
     </div>
-    <div class="tacho" data-tacho="inorganico">
-        <img src="~/img/tachonegro.png" alt="Tacho Inorgánico" />
-    </div>
-</section>
-    </main>
 
+
+@section Scripts {
     <script src="~/js/nivel1.js"></script>
-
+}

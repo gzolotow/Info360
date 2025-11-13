@@ -1,49 +1,51 @@
-window.addEventListener('DOMContentLoaded', () => {
-    const objetos = document.querySelectorAll('.objeto.draggable');
-    const tachos = document.querySelectorAll('.tacho');
+document.addEventListener("DOMContentLoaded", () => {
+    const residuos = document.querySelectorAll(".residuo");
+    const tachos = document.querySelectorAll(".tacho");
+    const overlay = document.getElementById("overlayMisiones");
+    const btnMisiones = document.getElementById("btnMisiones");
+    const cerrarOverlay = document.getElementById("cerrarOverlay");
 
-    objetos.forEach(obj => {
-        obj.setAttribute('draggable', true);
+    // Overlay
+    if (btnMisiones && cerrarOverlay) {
+        btnMisiones.addEventListener("click", () => overlay.classList.remove("hidden"));
+        cerrarOverlay.addEventListener("click", () => overlay.classList.add("hidden"));
+    }
 
-        obj.addEventListener('dragstart', (ev) => {
-            ev.dataTransfer.setData('text/plain', ev.target.alt);
-            ev.dataTransfer.setData('object-tacho', ev.target.dataset.tacho);
-            ev.target.classList.add('dragging');
+    // Drag & Drop con animación
+    residuos.forEach(residuo => {
+        residuo.addEventListener("dragstart", e => {
+            e.dataTransfer.setData("tipo", residuo.dataset.tipo);
+            e.dataTransfer.setData("id", residuo.id);
+            residuo.classList.add("dragging");
         });
 
-        obj.addEventListener('dragend', (ev) => {
-            ev.target.classList.remove('dragging');
+        residuo.addEventListener("dragend", () => {
+            residuo.classList.remove("dragging");
         });
     });
 
     tachos.forEach(tacho => {
-        tacho.addEventListener('dragover', (ev) => {
-            ev.preventDefault();
-            tacho.classList.add('drag-over');
+        tacho.addEventListener("dragover", e => {
+            e.preventDefault();
+            tacho.classList.add("highlight");
         });
 
-        tacho.addEventListener('dragleave', (ev) => {
-            tacho.classList.remove('drag-over');
+        tacho.addEventListener("dragleave", () => {
+            tacho.classList.remove("highlight");
         });
 
-        tacho.addEventListener('drop', (ev) => {
-            ev.preventDefault();
-            tacho.classList.remove('drag-over');
+        tacho.addEventListener("drop", e => {
+            tacho.classList.remove("highlight");
+            const tipoResiduo = e.dataTransfer.getData("tipo");
+            const residuoId = e.dataTransfer.getData("id");
+            const residuo = document.getElementById(residuoId);
+            const tipoTacho = tacho.classList.contains("verde") ? "verde" : "negro";
 
-            const droppedTacho = ev.currentTarget.dataset.tacho;
-            const draggedTacho = ev.dataTransfer.getData('object-tacho');
-            const draggedObjectAlt = ev.dataTransfer.getData('text/plain');
-
-            if (droppedTacho === draggedTacho) {
-                const obj = [...document.querySelectorAll('.objeto')].find(x => x.alt === draggedObjectAlt);
-                if (obj) {
-                    obj.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
-                    obj.style.transform = 'scale(0) translateY(50px)';
-                    obj.style.opacity = '0';
-                    setTimeout(() => obj.remove(), 500);
-                }
+            if (tipoResiduo === tipoTacho) {
+                residuo.classList.add("correcto");
+                setTimeout(() => residuo.remove(), 500);
             } else {
-                alert('¡Coloca el residuo en el tacho correcto!');
+                alert("Tacho incorrecto");
             }
         });
     });

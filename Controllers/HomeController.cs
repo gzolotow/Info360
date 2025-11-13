@@ -16,7 +16,7 @@ namespace EcoPlay.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View("Nivel1");
         }
 
         public IActionResult Home()
