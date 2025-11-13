@@ -12,6 +12,245 @@
   font-family: 'Cute Sunrise','Comic Sans MS', 'Poppins', sans-serif;
 }
 
+
+.fondo{
+ 
+      background-image: url('img/fondo.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+}
+Header {
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px ;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 🔹 NAVBAR */
+  .navbar{
+background-color: #34C759 !important; /* Verde principal */
+}
+.offcanvas-body{
+  background-color: #FFEECA;
+}
+
+.navbar{
+margin: 0%;
+padding: 0%;
+background-color: #34C759;
+}
+.btn-submenu{
+  background-color: #FFEECA;
+  border: none;
+}
+.cerrar{
+  background-color: #FFEECA;
+  border: none;
+}
+
+/* 🔹 OFFCANVAS (menú lateral) */
+.offcanvas {
+background-color: #FFEECA; /* Verde con leve transparencia */
+
+}
+.navbar-nav h4{
+font-size: 4ex;
+  text-align: center;
+}
+
+
+
+/* Logo */
+header img {
+  padding-left: 25%;
+  height: 75px;
+  width: auto;
+}
+
+/* Navegación */
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+   header {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+   nav {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+}
+.inventario .boton{
+  float: left;
+  width: 5%;
+  text-align: center;
+  background-color: #E6251E;
+  margin: 1%;
+  padding: 0.5%; 
+  border-radius: 10px ;
+  box-shadow: 0px 5px 10px rgba(151, 151, 151, 0.5); 
+  clear: both;
+}
+.inventario .boton img{
+  width: 50px;
+  height: auto;
+  margin: 0%;
+}
+.inventario .Seleccion {
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  display: grid;
+  place-items: center;
+  padding-bottom: 10%;
+  padding-top: 10%;
+}
+.inventario .Seleccion div{
+  box-shadow: 0px 1px 10px grey;
+  border-radius: 10px;
+  padding: 3%;
+  background-color: #FFEECA;
+  transition: all 0.2s ease-in-out;
+}
+.inventario .Seleccion div:hover{
+  background-color: #f5d38b;
+  transform: translateY(-2px);
+}
+.inventario .Seleccion div img{
+  width: 30ex;
+  height: 30ex;
+ 
+}
+ .close{
+  border: none;
+  background-color: #FFEECA;
+}
+ .foto {  
+  text-decoration: none;
+  margin-left: 70%;
+  background-color: #34C759;
+  border: none;
+  
+}
+ .foto img{  
+  border-radius: 50%;
+ width: 70px;
+  height: auto;
+ 
+}
+li{
+text-decoration: none;
+}
+.inventario .Todo {
+
+  margin-top: 2% ;
+  width: 90%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 200px;
+  margin-bottom: 5%;
+}
+.inventario .Seleccionado{
+  position: relative;
+  margin: 0%;
+  width: 80%;
+  display: grid;
+  grid-template-rows: repeat(2, 2fr);
+  grid-template-columns: 1fr;
+  gap: 8px;
+    
+}
+.plataforma{
+  width: 100%;
+  position: absolute;
+  top: 6000%;
+  left: 40%;
+}
+.rango{
+accent-color: #0BA2DB;
+}
+
+.terminos{
+border: none;
+border-radius: 10px;
+padding: 3%;
+color: white;
+background-color: #0BA2DB;
+}
+.inventario .Aspecto{
+margin-top: 3%;
+  width: 80%;
+  background-color: #7BD792;
+  border-radius: 10px;
+}
+.inventario .skin{
+  width: 70%;
+  height: auto;
+  position: absolute;
+  top: 1000%;
+  left: 53%;
+}
+.inventario .Aspecto h1{
+  box-shadow: 0px 1px 10px grey;
+  border-radius: 10px;
+  font-size: 8ex;
+  color: #FDD900;
+  text-align: center;
+  background-color: #34C759;
+}
+.Menu{
+margin-right: 1%;
+background-color: #34C759;
+border: none;
+}
+.icon{
+padding: 0%;
+margin-left: 35%;
+width: 30%;
+height: auto;
+}
+.btn-submenu .config{
+padding: 0%;
+margin-left: 2%;
+width: 30%;
+height: auto;
+}
+
+.cerrar{
+padding: 0%;
+margin-right: 20%;
+width: 75%;
+height: auto;
+}
+.block{
+width: 10%;
+height: auto;
+}
+.offcanvas-center {
+top: 50% !important;
+left: 50% !important;
+transform: translate(-50%, -50%) !important;
+width: 400px;
+height: auto;
+border-radius: 1rem;
+}
+
 html{
   --piel: #FFEECA;
   --verde: #34C759;
@@ -771,112 +1010,107 @@ nav a:hover {
   cursor: pointer;
 }
 
-/* --- SECCIÓN DE NIVELES --- */
 .niveles-container {
-  background-image: url("/img/fondoniveles.png");
-  background-size: cover;
-  background-position: center;
+  position: relative;
   width: 100%;
-  height: 100vh;
-  position: relative;
+  height: 90vh;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.niveles-layout {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(4, 0.7fr); /* menos alto que antes */
-  width: 90%;
-  height: 80%;
-  position: relative;
-  gap: 8px;
+/* Fondo */
+.niveles-fondo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
-/* -------- BOTONES -------- */
-.niveles-btn {
-  width: 100px;
-  height: 100px;
+/* Líneas curvas */
+.niveles-lineas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.niveles-lineas .linea {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.4);
+  stroke-width: 0.4%;
+}
+
+/* Botones de niveles */
+.nivel-btn {
+  position: absolute;
+  width: 12%;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
-  background-color: var(--verdeClarito);
-  color: white;
-  font-family: 'Cute Sunrise', sans-serif;
-  font-size: 18px;
-  border: 3px solid white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: black;
+  font-family: 'Cute Sunrise', 'Cute Dino', sans-serif;
+  font-size: 1.4vw;
   text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  position: relative;
-  transition: transform 0.2s, background 0.3s;
-}
-
-.niveles-btn:hover {
-  transform: scale(1.08);
-}
-
-.bloqueado {
-  background-color: gray !important;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-/* -------- POSICIÓN DE LOS BOTONES -------- */
-.tutorial-btn { grid-row: 4; grid-column: 3; }
-.nivel1-btn   { grid-row: 3; grid-column: 5; }
-.nivel2-btn   { grid-row: 2; grid-column: 7; }
-.nivel3-btn   { grid-row: 1; grid-column: 9; }
-
-/* -------- LÍNEAS ENTRE NIVELES -------- */
-.niveles-layout::before,
-.niveles-layout::after {
-  content: "";
-  position: absolute;
-  width: 4px;
-  background-color: var(--verde);
-  border-radius: 4px;
-}
-
-/* Línea Tutorial → Nivel 1 */
-.niveles-layout::before {
-  left: 35%;
-  top: 62%;
-  height: 17%;
-  transform: rotate(-25deg);
-}
-
-/* Línea Nivel 1 → Nivel 2 → Nivel 3 */
-.niveles-layout::after {
-  left: 50%;
-  top: 28%;
-  width: 35%;
-  height: 4px;
-  transform: rotate(-10deg);
-  background-color: var(--verde);
-}
-
-/* -------- BOTÓN VOLVER -------- */
-.niveles-volver {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: var(--verde);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 24px;
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-  font-family: 'Cute Sunrise', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: 3;
   transition: transform 0.2s ease;
+  box-shadow: 0 0 2% rgba(0,0,0,0.2);
 }
-.niveles-volver:hover {
-  transform: scale(1.1);
+
+/* Hover solo si está desbloqueado */
+.nivel-btn.desbloqueado:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  cursor: pointer;
 }
+
+/* Colores por nivel */
+.tutorial {
+  top: 65%;
+  left: 18%;
+  background-color: var(--verdeClarito);
+}
+
+.nivel1 {
+  top: 58%;
+  left: 42%;
+  background-color: var(--rojo);
+}
+
+.nivel2 {
+  top: 58%;
+  left: 62%;
+  background-color: var(--amarillo);
+}
+
+.nivel3 {
+  top: 48%;
+  left: 85%;
+  background-color: var(--azul);
+}
+
+/* Estados bloqueado/desbloqueado */
+.bloqueado {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(70%);
+  position: relative;
+}
+
+.bloqueado::after {
+  content: "🔒";
+  position: absolute;
+  font-size: 2vw;
+  color: rgba(0,0,0,0.7);
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 
 /* --- VENTANA FLOTANTE --- */
@@ -1217,113 +1451,150 @@ body {
     margin-right: 10px;
 }
 /* /////////////////////////////////////////////////////////Nivel 1 inicio////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* Contenedor principal */
+
 .nivel-container {
-    background: url('/img/fondonivel1.png')  no-repeat center center;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    font-family: 'Arial', sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('/img/fondonivel1.png') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
 }
 
 /* Título */
 .titulo-container {
-    text-align: center;
-    margin: 10px 0;
+  text-align: center;
+  margin: 2% 0;
 }
-.titulo-nivel {
-    font-size: 28px;
-    font-weight: bold;
-}
-.subtitulo {
-    font-size: 18px;
-    color: #333;
+.titulo-nivel { font-size: 2.8vw; font-weight: bold; }
+.subtitulo { font-size: 1.8vw; color: #333; }
+
+/* Botón volver */
+.btn-volver {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 4%;
+  height: auto;
+  background-color: var(--rojo);
+  border: none;
+  font-size: xx-large;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.1s ease-in;
 }
 
-/* Fondo */
-.nivel-fondo {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 100px);
+.btn-volver:hover {
+  background-color: #ad1c17;
+  transform: scale(0.95)
 }
-.fondo {
-    width: 100%;
-    height: auto;
+
+.btn-volver p{
+  color: black;
+  text-align: center;
+  margin: 0%;
 }
+
 
 /* Personaje */
 .personaje {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    width: 120px;
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+  width: 12%;
 }
 
 /* Tachos */
-.tacho {
-    position: absolute;
-    bottom: 20px;
-    width: 100px;
+.tacho.verde {
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  width: 15%;
 }
-.tacho.verde { left: 40%; }
-.tacho.negro { left: 60%; }
 
-/* Residuos posicionados */
+.tacho.negro {
+  position: absolute;
+  bottom: 10%;
+  left: 58%;
+  width: 15%;
+}
+
+/* Residuos */
 .residuo {
-    position: absolute;
-    width: 60px;
-    cursor: grab;
+  position: absolute;
+  width: 5%;
+  cursor: grab;
+ 
 }
 
-/* Posiciones según imagen */
-.banana { top: 50px; left: 10%; }
-.bollo { top: 80px; left: 20%; }
-.botella { bottom: 100px; left: 25%; }
-.pizza { bottom: 90px; left: 35%; }
-.lata { bottom: 90px; left: 45%; }
-.taper { bottom: 120px; left: 60%; }
-.vasito { bottom: 120px; left: 70%; }
-.diario { bottom: 80px; left: 85%; }
+/* Posiciones y rotaciones */
+.banana { top: 62%; left: 27%; transform: rotate(20deg); width: 1.5%; }
+.bollo { top: 67%; left: 36%; width: 2%; }
+.botella { bottom: 0.1%; right: 55%; transform: rotate(-130deg); width: 2%; }
+.lata { top: 67%; left: 70%; transform: rotate(-90deg); width: 1%; } /* Lata en el lago */
+.pizza { bottom: 0.5%; left: 25%; transform: rotate(0deg); width: 4%; }
+.taper { bottom: 12%; right: 30%; width: 4%; }
+.vasito { bottom: 12%; right: 20%; transform: rotate(70deg); width: 3%; }
+.diario { bottom: 4%; right: 5%; transform: rotate(-10deg); width: 4%; }
 
 /* Overlay */
 .overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .overlay.hidden { display: none; }
 .overlay-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
+  background: #fff;
+  padding: 2%;
+  border-radius: 8px;
 }
 
 /* Animación al arrastrar */
 .residuo.dragging {
-    opacity: 0.6;
-    transform: scale(1.2);
-    transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.6;
+  transform: scale(1.2);
 }
 
 /* Animación al desaparecer */
 .residuo.correcto {
-    animation: desaparecer 0.5s forwards;
+  animation: desaparecer 0.5s forwards;
 }
 @keyframes desaparecer {
-    0% { opacity: 1; transform: scale(1); }
-    100% { opacity: 0; transform: scale(0.5); }
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.5); }
 }
 
 /* Highlight en tacho */
 .tacho.highlight {
-    border: 3px solid yellow;
-    border-radius: 8px;
+  border: 0.5vw solid yellow;
+  border-radius: 8px;
 }
+/* Tachos */
+.tacho.verde {
+  position: absolute;
+  bottom: 6%;      /* Ajusta la altura para que no queden tan arriba */
+  left: 41%;       /* Ajusta la posición horizontal */
+  width: 12%;      /* Más grande para que se vea como en la imagen */
+}
+
+
+.tacho.negro {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;       /* Separación correcta entre ambos */
+  width: 12%;
+}
+
+
+
+
+
 /* /////////////////////////////////////////////////////////Nivel 1 FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* /////////////////////////////////////////////////////////Nivel 2 inicio////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */

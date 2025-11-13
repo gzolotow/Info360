@@ -60,6 +60,15 @@ public static class BD
             return usuario != null;
         }
     }
+    public static bool BuscarIDUsuario(string IDUsuario)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = "SELECT * FROM Usuario WHERE IDUsuario = @pIDUsuario";
+            var usuario = connection.QueryFirstOrDefault<Usuario>(query, new { pIDUsuario = IDUsuario });
+            return usuario != null;
+        }
+    }
 
     // LOGIN
     public static Usuario Login(string Username, string Contraseña)

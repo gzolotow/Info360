@@ -1,14 +1,19 @@
 @{
     ViewData["Title"] = "Nivel 1";
 }
- <!-- Fondo del nivel -->
-    
+
+
 <div class="nivel-container">
-    <!-- Título y subtítulo -->
+    <!-- Título -->
     <div class="titulo-container">
         <h1 class="titulo-nivel">Nivel 1</h1>
         <p class="subtitulo">Deslizá el objeto al tacho correspondiente</p>
     </div>
+
+
+    <!-- Botón volver -->
+    <a asp-controller="Home" asp-action="niveles" class="btn-volver"><p>⬅</p></a>
+
 
     <!-- Overlay Misiones -->
     <div id="overlayMisiones" class="overlay hidden">
@@ -19,37 +24,37 @@
         </div>
     </div>
 
-   
 
+    <!-- Fondo -->
+    <div class="nivel-fondo">
         <!-- Personaje -->
-        <img src="~/img/Heroe.png" alt="Personaje" class="personaje" />
+        <img src="~/img/Heroe.png" class="personaje" alt="Heroe" />
+
 
         <!-- Tachos -->
-        <img src="~/img/tachoverde.png" alt="Tacho verde" class="tacho verde" />
-        <img src="~/img/tachonegro.png" alt="Tacho negro" class="tacho negro" />
+        <img src="~/img/tachoverde.png" class="tacho verde" alt="Tacho verde" />
+        <img src="~/img/tachonegro.png" class="tacho negro" alt="Tacho negro" />
+
 
         <!-- Residuos -->
-        <img id="banana" src="~/img/banana.png" alt="Banana" class="residuo banana" draggable="true" data-tipo="negro" />
-        <img id="bollo" src="~/img/bollo.png" alt="Bollo" class="residuo bollo" draggable="true" data-tipo="negro" />
-        <img id="botella" src="~/img/botella.png" alt="Botella" class="residuo botella" draggable="true" data-tipo="verde" />
-        <img id="lata" src="~/img/lata.png" alt="Lata" class="residuo lata" draggable="true" data-tipo="verde" />
-        <img id="pizza" src="~/img/pizza.png" alt="Pizza" class="residuo pizza" draggable="true" data-tipo="negro" />
-        <img id="taper" src="~/img/taper.png" alt="Taper" class="residuo taper" draggable="true" data-tipo="negro" />
-        <img id="vasito" src="~/img/vasito.png" alt="Vasito" class="residuo vasito" draggable="true" data-tipo="negro" />
-        <img id="diario" src="~/img/diario.png" alt="Diario" class="residuo diario" draggable="true" data-tipo="verde" />
+        
+        <img id="banana" src="~/img/banana.png" class="residuo banana" draggable="true" data-tipo="negro" alt="Banana" />
+        <img id="bollo" src="~/img/bollo.png" class="residuo bollo" draggable="true" data-tipo="verde" alt="Bollo" />
+        <img id="botella" src="~/img/botella.png" class="residuo botella" draggable="true" data-tipo="verde" alt="Botella" />
+        <img id="lata" src="~/img/lata.png" class="residuo lata" draggable="true" data-tipo="negro" alt="Lata" />
+        <img id="pizza" src="~/img/pizza.png" class="residuo pizza" draggable="true" data-tipo="negro" alt="Pizza" />
+        <img id="taper" src="~/img/taper.png" class="residuo taper" draggable="true" data-tipo="negro" alt="Taper" />
+        <img id="vasito" src="~/img/vasito.png" class="residuo vasito" draggable="true" data-tipo="verde" alt="Vasito" />
+        <img id="diario" src="~/img/diario.png" class="residuo diario" draggable="true" data-tipo="verde" alt="Diario" />
     </div>
+</div>
 
 
 @section Scripts {
     <script src="~/js/nivel1.js"></script>
 }
-@section Scripts {
-<script>
-function completarNivel(nivel) {
-  let completados = JSON.parse(localStorage.getItem("nivelesCompletados")) || [];
-  if (!completados.includes(nivel)) completados.push(nivel);
-  localStorage.setItem("nivelesCompletados", JSON.stringify(completados));
-  window.location.href = "/Home/Niveles";
-}
-</script>
-}
+
+
+
+
+

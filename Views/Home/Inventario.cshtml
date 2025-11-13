@@ -1,55 +1,301 @@
 @{
-  ViewData["Title"] = "Aspectos - Ecoplay";
+  ViewData["Title"] = "Inventario - Ecoplay";
 }
 
- <section class="inventario">
-    <body class="fondo">
-            <header>
-                <a href="Index.html"><img src="/img/Logo.png" alt=""></a>
-             <nav>
-                 <a href="IniciarSesion.html">Iniciar Sesion</a>
-                 <a href="Registrarse.html">Registrarse</a>
-             </nav>
-     
-            </header>
+  <body class="fondo">
+        <header>
+          
+            <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                    <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="perfil" width="30" height="24">
+                    </a>
+                </div>
+            </nav>
+
+
+         <!-- Nav inicio -->
+        
+         <nav class="navbar fixed-top">
+        
+            <div class="container-fluid">
+            <!-- Logo -->
+                <nav>
+                    <div class="container">
+                        <a  href=" " class="navbar-brand" href="">
+                            <img src="img/logo.png" alt="Ecoplay">
+                        </a>
+                    </div>
+                    
+               
+         
+                </nav>
+
+            <!-- Termina Logo -->
+            <a  href=" " class="foto" asp-controller="Home" asp-action="Home">
+        
+                <img src="img/default.png" alt="Inicio">
+                
+            </a>
+            <!-- Overlay inicio -->
+
+            <!-- Botón para abrir el menú -->
+<button class="Menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+    aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <img src="img/menu.png" alt="Abrir menú">
+</button>
+
+
+<!-- Offcanvas -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    
+
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <ul class="navbar-nav flex-grow-1 pe-3">
+       <li class="nav-item">
+        <a href=" " class="Inicio" asp-controller="Home" asp-action="Home">
+            
+            <img class="icon" src="img/Inicio.png" alt="Inicio">
+            
+        </a>
+        <h4>Inicio</h4>
+        </li>
+    
+    
+        <li class="nav-item">
+        <a href =" " class="perfil" asp-controller="Home" asp-action="Perfil">
+            <img class="icon" src="img/perfil.png" alt="Perfil">
+        </a>
+        <h4>Perfil</h4>
+        </li>
+    
+    
+                
+                        <button class="btn-submenu" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasConfig" aria-controls="offcanvasConfig">
+                        <img class="config" src="img/config.png" alt="Configuración">
+                        </button>
+                    <h4>Configuración</h4>
+             
+            
+                   
+            
+                     <button class="cerrar" type="button" class="btn-offcanvas-cerrar" data-bs-dismiss="offcanvas" aria-label="Cerrar">
+                <img class="icon" src="img/cerrarMenu.png" alt="Cerrar menú">
+                </button>
+                <h4>Cerrar</h4>
+            
+               
+            </ul>
+    
+    
+            <!-- Botón de cerrar abajo -->
+           
+        </div>
+    </div>
+
+
+<!-- 🧩 SUBOVERLAY de CONFIGURACIÓN -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasConfig" aria-labelledby="offcanvasConfigLabel">
+    <div class="offcanvas-header">
+        
+       
+    </div>
+
+
+    <div class="offcanvas-body config-body text-center">
+
+
+        <!-- Opción Música -->
+        <div class="config-item">
+            <img src="img/musica.png" alt="Música" class="musica">
+            <a href=""><img src="img/check.png" alt="Activado" class="config-icon"></a>
+        </div>
+
+
+        <!-- Opción Volumen -->
+        <div class="config-item">
+            <img src="img/volumen.png" alt="Volumen" class="volumen">
+
+
+            <!-- Slider funcional -->
+            <input type="range" id="volumeSlider" min="0" max="100" value="80" class="rango">
+
+
+            <!-- Texto dinámico -->
+            <span id="volumeLabel" class="rango">Alto</span>
+
+            <button class="terminos" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTerminos">
+                Términos y condiciones
+            </button>
+              <!-- Botón para abrir el offcanvas -->
+  <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCenter" aria-controls="offcanvasCenter">
+    Abrir Offcanvas
+  </button>
+
+                   <!-- Botón Salir -->
+        <button type="button" class="close" data-bs-dismiss="offcanvas" aria-label="Close"><img src="img/cerrarOverlay.png" alt=""></button>
+        </div>
+
+
+      
+
+    
+
+         
+         
+ 
+    </div>
+</div>
+
+
+                            <!-- 🎵 Script de volumen -->
+                            <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const slider = document.getElementById('volumeSlider');
+                                const label = document.getElementById('volumeLabel');
+
+
+                                if (slider && label) {
+                                    slider.addEventListener('input', () => {
+                                        const value = slider.value;
+
+
+                                        // Cambiar texto según valor
+                                        if (value >= 70) {
+                                            label.textContent = 'Alto';
+                                        } else if (value >= 40) {
+                                            label.textContent = 'Medio';
+                                        } else if (value > 0) {
+                                            label.textContent = 'Bajo';
+                                        } else {
+                                            label.textContent = 'Mute';
+                                        }
+
+
+                                        // 🔊 Aquí puedes controlar un audio real:
+                                        // const audio = document.getElementById('miAudio');
+                                        // if (audio) audio.volume = value / 100;
+                                    });
+                                }
+                            });
+                            </script>
+
+                        <!-- Termina Overlay -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+         <!-- Nav final -->
+
+
+    </header>
+    <section class="inventario">
             <main>
          <section class="boton">
              <a href="Index.html"> 
-                 <img src="/img/salir.png" alt="salir">
+                 <img src="img/salir.png" alt="salir">
            
              </a>
          </section>
+          
          <section class="Todo">
              <div>  
                  <section class="Seleccionado">
                      <div>
-                         <img class = "plataforma"src="/img/plataforma.png" alt="plataforma">
+                         <img class = "plataforma"src="img/plataforma.png" alt="plataforma">
                      </div>
                      <div> 
-                         <img class="skin" src="/img/agua.png" alt="skin">
+                         <img class="skin" src="img/agua.png" alt="skin">
                      </div>
                    
                    </section>
                 
              </div>
+              <!-- Offcanvas centrado -->
+           
              <div>  
                  <section class="Aspecto">
                       <h1>Aspecto</h1>
                      <section class="Seleccion">
-                         <div> <a href=""> <img src="/img/tacho.png" alt=""></a></div>
-                         <div><a href=""><img src="/img/Heroe.png" alt=""></a></div>
-                         <div><a href=""><img src="/img/arbol.png" alt=""></a></div>
-                         <div><a href=""><img src="/img/agua.png" alt=""></a></div>
+                         <div> <a href=""> <img src="img/tacho.png" alt=""></a></div>
+                         <div><a href=""><img src="img/Heroe.png" alt=""></a></div>
+                         <div><a href=""><img src="img/arbol.png" alt=""></a></div>
+                         <div><a href=""><img src="img/agua.png" alt=""></a></div>
                      </section>
                  </section>
              </div>
+               <!-- Offcanvas centrado -->
+  <div class="offcanvas offcanvas-center" tabindex="-1" id="offcanvasCenter" aria-labelledby="offcanvasCenterLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasCenterLabel">Offcanvas centrado</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>1. Aceptación de los términos
+
+        El uso de EcoPlay implica la aceptación plena de estos Términos y Condiciones. Si no está de acuerdo con alguno de los puntos aquí expuestos, le pedimos que no utilice la aplicación ni los servicios asociados.
+        
+        2. Objetivo educativo
+        
+        EcoPlay es un videojuego con fines educativos y recreativos, diseñado para promover el conocimiento sobre la contaminación ambiental, el reciclaje y las buenas prácticas ecológicas.
+        El juego no reemplaza la educación formal ni constituye asesoramiento profesional en materia ambiental.
+        
+        3. Uso del servicio
+        
+        EcoPlay está destinado principalmente a niños y niñas bajo la supervisión de un adulto responsable.
+        
+        El acceso y uso deben realizarse de manera respetuosa y conforme a las leyes vigentes.
+        
+        Está prohibido utilizar la aplicación con fines comerciales no autorizados o de forma que pueda dañar su funcionamiento.
+        
+        4. Cuentas y datos del usuario
+        
+        Para acceder a ciertas funciones, el usuario puede necesitar crear una cuenta.
+        EcoPlay se compromete a proteger la privacidad y seguridad de los datos personales conforme a su Política de Privacidad.
+        Los padres o tutores son responsables de supervisar el uso de la aplicación por parte de los menores.
+        
+        5. Propiedad intelectual
+        
+        Todos los contenidos de EcoPlay, incluyendo gráficos, personajes, sonidos, logotipos, textos y código fuente, son propiedad de EcoPlay o de sus respectivos autores, y están protegidos por las leyes de propiedad intelectual.
+        No se permite copiar, modificar, distribuir ni utilizar dichos contenidos sin autorización expresa.
+        
+        6. Limitación de responsabilidad
+        
+        EcoPlay no se hace responsable por:
+        
+        Daños derivados del uso inadecuado de la aplicación.
+        
+        Fallos técnicos o interrupciones temporales del servicio.
+        
+        Contenidos generados por terceros que no estén bajo el control de EcoPlay.
+        
+        El uso del juego se realiza bajo responsabilidad del usuario o del tutor legal del menor.
+        
+        7. Modificaciones del servicio y los términos
+        
+        EcoPlay puede actualizar o modificar estos Términos y Condiciones en cualquier momento. Las versiones actualizadas se publicarán en la aplicación o en el sitio web oficial.
+        El uso continuado de la aplicación después de dichos cambios implica la aceptación de las nuevas condiciones.
+        
+        8. Contacto
+        
+        Si tiene dudas, comentarios o inquietudes sobre estos Términos y Condiciones, puede comunicarse con nosotros a través del correo electrónico:
+        📧 contacto@ecoplay.com
+        
+        © 2025 EcoPlay — Todos los derechos reservados.
+        Jugar, aprender y cuidar el planeta, ¡todo al mismo tiempo! 🌱🎮.</p>
+      <button class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Cerrar</button>
+    </div>
+  </div>
+  
          </section>
                
        
         
      </main>
        
-       
-    </body>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </section>
+    </body>
 </html>
