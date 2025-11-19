@@ -2,7 +2,6 @@
     ViewData["Title"] = "Nivel 1";
 }
 
-
 <div class="nivel-container">
     <!-- Título -->
     <div class="titulo-container">
@@ -10,51 +9,41 @@
         <p class="subtitulo">Deslizá el objeto al tacho correspondiente</p>
     </div>
 
-
     <!-- Botón volver -->
     <a asp-controller="Home" asp-action="niveles" class="btn-volver"><p>⬅</p></a>
 
+ 
 
-    <!-- Overlay Misiones -->
-    <div id="overlayMisiones" class="overlay hidden">
+    <!-- Overlay Nivel Completado -->
+    <div id="overlayCompletado" class="overlay hidden">
         <div class="overlay-content">
-            <h2>Misiones</h2>
-            <p>Arrastrá los residuos al tacho correcto.</p>
-            <button id="cerrarOverlay">Cerrar</button>
+            <h2>¡Nivel completado!</h2>
+            <p>¡Felicitaciones! Has reciclado todos los residuos correctamente.</p>
+            <a asp-controller="Home" asp-action="niveles" class="btn-volver"><p>⬅</p></a>
         </div>
     </div>
-
 
     <!-- Fondo -->
     <div class="nivel-fondo">
         <!-- Personaje -->
         <img src="~/img/Heroe.png" class="personaje" alt="Heroe" />
 
-
         <!-- Tachos -->
-        <img src="~/img/tachoverde.png" class="tacho verde" alt="Tacho verde" />
-        <img src="~/img/tachonegro.png" class="tacho negro" alt="Tacho negro" />
-
+        <img src="~/img/tachoverde.png" class="tacho verde" alt="Tacho verde" draggable="false"/>
+        <img src="~/img/tachonegro.png" class="tacho negro" alt="Tacho negro" draggable="false"/>
 
         <!-- Residuos -->
-        
         <img id="banana" src="~/img/banana.png" class="residuo banana" draggable="true" data-tipo="negro" alt="Banana" />
         <img id="bollo" src="~/img/bollo.png" class="residuo bollo" draggable="true" data-tipo="verde" alt="Bollo" />
         <img id="botella" src="~/img/botella.png" class="residuo botella" draggable="true" data-tipo="verde" alt="Botella" />
         <img id="lata" src="~/img/lata.png" class="residuo lata" draggable="true" data-tipo="negro" alt="Lata" />
         <img id="pizza" src="~/img/pizza.png" class="residuo pizza" draggable="true" data-tipo="negro" alt="Pizza" />
         <img id="taper" src="~/img/taper.png" class="residuo taper" draggable="true" data-tipo="negro" alt="Taper" />
-        <img id="vasito" src="~/img/vasito.png" class="residuo vasito" draggable="true" data-tipo="verde" alt="Vasito" />
+        <img id="vasito" src="~/img/vasito.png" class="residuo vasito" draggable="true" data-tipo="negro" alt="Vasito" />
         <img id="diario" src="~/img/diario.png" class="residuo diario" draggable="true" data-tipo="verde" alt="Diario" />
     </div>
 </div>
 
-
 @section Scripts {
     <script src="~/js/nivel1.js"></script>
 }
-
-
-
-
-

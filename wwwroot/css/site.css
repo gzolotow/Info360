@@ -46,32 +46,68 @@ section{
 
 /* /////////////////////////////////////////////////////////HEADER INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
+/* Header y navbar */
 header {
   position: sticky;
   top: 0px;
-  background-color: var(--verde); 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 5%;
+  padding: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 0.5%;
   width: 100%;
   box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.555);
+  background-color: var(--verde);
+}
+header .navbar {
+  background-color: var(--verde) !important;
+  margin: 0;
+  padding: 0;
+}
+header a {
+  border: 0px;
+}
+header .offcanvas-body {
+  background-color: var(--piel);
+}
+header .btn-submenu,
+header .cerrar {
+  background-color: var(--piel);
+  border: none;
+}
+
+/* Menú lateral */
+header .offcanvas {
+  background-color: var(--piel);
+}
+header .navbar-nav h4 {
+  font-size: 4ex;
+  text-align: center;
 }
 
 /* Logo */
 header img {
-    height: 50px;
-    width: auto;
+  margin-top: -0.5%;
+  height: 75px;
+  width: auto;
 }
 
 /* Navegación */
 header nav {
+  display: flex;
+  gap: 15px;
+}
+
+/* Navegación */
+.index-nav {
     display: flex;
     gap: 15px;
 }
 
-header nav a {
+.index-botones {
   text-decoration: none;
   background-color: var(--piel);
   color: black;
@@ -84,27 +120,9 @@ header nav a {
   box-shadow: 0 2px 4px rgba(0,0,0,0.555);
 }
 
-header nav a:hover {
+.index-botones:hover {
   background-color: var(--piel);
   transform: translateY(-2px);
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  header {
-      flex-direction: column;
-      gap: 10px;
-  }
-
-  header nav {
-      flex-wrap: wrap;
-      justify-content: center;
-  }
-}
-
-header .inicio {
-    display: flex;
-    gap: 10px;
 }
 /* /////////////////////////////////////////////////////////HEADER FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -417,80 +435,17 @@ nav a:hover {
 
 /* /////////////////////////////////////////////////////////INVENTARIO INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-.aspecto-view {
-  --piel: #FFEECA;
-  --verde: #34C759;
-  --azul: #0BA2DB;
-  --rojo: #E6251E;
-  --amarillo: #FDD900;
-  --verdeClarito: #7BD792;
-}
-
 /* Fondo */
-.aspecto-view.fondo {
-  background-image: url('img/fondo.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
+.inventario {
+  background: url('/img/fondo.jpg') no-repeat center center;
   background-size: cover;
-}
-
-/* Header y navbar */
-.aspecto-view header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
-}
-.aspecto-view .navbar {
-  background-color: var(--verde) !important;
   margin: 0;
   padding: 0;
-}
-.aspecto-view .offcanvas-body {
-  background-color: var(--piel);
-}
-.aspecto-view .btn-submenu,
-.aspecto-view .cerrar {
-  background-color: var(--piel);
-  border: none;
-}
-
-/* Menú lateral */
-.aspecto-view .offcanvas {
-  background-color: var(--piel);
-}
-.aspecto-view .navbar-nav h4 {
-  font-size: 4ex;
-  text-align: center;
-}
-
-/* Logo */
-.aspecto-view header img {
-  padding-left: 25%;
-  height: 75px;
-  width: auto;
-}
-
-/* Navegación */
-.aspecto-view nav {
-  display: flex;
-  gap: 15px;
-}
-@media (max-width: 600px) {
-  .aspecto-view header {
-      flex-direction: column;
-      gap: 10px;
-  }
-  .aspecto-view nav {
-      flex-wrap: wrap;
-      justify-content: center;
-  }
+  height: 100vh;
 }
 
 /* Botón salir */
-.aspecto-view .inventario .boton {
+.inventario .boton {
   float: left;
   width: 5%;
   text-align: center;
@@ -501,13 +456,13 @@ nav a:hover {
   box-shadow: 0px 5px 10px rgba(151, 151, 151, 0.5);
   clear: both;
 }
-.aspecto-view .inventario .boton img {
+.inventario .boton img {
   width: 50px;
   height: auto;
 }
 
 /* Selección de aspectos */
-.aspecto-view .inventario .Seleccion {
+.inventario .Seleccion {
   width: 100%;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
@@ -516,44 +471,44 @@ nav a:hover {
   place-items: center;
   padding: 10% 0;
 }
-.aspecto-view .inventario .Seleccion div {
+.inventario .Seleccion div {
   box-shadow: 0px 1px 10px grey;
   border-radius: 10px;
   padding: 3%;
   background-color: var(--piel);
   transition: all 0.2s ease-in-out;
 }
-.aspecto-view .inventario .Seleccion div:hover {
+.inventario .Seleccion div:hover {
   background-color: #f5d38b;
   transform: translateY(-2px);
 }
-.aspecto-view .inventario .Seleccion div img {
+ .inventario .Seleccion div img {
   width: 30ex;
   height: 30ex;
 }
 
 /* Botones generales */
-.aspecto-view .close {
+.close {
   border: none;
   background-color: var(--piel);
 }
-.aspecto-view .foto {
+.foto {
   text-decoration: none;
   margin-left: 70%;
   background-color: var(--verde);
   border: none;
 }
-.aspecto-view .foto img {
+.foto img {
   border-radius: 50%;
   width: 70px;
   height: auto;
 }
-.aspecto-view li {
+ li {
   text-decoration: none;
 }
 
 /* Contenedor principal */
-.aspecto-view .inventario .Todo {
+.inventario .Todo {
   margin-top: 2%;
   width: 90%;
   display: grid;
@@ -561,7 +516,7 @@ nav a:hover {
   gap: 200px;
   margin-bottom: 5%;
 }
-.aspecto-view .inventario .Seleccionado {
+.inventario .Seleccionado {
   position: relative;
   margin: 0;
   width: 80%;
@@ -571,25 +526,25 @@ nav a:hover {
 }
 
 /* Personaje y plataforma */
-.aspecto-view .plataforma {
+.plataforma {
   width: 100%;
   position: absolute;
-  top: 6000%;
-  left: 40%;
+  top: 1200%;
+  left: 25%;
 }
-.aspecto-view .inventario .skin {
+.inventario .skin {
   width: 70%;
   height: auto;
   position: absolute;
-  top: 1000%;
-  left: 53%;
+  top: 450%;
+  left: 40%;
 }
 
 /* Botones de configuración */
-.aspecto-view .rango {
+.rango {
   accent-color: var(--azul);
 }
-.aspecto-view .terminos {
+.terminos {
   border: none;
   border-radius: 10px;
   padding: 3%;
@@ -598,13 +553,13 @@ nav a:hover {
 }
 
 /* Cuadro de “Aspecto” */
-.aspecto-view .inventario .Aspecto {
+.inventario .Aspecto {
   margin-top: 3%;
-  width: 80%;
+  width: 100%;
   background-color: var(--verdeClarito);
   border-radius: 10px;
 }
-.aspecto-view .inventario .Aspecto h1 {
+.inventario .Aspecto h1 {
   box-shadow: 0px 1px 10px grey;
   border-radius: 10px;
   font-size: 8ex;
@@ -614,24 +569,24 @@ nav a:hover {
 }
 
 /* Menú */
-.aspecto-view .Menu {
+.Menu {
   margin-right: 1%;
   background-color: var(--verde);
   border: none;
 }
-.aspecto-view .icon {
+.icon {
   padding: 0;
   margin-left: 35%;
   width: 30%;
   height: auto;
 }
-.aspecto-view .btn-submenu .config {
+.btn-submenu .config {
   padding: 0;
   margin-left: 2%;
   width: 30%;
   height: auto;
 }
-.aspecto-view .cerrar {
+.cerrar {
   padding: 0;
   margin-right: 20%;
   width: 75%;
@@ -639,7 +594,7 @@ nav a:hover {
 }
 
 /* Offcanvas centrado */
-.aspecto-view .offcanvas-center {
+.offcanvas-center {
   top: 50% !important;
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
@@ -870,145 +825,160 @@ nav a:hover {
 
 /* /////////////////////////////////////////////////////////PERFIL FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* /////////////////////////////////////////////////////////MISIONES INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-.btn-misiones {
-  background-color: #f8f8f8;
-  border: none;
-  border-radius: 6px;
-  padding: 5px 10px;
-  font-weight: bold;
-  cursor: pointer;
-}
+/* /////////////////////////////////////////////////////////NIVELES INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ==========================================
+   ESTILOS VISTA NIVELES (FINAL)
+   ========================================== */
 
-.btn-misiones:hover {
-  background-color: #ddd;
-}
-
-/* --- FONDO --- */
-.fondo {
-  background: url("fondo.png") no-repeat center center;
-  background-size: cover;
-  height: calc(100vh - 60px);
-  position: relative;
-}
-
-/* --- BOTÓN VOLVER --- */
-.btn-volver {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: #e53e3e;
-  border: none;
-  color: white;
-  font-size: 22px;
-  padding: 5px 10px;
-  border-radius: 8px;
-  cursor: pointer;
-}
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
 
 .niveles-container {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* Asegúrate de que esta ruta sea correcta en tu proyecto */
+    background-image: url('/img/fondoniveles.png');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Fredoka', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Fondo */
-.niveles-fondo {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+/* Botones Superiores */
+.niveles-btn-volver {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #dc2626;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 20;
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    transition: transform 0.2s;
 }
 
-/* Líneas curvas */
-.niveles-lineas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
+.niveles-btn-volver:hover {
+    transform: scale(1.05);
+    color: black;
 }
 
-.niveles-lineas .linea {
-  fill: none;
-  stroke: rgba(0, 0, 0, 0.4);
-  stroke-width: 0.4%;
+.niveles-btn-misiones {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ffedd5;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 20;
+    border: 2px solid #fed7aa;
+    transition: transform 0.2s;
 }
 
-/* Botones de niveles */
-.nivel-btn {
-  position: absolute;
-  width: 12%;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  color: black;
-  font-family: 'Cute Sunrise', 'Cute Dino', sans-serif;
-  font-size: 1.4vw;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  transition: transform 0.2s ease;
-  box-shadow: 0 0 2% rgba(0,0,0,0.2);
+.niveles-btn-misiones:hover {
+    transform: scale(1.05);
+    color: black;
 }
 
-/* Hover solo si está desbloqueado */
-.nivel-btn.desbloqueado:hover {
-  transform: translate(-50%, -50%) scale(1.05);
-  cursor: pointer;
+/* Líneas Conectoras */
+.niveles-conexiones-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; /* Detrás de los nodos */
+    overflow: visible;
 }
 
-/* Colores por nivel */
-.tutorial {
-  top: 65%;
-  left: 18%;
-  background-color: var(--verdeClarito);
+/* Estilo de los Nodos (Círculos) */
+.niveles-nodo {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: black;
+    text-decoration: none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+    z-index: 10; /* Delante de las líneas */
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(0,0,0,0.1);
 }
 
-.nivel1 {
-  top: 58%;
-  left: 42%;
-  background-color: var(--rojo);
+.niveles-nodo:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    color: black;
+    text-decoration: none;
 }
 
-.nivel2 {
-  top: 58%;
-  left: 62%;
-  background-color: var(--amarillo);
+/* Posiciones y Colores */
+.niveles-nodo-tutorial { 
+    background-color: #22c55e;
+    top: 65%; 
+    left: 15%; 
 }
 
-.nivel3 {
-  top: 48%;
-  left: 85%;
-  background-color: var(--azul);
+.niveles-nodo-1 { 
+    background-color: #ef4444;
+    top: 35%; 
+    left: 40%; 
 }
 
-/* Estados bloqueado/desbloqueado */
-.bloqueado {
-  opacity: 0.5;
-  cursor: not-allowed;
-  pointer-events: none;
-  filter: grayscale(70%);
-  position: relative;
+.niveles-nodo-2 { 
+    background-color: #fcdb10;
+    top: 65%; 
+    left: 65%; 
 }
 
-.bloqueado::after {
-  content: "🔒";
-  position: absolute;
-  font-size: 2vw;
-  color: rgba(0,0,0,0.7);
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.niveles-nodo-3 { 
+    background-color: #0ea5e9;
+    top: 40%; 
+    left: 90%; 
 }
 
+/* Estado Bloqueado */
+.niveles-bloqueado {
+    /* Filtro para oscurecer y poner gris, manteniendo solidez */
+    filter: grayscale(1) brightness(0.75);
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+    z-index: 10; /* Importante: Mismo nivel que los activos para tapar la línea */
+}
 
+.niveles-candado {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    display: block;
+}
+/* /////////////////////////////////////////////////////////NIVELES FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* /////////////////////////////////////////////////////////TUTORIAL INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* --- VENTANA FLOTANTE --- */
 .tutorial-modal {
@@ -1348,7 +1318,6 @@ body {
     margin-right: 10px;
 }
 /* /////////////////////////////////////////////////////////Nivel 1 inicio////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-
 .nivel-container {
   position: relative;
   width: 100%;
@@ -1372,27 +1341,14 @@ body {
   top: 2%;
   left: 2%;
   width: 4%;
-  height: auto;
-  background-color: var(--rojo);
-  border: none;
-  font-size: xx-large;
-  cursor: pointer;
-  text-decoration: none;
+  background-color: #e53935;
   border-radius: 10px;
-  transition: background-color 0.3s ease, transform 0.1s ease-in;
-}
-
-.btn-volver:hover {
-  background-color: #ad1c17;
-  transform: scale(0.95)
-}
-
-.btn-volver p{
-  color: black;
   text-align: center;
-  margin: 0%;
+  font-size: 2vw;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
 }
-
 
 /* Personaje */
 .personaje {
@@ -1405,16 +1361,15 @@ body {
 /* Tachos */
 .tacho.verde {
   position: absolute;
-  bottom: 10%;
-  left: 40%;
-  width: 15%;
+  bottom: 6%;
+  left: 41%;
+  width: 12%;
 }
-
 .tacho.negro {
   position: absolute;
-  bottom: 10%;
-  left: 58%;
-  width: 15%;
+  bottom: 6%;
+  left: 51%;
+  width: 12%;
 }
 
 /* Residuos */
@@ -1422,14 +1377,13 @@ body {
   position: absolute;
   width: 5%;
   cursor: grab;
- 
 }
 
 /* Posiciones y rotaciones */
 .banana { top: 62%; left: 27%; transform: rotate(20deg); width: 1.5%; }
 .bollo { top: 67%; left: 36%; width: 2%; }
 .botella { bottom: 0.1%; right: 55%; transform: rotate(-130deg); width: 2%; }
-.lata { top: 67%; left: 70%; transform: rotate(-90deg); width: 1%; } /* Lata en el lago */
+.lata { top: 67%; left: 70%; transform: rotate(-90deg); width: 1%; }
 .pizza { bottom: 0.5%; left: 25%; transform: rotate(0deg); width: 4%; }
 .taper { bottom: 12%; right: 30%; width: 4%; }
 .vasito { bottom: 12%; right: 20%; transform: rotate(70deg); width: 3%; }
@@ -1448,8 +1402,10 @@ body {
 .overlay.hidden { display: none; }
 .overlay-content {
   background: #fff;
-  padding: 2%;
-  border-radius: 8px;
+  padding: 3%;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.5vw;
 }
 
 /* Animación al arrastrar */
@@ -1471,160 +1427,162 @@ body {
 .tacho.highlight {
   border: 0.5vw solid yellow;
   border-radius: 8px;
+}/* Overlay Nivel Completado */
+#overlayCompletado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
-/* Tachos */
-.tacho.verde {
+
+#overlayCompletado.hidden {
+  display: none;
+}
+
+#overlayCompletado .overlay-content {
+  background: linear-gradient(135deg, #4CAF50, #81C784); /* degradado verde */
+  color: #fff;
+  text-align: center;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: popIn 0.6s ease forwards;
+  max-width: 400px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#overlayCompletado .overlay-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#overlayCompletado .overlay-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#overlayCompletado .btn-volver {
+  display: inline-block;
+  background-color: #fff;
+  color: #4CAF50;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#overlayCompletado .btn-volver:hover {
+  background-color: #388E3C;
+  color: #fff;
+}
+
+/* Animación */
+@keyframes popIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.residuo {
   position: absolute;
-  bottom: 6%;      /* Ajusta la altura para que no queden tan arriba */
-  left: 41%;       /* Ajusta la posición horizontal */
-  width: 12%;      /* Más grande para que se vea como en la imagen */
+  cursor: grab;
+  filter: drop-shadow(4px 6px 6px rgba(0, 0, 0, 0.4));
+  transition: filter 0.3s ease;
 }
 
-
-.tacho.negro {
-  position: absolute;
-  bottom: 6%;
-  left: 50%;       /* Separación correcta entre ambos */
-  width: 12%;
+.residuo.dragging {
+  filter: drop-shadow(6px 8px 10px rgba(0, 0, 0, 0.5));
+  transform: scale(1.2);
 }
-
-
-
-
 
 /* /////////////////////////////////////////////////////////Nivel 1 FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* /////////////////////////////////////////////////////////Nivel 2 inicio////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* Reset básico */
 
-/* Contenedor principal del juego */
-.nivel2-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background: url('~/img/fondonivel2.png') no-repeat center bottom;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Para poner muñeco abajo */
-    align-items: center;
-    color: #000;
-    user-select: none;
-}
-
-/* Header ficticio (sin código, solo espacio para el texto) */
-.nivel2-header {
-    text-align: center;
-    padding-top: 20px;
-}
-
-.nivel2-header h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    text-shadow: 1px 1px 3px rgba(255,255,255,0.6);
-}
-
-.nivel2-header h2 {
-    font-size: 1.3rem;
-    font-weight: normal;
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
-}
-
-/* Contenedor de objetos que caen */
-.nivel2-objetos-container {
-    position: relative;
-    flex: 1; /* Ocupa espacio entre header y player */
+/* CONTENEDOR PRINCIPAL */
+#nivel2-container {
     width: 100%;
-    overflow: visible;
-    pointer-events: none; /* No bloquea eventos */
-}
-
-/* Cada objeto que cae */
-.nivel2-objeto {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    pointer-events: auto;
-    user-select: none;
-}
-
-/* Contenedor del jugador y tacho */
-.nivel2-player-container {
+    height: 100vh;
     position: relative;
-    width: 180px;
-    height: 140px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 10px;
-    margin-bottom: 20px;
-    cursor: grab;
-    user-select: none;
-    /* Se posiciona en la parte baja con flex en nivel2-container */
-    z-index: 10;
+    background-image: url('/img/FondoNivel2.png'); /* tu fondo */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 
-/* Imagen muñeco */
-.nivel2-player {
-    height: 130px;
-    pointer-events: auto;
+/* ESPACIO PARA LA BARRA VERDE */
+.espacio-header {
+    height: 90px;
 }
 
-/* Imagen tacho */
-.nivel2-tacho {
-    height: 130px;
-    pointer-events: auto;
-}
-
-/* Efecto cuando está “agarrado” */
-.nivel2-player-container.dragging {
-    cursor: grabbing;
-}
-
-/* Texto estilo botón o etiqueta (Misiones, flecha) */
-/* Esto es opcional, basándome en la UI que viste */
-.nivel2-button-misiones {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background-color: #f9d97b;
-    padding: 8px 15px;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+/* TÍTULOS */
+.titulo {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0;
     color: #000;
-    font-size: 1rem;
-    z-index: 20;
 }
 
-.nivel2-button-back {
+.subtitulo {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+/* ÁREA DEL JUEGO */
+#juego-area {
+    width: 100%;
+    height: calc(100vh - 200px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* PERSONAJE */
+#personaje {
     position: absolute;
-    top: 10px;
-    left: 15px;
-    background-color: #de2e2e;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-    z-index: 20;
+    width: 150px;
+    bottom: 12vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
 }
 
-.nivel2-button-back img {
-    width: 20px;
-    height: 20px;
+/* TACHO */
+#tacho {
+    position: absolute;
+    width: 170px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* OBJETOS QUE CAEN */
+.objeto {
+    position: absolute;
+    width: 90px;
+    animation: caer 3.5s linear forwards;
+    z-index: 1;
+}
+
+@keyframes caer {
+    from { top: -120px; }
+    to { top: 110vh; }
 }
 
 
 /* /////////////////////////////////////////////////////////Nivel 2 FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* /////////////////////////////////////////////////////////EDITAR FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////EDITAR INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .Editar {
   background-color: var(--piel);

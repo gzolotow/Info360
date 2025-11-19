@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     const residuos = document.querySelectorAll(".residuo");
     const tachos = document.querySelectorAll(".tacho");
+    const overlayCompletado = document.getElementById("overlayCompletado");
 
+    let totalResiduos = residuos.length;
+    let residuosCorrectos = 0;
 
     residuos.forEach(residuo => {
         residuo.addEventListener("dragstart", e => {
@@ -10,12 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
             residuo.classList.add("dragging");
         });
 
-
         residuo.addEventListener("dragend", () => {
             residuo.classList.remove("dragging");
         });
     });
-
 
     tachos.forEach(tacho => {
         tacho.addEventListener("dragover", e => {
@@ -23,11 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
             tacho.classList.add("highlight");
         });
 
-
         tacho.addEventListener("dragleave", () => {
             tacho.classList.remove("highlight");
         });
-
 
         tacho.addEventListener("drop", e => {
             tacho.classList.remove("highlight");
@@ -36,16 +35,19 @@ document.addEventListener("DOMContentLoaded", () => {
             const residuo = document.getElementById(residuoId);
             const tipoTacho = tacho.classList.contains("verde") ? "verde" : "negro";
 
-
             if (tipoResiduo === tipoTacho) {
                 residuo.classList.add("correcto");
-                setTimeout(() => residuo.remove(), 500);
+                setTimeout(() => {
+                    residuo.remove();
+                    residuosCorrectos++;
+
+                    if (residuosCorrectos === totalResiduos) {
+                        overlayCompletado.classList.remove("hidden");
+                    }
+                }, 500);
             } else {
                 alert("Vuelve a intentar");
             }
         });
     });
 });
-
-
-

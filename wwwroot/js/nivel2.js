@@ -1,132 +1,83 @@
-const objetos = [
-    { src: '~/img/banana.png', reciclable: false },
-    { src: '~/img/bolsa.png', reciclable: true },
-    { src: '~/img/botella.png', reciclable: true }, 
-    { src: '~/img/pizza.png', reciclable: false },
-    { src: '~/img/manzana.png', reciclable: false },
-    { src: '~/img/vasito.png', reciclable: true }
-    { src: '~/img/vaso.png', reciclable: true },
-    { src: '~/img/taper.png', reciclable: false },
-    { src: '~/img/diario.png', reciclable: true },
+/* OBJETOS RECICLABLES (según tus imágenes reales) */
+const reciclables = [
+    "lata.png",
+    "botella.png",
+    "bolsa.png",
+    "diario.png",
+    "bollo.png"
 ];
 
-// Estado objetos en pantalla
-const objetosEnPantalla = [];
+/* OBJETOS NO RECICLABLES (basura real) */
+const noReciclables = [
+    "banana.png",
+    "pizza.png",
+    "taper.png",
+    "vaso.png",
+    "vasito.png"
+];
 
-// Áreas límites
-const screenWidth = window.innerWidth;
-const screenHeight = window.innerHeight;
+/* LISTA COMPLETA */
+const objetos = [...reciclables, ...noReciclables];
 
-// Función para crear objeto volante con posiciones y velocidades aleatorias
-function crearObjetoVolante() {
-    if (!gameActive) return;
+/* ELEMENTOS */
+const personaje = document.getElementById("personaje");
+const tacho = document.getElementById("tacho");
+const juego = document.getElementById("juego-area");
 
-    const index = Math.floor(Math.random() * objetos.length);
-    const objData = objetos[index];
+/* --------------------------------------------- */
+/* MOVIMIENTO DEL PERSONAJE Y TACHO */
+/* --------------------------------------------- */
+document.addEventListener("mousemove", (e) => {
+    let x = e.clientX;
+    personaje.style.left = x + "px";
+    tacho.style.left = x + "px";
+});
 
-    const objetoEl = document.createElement('img');
-    objetoEl.src = objData.src;
-    objetoEl.classList.add('nivel2-objeto');
-    objetoEl.dataset.reciclable = objData.reciclable ? 'true' : 'false';
+/* --------------------------------------------- */
+/* CREACIÓN DE OBJETOS QUE CAEN */
+/* --------------------------------------------- */
+function crearObjeto() {
+    const obj = document.createElement("img");
 
-    // Posición inicial en borde izquierdo o derecho aleatorio y altura aleatoria
-    const startSide = Math.random() < 0.5 ? 'left' : 'right';
-    const posY = Math.random() * (screenHeight * 0.6) + 50; // altura entre 50px y 60% pantalla
+    const img = objetos[Math.floor(Math.random() * objetos.length)];
+    obj.src = `/img/${img}`;
+    obj.classList.add("objeto");
+    obj.style.left = Math.random() * 90 + "vw";
 
-    // Posición X inicial depende de lado
-    let posX = startSide === 'left' ? -50 : screenWidth + 50;
+    juego.appendChild(obj);
 
-    objetoEl.style.top = posY + 'px';
-    objetoEl.style.position = 'absolute';
+    /* DETECTAR COLISIÓN */
+    let check = setInterval(() => {
+        if (colision(obj, tacho)) {
 
-    objetosContainer.appendChild(objetoEl);
-
-    // Velocidad horizontal (izq a derecha o viceversa)
-    const velocidadX = (Math.random() * 1.2 + 0.8) * (startSide === 'left' ? 1 : -1);
-    // Velocidad vertical suave para simular vuelo (sube y baja lentamente)
-    const velocidadY = (Math.random() * 0.5 + 0.1) * (Math.random() < 0.5 ? 1 : -1);
-
-    // Guardamos estado para animar
-    objetosEnPantalla.push({
-        el: objetoEl,
-        x: posX,
-        y: posY,
-        velX: velocidadX,
-        velY: velocidadY,
-        reciclable: objData.reciclable,
-        startSide: startSide
-    });
-}
-
-// Animar objetos "volando"
-function animarObjetosVolando() {
-    if (!gameActive) return;
-
-    objetosEnPantalla.forEach((obj, i) => {
-        obj.x += obj.velX;
-        obj.y += obj.velY;
-
-        // Oscilación vertical (si se pasa cierto límite vertical, cambia dirección Y)
-        if (obj.y < 50) obj.velY = Math.abs(obj.velY);
-        if (obj.y > screenHeight * 0.7) obj.velY = -Math.abs(obj.velY);
-
-        obj.el.style.left = obj.x + 'px';
-        obj.el.style.top = obj.y + 'px';
-
-        // Detectar si está llegando al "tacho" del jugador (colisión)
-        const playerRect = playerContainer.getBoundingClientRect();
-        const objRect = obj.el.getBoundingClientRect();
-
-        if (
-            objRect.right > playerRect.left &&
-            objRect.left < playerRect.right &&
-            objRect.bottom > playerRect.top &&
-            objRect.top < playerRect.bottom
-        ) {
-            if (obj.reciclable) {
-                // Animación de "tragado"
-                obj.el.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
-                obj.el.style.transform = 'scale(0) translateY(40px)';
-                obj.el.style.opacity = '0';
-
-                setTimeout(() => {
-                    if (obj.el.parentNode) {
-                        obj.el.parentNode.removeChild(obj.el);
-                    }
-                }, 500);
-
-                objetosEnPantalla.splice(i, 1);
-                // Acá podrías sumar puntaje o feedback
+            if (reciclables.includes(img)) {
+                console.log("✔ Reciclable atrapado");
             } else {
-                // No reciclables pasan sin efecto (o podrías agregar mensaje o penalización)
+                console.log("✘ Basura atrapada");
             }
-        }
 
-        // Si salió de pantalla horizontalmente, eliminar y sacar del array
-        if ((obj.startSide === 'left' && obj.x > screenWidth + 60) ||
-            (obj.startSide === 'right' && obj.x < -60)) {
-            if (obj.el.parentNode) {
-                obj.el.parentNode.removeChild(obj.el);
-            }
-            objetosEnPantalla.splice(i, 1);
+            obj.remove();
+            clearInterval(check);
         }
-    });
+    }, 50);
 
-    requestAnimationFrame(animarObjetosVolando);
+    obj.addEventListener("animationend", () => obj.remove());
 }
-function startGame() {
-    gameActive = true;
 
-    // Cada 0.6 segundos cae nuevo objeto volante
-    const spawnInterval = setInterval(() => {
-        crearObjetoVolante();
-    }, 600);
+/* CREA UN OBJETO CADA 1.1s */
+setInterval(crearObjeto, 1100);
 
-    animarObjetosVolando();
+/* --------------------------------------------- */
+/* SISTEMA DE COLISIÓN */
+/* --------------------------------------------- */
+function colision(a, b) {
+    const r1 = a.getBoundingClientRect();
+    const r2 = b.getBoundingClientRect();
 
-    setTimeout(() => {
-        gameActive = false;
-        clearInterval(spawnInterval);
-        alert('¡Tiempo terminado!');
-    }, gameDuration);
+    return !(
+        r1.top > r2.bottom ||
+        r1.bottom < r2.top ||
+        r1.right < r2.left ||
+        r1.left > r2.right
+    );
 }
