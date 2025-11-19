@@ -1,7 +1,6 @@
 @{
     ViewData["Title"] = "Niveles";
-   
-    
+
     /* Lógica de niveles completados (recibida del controlador) */
     bool nivel1Completado = ViewBag.Nivel1Completado ?? false;
     bool nivel2Completado = ViewBag.Nivel2Completado ?? false;
@@ -15,7 +14,7 @@
     </a>
 
     <!-- Botón Misiones -->
-    <a href="@Url.Action("Misiones", "Juego")" class="niveles-btn-misiones">
+    <a href="@Url.Action("Misiones", "Home")" class="niveles-btn-misiones">
         Misiones
     </a>
 
@@ -44,7 +43,7 @@
     </svg>
 
     <!-- NODO: Tutorial (Siempre disponible) -->
-    <a href="/tutorial" class="niveles-nodo niveles-nodo-tutorial">
+    <a href="javascript:void(0)" onclick="abrirOverlay()" class="niveles-nodo niveles-nodo-tutorial">
         Tutorial
     </a>
 
@@ -84,3 +83,20 @@
     }
 
 </div>
+
+<!-- Overlay del Tutorial -->
+<div id="tutorial-overlay" class="overlay" style="display:none;">
+    <div class="overlay-content">
+        <button class="overlay-close" onclick="cerrarOverlay()">✖</button>
+        <img src="/img/tutorial.png" alt="Tutorial Basura" class="overlay-img" />
+    </div>
+</div>
+
+<!-- Scripts -->
+<script>
+    function abrirOverlay() {
+        document.getElementById('tutorial-overlay').style.display = 'flex';
+    }
+    function cerrarOverlay() {
+        document.getElementById('tutorial-overlay').style.display = 'none';
+    }

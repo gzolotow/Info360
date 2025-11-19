@@ -153,6 +153,7 @@ header nav {
 }
 
 .config-icon {
+  margin-top: 100%;
   width: 60px;
   height: 60px;
 }
@@ -185,7 +186,7 @@ header nav {
   color: var(--rojo);
 }
 
-.btn-submenu {
+.config {
   background: none;
   border: none;
   cursor: pointer;
@@ -264,9 +265,8 @@ nav a {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-nav a:hover {
-  background-color: #ffe699;
-  transform: translateY(-2px);
+.foto{
+  box-shadow: none;
 }
 
 /* /////////////////////////////////////////////////////////HEADER MENU FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -1317,6 +1317,44 @@ body {
     width: 25px;
     margin-right: 10px;
 }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.overlay-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    max-width: 90%;
+    text-align: center;
+}
+
+.overlay-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.overlay-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
 /* /////////////////////////////////////////////////////////Nivel 1 inicio////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .nivel-container {
   position: relative;
@@ -1504,80 +1542,153 @@ body {
 /* /////////////////////////////////////////////////////////Nivel 1 FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* /////////////////////////////////////////////////////////Nivel 2 inicio////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* Reset básico */
+/* ------------------------------
+   ESTILOS GENERALES NIVEL 2
+--------------------------------*/
 
 /* CONTENEDOR PRINCIPAL */
 #nivel2-container {
+    position: relative;
     width: 100%;
     height: 100vh;
-    position: relative;
-    background-image: url('/img/FondoNivel2.png'); /* tu fondo */
+    background: url('/img/fondonivel2.png') no-repeat center center;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
 }
 
-/* ESPACIO PARA LA BARRA VERDE */
-.espacio-header {
-    height: 90px;
-}
+/* ------------------------------
+   BARRA DE PROGRESO
+--------------------------------*/
 
-/* TÍTULOS */
-.titulo {
-    text-align: center;
-    font-size: 48px;
-    font-weight: 900;
-    margin: 0;
-    color: #000;
-}
-
-.subtitulo {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #000;
-}
-
-/* ÁREA DEL JUEGO */
-#juego-area {
-    width: 100%;
-    height: calc(100vh - 200px);
-    position: relative;
+#progressWrapper {
+    width: 80%;
+    height: 25px;
+    background: #ffffff90;
+    border-radius: 20px;
+    margin: 20px auto;
     overflow: hidden;
+    border: 2px solid #fff;
 }
 
-/* PERSONAJE */
-#personaje {
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #00ff57;
+    transition: width 0.25s ease;
+}
+
+/* ------------------------------
+   JUGADOR (HÉROE + TACHO)
+--------------------------------*/
+
+#player {
     position: absolute;
-    width: 150px;
-    bottom: 12vh;
+    bottom: 40px;
+    width: 160px;
+    height: 160px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 3;
+    pointer-events: none;
 }
 
-/* TACHO */
+#hero {
+    position: absolute;
+    left: -25px;
+    bottom: 25px;
+    width: 130px;
+}
+
 #tacho {
     position: absolute;
-    width: 170px;
+    right: -10px;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
+    width: 120px;
 }
 
-/* OBJETOS QUE CAEN */
-.objeto {
+/* ------------------------------
+   OBJETOS QUE CAEN
+--------------------------------*/
+
+.falling-object {
     position: absolute;
-    width: 90px;
-    animation: caer 3.5s linear forwards;
-    z-index: 1;
+    width: 85px;
+    user-select: none;
+    pointer-events: none;
 }
 
-@keyframes caer {
-    from { top: -120px; }
-    to { top: 110vh; }
+/* ------------------------------
+   ANIMACIONES
+--------------------------------*/
+
+/* Animación correcta (absorción) */
+.absorb {
+    animation: absorbAnim 0.35s forwards ease-out;
 }
+
+@keyframes absorbAnim {
+    0% { transform: scale(1) rotate(0deg); opacity: 1; }
+    100% { transform: scale(0) rotate(360deg); opacity: 0; }
+}
+
+/* Animación incorrecta (explosión) */
+.explode {
+    animation: explodeAnim 0.28s forwards;
+}
+
+@keyframes explodeAnim {
+    0% { transform: scale(1); opacity: 1; filter: brightness(1); }
+    100% { transform: scale(2); opacity: 0; filter: brightness(4) saturate(3); }
+}
+
+/* ------------------------------
+   OVERLAY NIVEL COMPLETADO
+   (USA TU MISMO DISEÑO)
+--------------------------------*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.overlay.hidden {
+    display: none;
+}
+
+.overlay-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 18px;
+    text-align: center;
+    width: 400px;
+}
+
+.overlay-content h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.btn-volver {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.btn-volver p {
+    margin: 0;
+}
+
+
 
 
 /* /////////////////////////////////////////////////////////Nivel 2 FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */

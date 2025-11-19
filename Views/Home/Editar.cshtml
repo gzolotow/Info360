@@ -14,16 +14,18 @@
         </div>
       }
 
-      <form asp-action="Registrarse" asp-controller="Account" method="post">
-        <input type="text" id="username" name="username" placeholder="usuario" required>
+      <form asp-action="EditarUsuario" asp-controller="Home" method="post">
+        <input type="text" id="username" name="username" placeholder="usuario" autocomplete="usuario" required>
 
-        <input type="email" id="email" name="email" placeholder="correo electrónico (tutor)" required>
+        <input type="email" id="email" name="email" placeholder="correo electrónico (tutor)" autocomplete="email" required>
 
         <input type="password" id="password" name="password" placeholder="contraseña" required>
 
-        <input type="text" id="fecha" name="fecha" placeholder="fecha de nacimiento (dd/mm/aa)" required>
+        <input type="text" id="fecha" name="fecha" placeholder="fecha de nacimiento (dd/mm/aa)" autocomplete="bday" required>
 
         <input type="file" name="image" id="image">
+
+        <input type="hidden" name="IDNivelUsuario" id="IDNivelUsuario" value="@ViewBag.user.IDNivelUsuario">
 
         <input type="submit" onclick=Validar(event) value="Cambiar">
 

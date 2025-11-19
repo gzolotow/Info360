@@ -27,3 +27,9 @@ function Validar(event)
 
   document.querySelector("form").submit();
 }
+function abrirOverlay() {
+    document.getElementById('tutorial-overlay').style.display = 'flex';
+}
+function cerrarOverlay() {
+    document.getElementById('tutorial-overlay').style.display = 'none';
+}

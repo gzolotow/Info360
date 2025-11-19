@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using EcoPlay.Models;
+using Newtonsoft.Json;
 
 namespace EcoPlay.Controllers
 {
@@ -23,9 +24,7 @@ namespace EcoPlay.Controllers
             if (user != null)
             {
                 // ✅ Guardar datos del usuario en la sesión
-                HttpContext.Session.SetString("NombreUsuario", user.Username);
-                HttpContext.Session.SetString("MailUsuario", user.Mail);
-                HttpContext.Session.SetInt32("IDUsuario", user.IDUsuario);
+                HttpContext.Session.SetString("user", Objeto.ObjectToString(user));
 
                 // Redirige al Home principal
                 return RedirectToAction("Home", "Home");

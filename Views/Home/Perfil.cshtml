@@ -9,7 +9,7 @@
       <a asp-controller="Home" asp-action="Home" class="col1 row1"><p>⬅</p></a>
 
       <div class="col1Span6 row2Span8">
-        <img src="avatar.png" alt="Avatar del usuario">
+        <img src="default.png" alt="Avatar del usuario">
         <a asp-controller="Home" asp-action="CerrarSesion" class="cerrar-sesion">Cerrar sesión</a>
       </div>
 
@@ -17,12 +17,12 @@
         <h2>Perfil</h2>
 
         <div>
-          <p><strong>Username:</strong> nombre</p>
-          <p><strong>E-mail:</strong> mail</p>
-          <p><strong>Fecha de nacimiento:</strong> fecha</p>
+          <p><strong>Username:</strong> @ViewBag.user.Username</p>
+          <p><strong>E-mail:</strong> @ViewBag.user.Mail</p>
+          <p><strong>Fecha de nacimiento:</strong> @ViewBag.user.FechaNacimiento</p>
         </div>
 
-        <a href='@Url.Action("Editar", "Home" , new {IDUsuario = @ViewBag.IDUsuario})'>EDITAR</a>
+        <a href='@Url.Action("Editar", "Home")'>EDITAR</a>
       </div>
     </section>
   </main>

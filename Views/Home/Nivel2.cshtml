@@ -1,22 +1,38 @@
 @{
-    ViewData["Title"] = "Nivel 2 - EcoPlay";
+    ViewData["Title"] = "Nivel2";
 }
 
-<link rel="stylesheet" href="~/css/nivel2.css" />
-
 <div id="nivel2-container">
-
-    <!-- ESPACIO PARA TU BARRA VERDE SUPERIOR -->
-    <div class="espacio-header"></div>
-
-    <h1 class="titulo">Nivel 2</h1>
-    <h2 class="subtitulo">Agarra los objetos reciclables</h2>
-
-    <div id="juego-area">
-        <img id="personaje" src="~/img/Heroe.png" />
-        <img id="tacho" src="~/img/tachoverde.png" />
+    
+    <!-- PROGRESS BAR -->
+    <div id="progressWrapper">
+        <div id="progressBar"></div>
     </div>
 
+    <!-- Personaje + Tacho Juntos -->
+    <div id="player">
+        <img id="hero" src="/img/Heroe.png" alt="Heroe">
+        <img id="tacho" src="/img/tachoVerde.png" alt="Tacho">
+    </div>
+
+    <!-- Contenedor objetos -->
+    <div id="falling-container"></div>
+
+    <!-- Overlay Nivel Completado -->
+    <div id="overlayCompletado" class="overlay hidden">
+        <div class="overlay-content">
+            <h2>¡Nivel completado!</h2>
+            <p>¡Felicitaciones! Has reciclado todos los residuos correctamente.</p>
+            <a asp-controller="Home" asp-action="niveles" class="btn-volver"><p>⬅</p></a>
+        </div>
+    </div>
 </div>
 
-<script src="~/js/nivel2.js"></script>
+<!-- AUDIOS -->
+<audio id="soundBien" src="/sounds/catch-bien.wav" preload="auto"></audio>
+<audio id="soundMal" src="/sounds/catch-mal.wav" preload="auto"></audio>
+<audio id="soundError" src="/sounds/error.wav" preload="auto"></audio>
+
+@section Scripts{
+    <script src="/js/nivel2.js"></script>
+}

@@ -16,7 +16,9 @@ namespace EcoPlay.Controllers
 
         public IActionResult Index()
         {
-            return View("Nivel2");
+            ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
+
+            return View();
         }
 
         public IActionResult Home()
@@ -28,22 +30,20 @@ namespace EcoPlay.Controllers
 
         public IActionResult Perfil()
         {
-            var mail = HttpContext.Session.GetString("MailUsuario");
-            var nombre = HttpContext.Session.GetString("NombreUsuario");
-
-            ViewData["MailUsuario"] = mail ?? "No registrado";
-            ViewData["NombreUsuario"] = nombre ?? "Invitado";
+            ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
 
             return View();
         }
 
         public IActionResult Niveles()
         {
+            ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
             return View();
         }
 
         public IActionResult Inventario()
         {
+            ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
             return View();
         }
 
@@ -79,8 +79,7 @@ namespace EcoPlay.Controllers
         [HttpPost]
         public IActionResult GuardarDatosUsuario(string nombre, string mail)
         {
-            HttpContext.Session.SetString("NombreUsuario", nombre);
-            HttpContext.Session.SetString("MailUsuario", mail);
+            ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
             return RedirectToAction("Home");
         }
 
@@ -94,6 +93,7 @@ namespace EcoPlay.Controllers
 
          public IActionResult Nivel1()
         {
+            ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
             return View();
         }
         // *** NUEVA ACCIÓN PARA GUARDAR RESULTADO DEL NIVEL ***
@@ -125,19 +125,23 @@ namespace EcoPlay.Controllers
 
         public IActionResult Editar()
         {
+            ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
             return View();
         }
 
         [HttpPost]
-        public IActionResult EditarUsuario(int IDUsuario, string username, string email, string password, string fecha)
+        public IActionResult EditarUsuario(int IDUsuario, string username, string email, string password, string fecha, int IDNivelUsuario)
         {
+            Usuario usu = new Usuario();
+            
             if (!DateTime.TryParse(fecha, out DateTime fechaNacimiento))
             {
                 ViewBag.Error = "La fecha no tiene un formato válido (dd/mm/aa).";
                 return View("Editar");
             }
-
-            BD.ModificarUsuario(IDUsuario, username, email, fechaNacimiento, password, "default.png");
+            
+            usu = BD.ModificarUsuario(IDUsuario, username, email, fechaNacimiento, password, "default.png", IDNivelUsuario);
+            HttpContext.Session.SetString("user", Objeto.ObjectToString(usu));
 
             return View("Perfil");
         }

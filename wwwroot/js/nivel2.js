@@ -1,83 +1,157 @@
-/* OBJETOS RECICLABLES (según tus imágenes reales) */
+// Arrays de imágenes
 const reciclables = [
-    "lata.png",
-    "botella.png",
-    "bolsa.png",
-    "diario.png",
-    "bollo.png"
+    "/img/botella.png",
+    "/img/otella2.png",
+    "/img/botella3.png",
+    "/img/lata.png",
+    "/img/papel.png",
+    "/img/carton.png"
 ];
 
-/* OBJETOS NO RECICLABLES (basura real) */
 const noReciclables = [
-    "banana.png",
-    "pizza.png",
-    "taper.png",
-    "vaso.png",
-    "vasito.png"
+    "/img/banana.png",
+    "/img/pizza.png",
+    "/img/aper.png",
+    "/img/vaso.png",
+    "/img/vasito.png"
 ];
 
-/* LISTA COMPLETA */
-const objetos = [...reciclables, ...noReciclables];
+// DOM
+const player = document.getElementById("player");
+const fallingContainer = document.getElementById("falling-container");
+const progressBar = document.getElementById("progressBar");
+const overlayCompletado = document.getElementById("overlayCompletado");
 
-/* ELEMENTOS */
-const personaje = document.getElementById("personaje");
-const tacho = document.getElementById("tacho");
-const juego = document.getElementById("juego-area");
+const soundBien = document.getElementById("soundBien");
+const soundMal = document.getElementById("soundMal");
+const soundError = document.getElementById("soundError");
 
-/* --------------------------------------------- */
-/* MOVIMIENTO DEL PERSONAJE Y TACHO */
-/* --------------------------------------------- */
+let progreso = 0;
+let juegoTerminado = false;
+
+// Movimiento del jugador
 document.addEventListener("mousemove", (e) => {
-    let x = e.clientX;
-    personaje.style.left = x + "px";
-    tacho.style.left = x + "px";
+    const limite = window.innerWidth - player.offsetWidth;
+    let x = e.clientX - player.offsetWidth / 2;
+
+    if (x < 0) x = 0;
+    if (x > limite) x = limite;
+
+    player.style.left = x + "px";
 });
 
-/* --------------------------------------------- */
-/* CREACIÓN DE OBJETOS QUE CAEN */
-/* --------------------------------------------- */
-function crearObjeto() {
+// Crear objetos
+function spawnObject() {
+    if (juegoTerminado) return;
+
     const obj = document.createElement("img");
+    obj.classList.add("falling-object");
 
-    const img = objetos[Math.floor(Math.random() * objetos.length)];
-    obj.src = `/img/${img}`;
-    obj.classList.add("objeto");
-    obj.style.left = Math.random() * 90 + "vw";
+    const tipo = Math.random() < 0.6 ? "rec" : "no";
+    obj.dataset.tipo = tipo;
 
-    juego.appendChild(obj);
+    obj.src = `/images/${tipo === "rec" ? reciclables.random() : noReciclables.random()}`;
+    obj.style.left = Math.random() * (window.innerWidth - 100) + "px";
+    obj.style.top = "-120px";
 
-    /* DETECTAR COLISIÓN */
-    let check = setInterval(() => {
-        if (colision(obj, tacho)) {
+    fallingContainer.appendChild(obj);
 
-            if (reciclables.includes(img)) {
-                console.log("✔ Reciclable atrapado");
-            } else {
-                console.log("✘ Basura atrapada");
-            }
-
-            obj.remove();
-            clearInterval(check);
-        }
-    }, 50);
-
-    obj.addEventListener("animationend", () => obj.remove());
+    fall(obj);
 }
 
-/* CREA UN OBJETO CADA 1.1s */
-setInterval(crearObjeto, 1100);
+// Caída
+function fall(obj) {
+    let y = -120;
+    let speed = 3 + Math.random() * 2.5;
 
-/* --------------------------------------------- */
-/* SISTEMA DE COLISIÓN */
-/* --------------------------------------------- */
-function colision(a, b) {
-    const r1 = a.getBoundingClientRect();
-    const r2 = b.getBoundingClientRect();
+    const interval = setInterval(() => {
+        if (juegoTerminado) {
+            obj.remove();
+            clearInterval(interval);
+            return;
+        }
+
+        y += speed;
+        obj.style.top = y + "px";
+
+        if (checkCollision(obj, player)) {
+            if (obj.dataset.tipo === "rec") recogerBien(obj);
+            else recogerMal(obj);
+
+            clearInterval(interval);
+        }
+
+        if (y > window.innerHeight) {
+            obj.remove();
+            clearInterval(interval);
+        }
+
+    }, 16);
+}
+
+// ✔ Buena recolección
+function recogerBien(obj) {
+    soundBien.volume = 1;
+    soundBien.play();
+
+    obj.classList.add("absorb");
+
+    progreso += 4;
+    updateBarra();
+
+    setTimeout(() => obj.remove(), 300);
+}
+
+// ❌ Mala recolección
+function recogerMal(obj) {
+    soundMal.volume = 1;
+    soundMal.play();
+
+    obj.classList.add("explode");
+
+    progreso -= 6;
+    if (progreso < 0) progreso = 0;
+
+    soundError.volume = 1;
+    soundError.play();
+
+    updateBarra();
+
+    setTimeout(() => obj.remove(), 250);
+}
+
+// Barra
+function updateBarra() {
+    progressBar.style.width = progreso + "%";
+
+    if (progreso >= 100) {
+        terminarNivel();
+    }
+}
+
+// Terminar nivel
+function terminarNivel() {
+    juegoTerminado = true;
+    setTimeout(() => overlayCompletado.classList.remove("hidden"), 400);
+}
+
+// Helper
+Array.prototype.random = function () {
+    return this[Math.floor(Math.random() * this.length)];
+};
+
+// Spawn constante
+setInterval(spawnObject, 850);
+
+// DETECTOR DE COLISION
+function checkCollision(a, b) {
+    const A = a.getBoundingClientRect();
+    const B = b.getBoundingClientRect();
 
     return !(
-        r1.top > r2.bottom ||
-        r1.bottom < r2.top ||
-        r1.right < r2.left ||
-        r1.left > r2.right
+        A.bottom < B.top ||
+        A.top > B.bottom ||
+        A.right < B.left ||
+        A.left > B.right
     );
 }

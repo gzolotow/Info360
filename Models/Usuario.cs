@@ -1,12 +1,21 @@
 namespace EcoPlay.Models;
+using Newtonsoft.Json;
+
 public class Usuario
 {
+    [JsonProperty]
     public int IDUsuario { get; set; }
+    [JsonProperty]
     public string Username { get; set; }
+    [JsonProperty]
     public string Mail { get; set; }
+    [JsonProperty]
     public DateTime FechaNacimiento { get; set; }
+    [JsonProperty]
     public string Contraseña { get; set; }
+    [JsonProperty]
     public string Foto { get; set; }
+    [JsonProperty]
     public int IDNivelUsuario { get; set; }
 
     public Usuario (){}

@@ -81,7 +81,7 @@ public static class BD
     }
 
     // MODIFICAR USUARIO
-    public static void ModificarUsuario(int IDUsuario, string Username, string Mail, DateTime FechaNacimiento, string Contraseña, string Foto)
+    public static Usuario ModificarUsuario(int IDUsuario, string Username, string Mail, DateTime FechaNacimiento, string Contraseña, string Foto, int IDNivelUsuario)
     {
         string query = @"UPDATE Usuario 
                          SET Username = @pUsername, Mail = @pMail, FechaNacimiento = @pFechaNacimiento, 
@@ -100,6 +100,8 @@ public static class BD
                 pFoto = Foto
             });
         }
+        Usuario usu = new Usuario(Username, Mail, FechaNacimiento, Contraseña, Foto, IDNivelUsuario);
+        return (usu);
     }
 
     // ELIMINAR USUARIO

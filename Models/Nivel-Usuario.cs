@@ -1,11 +1,18 @@
-namespace Ecoplay.Models
-{
+namespace Ecoplay.Models;
+using Newtonsoft.Json;
+
+
     public class NivelUsuario
     {
+        [JsonProperty]
         public int IDNivelUsuario { get; set; }
+        [JsonProperty]
         public int IDNivel { get; set; }
+        [JsonProperty]
         public int AspectoEquipado { get; set; }
+        [JsonProperty]
         public int Estrellas { get; set; }
+        [JsonProperty]
         public int MisionesCompletadas { get; set; }
 
 
@@ -19,4 +26,4 @@ namespace Ecoplay.Models
             this.MisionesCompletadas = MisionesCompletadas;
         }
     }
-}
+
