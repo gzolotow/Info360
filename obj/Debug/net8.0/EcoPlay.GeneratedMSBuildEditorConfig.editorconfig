@@ -9,79 +9,79 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EcoPlay
 build_property.RootNamespace = EcoPlay
-build_property.ProjectDir = C:\Users\49092487\Downloads\Nueva carpeta\Info360-1\
+build_property.ProjectDir = C:\Users\49189314\Downloads\Nueva carpeta\Info360\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\49092487\Downloads\Nueva carpeta\Info360-1
+build_property.MSBuildProjectDirectory = C:\Users\49189314\Downloads\Nueva carpeta\Info360
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Account/IniciarSesion.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Account/IniciarSesion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmljaWFyU2VzaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Account/Registrarse.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Account/Registrarse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RyYXJzZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Home/Editar.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Home/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Home/Home.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Home/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Home/Index.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Home/Inventario.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Home/Inventario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbnZlbnRhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Home/Misiones.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Home/Misiones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNaXNpb25lcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Home/Nivel1.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Home/Nivel1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOaXZlbDEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Home/Nivel2.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Home/Nivel2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOaXZlbDIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Home/niveles.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Home/niveles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxuaXZlbGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Home/Perfil.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Home/Perfil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJmaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Home/ResumenNivel.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Home/ResumenNivel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXN1bWVuTml2ZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Home/Tutorial.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Home/Tutorial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUdXRvcmlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Shared/_Layout.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/_ViewImports.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/49092487/Downloads/Nueva carpeta/Info360-1/Views/_ViewStart.cshtml]
+[C:/Users/49189314/Downloads/Nueva carpeta/Info360/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

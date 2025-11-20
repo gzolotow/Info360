@@ -3,25 +3,33 @@
 
 // Write your JavaScript code.
 
-function Validar(event)
-{
+function Validar(event) {
   event.preventDefault();
 
-  let password = document.getElementById("password").value;
-  let usuario = document.getElementById("username").value;
+  let password = document.getElementById("password").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let usuario = document.getElementById("username").value.trim();
   let tieneMayuscula = /[A-Z]/.test(password);
 
-  if (password.length < 4 && !tieneMayuscula) {
-    alert("⚠️ La Contraseña debe tener al menos una letra mayúscula y al menos 4 caracteres.");
+  if (!tieneMayuscula && password.length < 4) {
+    alert("⚠️ La contraseña debe tener al menos una letra mayúscula y 4 caracteres.");
     return false;
-  }else if (!tieneMayuscula) {
-    alert("⚠️ La Contraseña debe tener al menos una letra mayúscula.");
+  }
+  if (!tieneMayuscula) {
+    alert("⚠️ La contraseña debe tener al menos una letra mayúscula.");
     return false;
-  }else if (password.length < 4){
-    alert("⚠️ La Contraseña debe tener al menos 4 caracteres.");
+  }
+  if (password.length < 4) {
+    alert("⚠️ La contraseña debe tener al menos 4 caracteres.");
     return false;
-  }else if (usuario == password){
-    alert("⚠️ La Contraseña debe ser distinta al nombre de Usuario.");
+  }
+  if (usuario === password) {
+    alert("⚠️ La contraseña debe ser distinta al nombre de usuario.");
+    return false;
+  }
+
+  if (!email) {
+    alert("⚠️ Falta el correo electrónico.");
     return false;
   }
 

@@ -23,15 +23,13 @@ namespace EcoPlay.Controllers
 
         public IActionResult Home()
         {
-            var nombreUsuario = HttpContext.Session.GetString("NombreUsuario");
-            ViewData["NombreUsuario"] = nombreUsuario ?? "Invitado";
+            ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
             return View();
         }
 
         public IActionResult Perfil()
         {
             ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
-
             return View();
         }
 
@@ -130,9 +128,9 @@ namespace EcoPlay.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditarUsuario(int IDUsuario, string username, string email, string password, string fecha, int IDNivelUsuario)
+        public IActionResult EditarUsuario(int IDUsuario, string username, string email, string password, string fecha, string image, int IDNivelUsuario)
         {
-            Usuario usu = new Usuario();
+            Usuario usu = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
             
             if (!DateTime.TryParse(fecha, out DateTime fechaNacimiento))
             {
@@ -140,11 +138,15 @@ namespace EcoPlay.Controllers
                 return View("Editar");
             }
             
-            usu = BD.ModificarUsuario(IDUsuario, username, email, fechaNacimiento, password, "default.png", IDNivelUsuario);
+            if(image == null){
+                usu = BD.ModificarUsuario(IDUsuario, username, email, fechaNacimiento, password, "default.png", IDNivelUsuario);
+            }else{
+                usu = BD.ModificarUsuario(IDUsuario, username, email, fechaNacimiento, password, image, IDNivelUsuario);
+            }
+
             HttpContext.Session.SetString("user", Objeto.ObjectToString(usu));
 
             return View("Perfil");
         }
-
     }
 }

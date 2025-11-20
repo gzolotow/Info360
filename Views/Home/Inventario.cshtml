@@ -80,14 +80,10 @@
                             <!-- Texto dinámico -->
                             <span id="volumeLabel" class="rango">Alto</span>
 
-                            <button class="terminos" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTerminos">
-                                Términos y condiciones
-                            </button>
-
                             <!-- Botón para abrir el offcanvas -->
-                            <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            <button class="btn-cerrar"d type="button" data-bs-toggle="offcanvas"
                                 data-bs-target="#offcanvasCenter" aria-controls="offcanvasCenter">
-                                Abrir Offcanvas
+                                terminos y condiciones
                             </button>
 
                             <!-- Botón Salir -->
@@ -127,8 +123,9 @@
 
     <section class="inventario">
         <main>
+        
             <section class="boton">
-                <a href="Index.html">
+                <a asp-controller="Home" asp-action="Home" class="col1 row1">
                     <img src="/img/salir.png" alt="salir">
                 </a>
             </section>
@@ -162,7 +159,7 @@
                 <!-- Offcanvas centrado -->
                 <div class="offcanvas offcanvas-center" tabindex="-1" id="offcanvasCenter" aria-labelledby="offcanvasCenterLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasCenterLabel">Offcanvas centrado</h5>
+                        <h5 class="offcanvas-title" id="offcanvasCenterLabel">terminos y condiciones</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
                     </div>
                     <div class="offcanvas-body">
