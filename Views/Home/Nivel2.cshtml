@@ -8,8 +8,7 @@
             <div class="container-fluid">
                 <!-- Logo -->
 
-                <img src="/img/logo.png" alt="Ecoplay">
-
+                 <img class = "LogoHeader" src="/img/logo.png" alt="Ecoplay">
                 <!-- Termina Logo -->
 
                 <!-- ✅ Corregido: sin href -->
@@ -27,10 +26,10 @@
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-body d-flex flex-column justify-content-between">
                         <ul class="navbar-nav flex-grow-1 pe-3">
-                            <li class="nav-item">
+                           <li class="nav-item">
                                 <!-- ✅ Corregido -->
                                 <a class="Inicio" asp-controller="Home" asp-action="Home">
-                                    <img class="icon" src="/img/Inicio.png" alt="Inicio">
+                                    <img class="casa" src="/img/Inicio.png" alt="Inicio">
                                 </a>
                                 <h4>Inicio</h4>
                             </li>
@@ -38,7 +37,7 @@
                             <li class="nav-item">
                                 <!-- ✅ Corregido -->
                                 <a class="perfil" asp-controller="Home" asp-action="Perfil">
-                                    <img class="icon" src="/img/perfil.png" alt="Perfil">
+                                    <img class="perfil" src="/img/perfil.png" alt="Perfil">
                                 </a>
                                 <h4>Perfil</h4>
                             </li>
@@ -49,11 +48,12 @@
                             </button>
                             <h4>Configuración</h4>
 
-                            <button class="cerrar" type="button" class="btn-offcanvas-cerrar" data-bs-dismiss="offcanvas"
+                            <button type="button" class="btn-offcanvas-cerrar" data-bs-dismiss="offcanvas"
                                 aria-label="Cerrar">
-                                <img class="icon" src="/img/cerrarMenu.png" alt="Cerrar menú">
+                                <img class="Cerrar" src="/img/cerrarMenu.png" alt="Cerrar menú">
+                                <h4>Cerrar</h4>
                             </button>
-                            <h4>Cerrar</h4>
+
                         </ul>
                     </div>
                 </div>

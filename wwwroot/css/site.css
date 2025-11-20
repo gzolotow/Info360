@@ -65,6 +65,7 @@ header {
 header .navbar {
   background-color: var(--verde) !important;
   margin: 0;
+  margin-top: 0.5%;
   padding: 0;
 }
 header a {
@@ -91,8 +92,18 @@ header .navbar-nav h4 {
 /* Logo */
 header img {
   margin-top: -0.5%;
-  height: 75px;
+  margin-left: -0.5%;
+  height: 80px;
   width: auto;
+}
+.LogoInicio{
+  width: 14.5%;
+  margin-top: -0.5%;
+  height: auto;
+}
+
+.LogoHeader img {
+  margin-top: -0.6%;
 }
 
 /* Navegación */
@@ -138,12 +149,21 @@ header nav {
 .offcanvas {
   background-color: var(--piel);
 }
-
+.LogoHeader{
+  margin-left: 4%;
+  width: 250px;
+  height: auto;
+  box-shadow: rgba(0, 0, 4px, 0.25);
+}
+.container-fluid{
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
 .config-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px;
+  
 }
 
 .config-item {
@@ -185,19 +205,17 @@ header nav {
   height: 60px;
   color: var(--rojo);
 }
-
+.btn-offcanvas-cerrar{
+  background-color: var(--piel);
+  border: none;
+}
 .config {
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.btn-offcanvas-cerrar {
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-}
+
 
 .btn-offcanvas-cerrar img {
   width: 60px;
@@ -793,7 +811,6 @@ nav a {
   font-size: xx-large;
   color: black;
   margin: 3%;
-  margin-bottom: %;
   text-align: start;
 }
 
@@ -828,9 +845,6 @@ nav a {
 
 
 /* /////////////////////////////////////////////////////////NIVELES INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* ==========================================
-   ESTILOS VISTA NIVELES (FINAL)
-   ========================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
 
@@ -969,57 +983,64 @@ nav a {
     margin-bottom: 5px;
     display: block;
 }
-/* /////////////////////////////////////////////////////////NIVELES FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* /////////////////////////////////////////////////////////TUTORIAL INICIO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-
-/* --- VENTANA FLOTANTE --- */
-.tutorial-modal {
-  display: none; /* se activa con JS */
+/* El overlay que cubre toda la pantalla */
+.overlay {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #a7e8a1;
-  border: 4px solid #3cb34a;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-  width: 600px;
-  max-width: 90%;
-  padding: 20px;
-  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 5000;
 }
 
-/* Botón de cerrar */
-.cerrar {
+/* Contenedor de la imagen – ahora ocupa toda la pantalla */
+.overlay-content {
+  width: 50vw !important;
+  height: 70vh !important;
+  max-width: none !important;
+  max-height: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* La imagen llena toda la pantalla */
+.overlay-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Botón cerrar arriba a la derecha */
+.overlay-close {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  background: none;
+  width: 11.5%;
+  left: 0%;
+  z-index: 99999 !important;
   border: none;
-  color: #e53e3e;
-  font-size: 26px;
+  padding: 10px;
   cursor: pointer;
 }
 
-/* Título */
-.tutorial-modal h2 {
-  text-align: center;
-  font-size: 22px;
-  margin-top: 10px;
-  color: #000;
+.overlay-close p{
+  color: var(--rojo);
+  font-size: 4ex;
+  border: 5px solid var(--rojo);
+  border-radius: 50%;
+  margin-left: 10%;
 }
 
-/* Contenedor de tachos */
-.contenedor-tachos {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 60px;
-  margin-top: 20px;
-}
+/* /////////////////////////////////////////////////////////NIVELES FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* Tacho y basura */
 .tacho {
