@@ -25,6 +25,8 @@ namespace EcoPlay.Controllers
             {
                 // ✅ Guardar datos del usuario en la sesión
                 HttpContext.Session.SetString("user", Objeto.ObjectToString(user));
+                var nivelUsuario = BD.BuscarNivelUsuario(user.IDUsuario);
+                HttpContext.Session.SetString("nivelUsuario", Objeto.ObjectToString(nivelUsuario));
 
                 // Redirige al Home principal
                 return RedirectToAction("Home", "Home");

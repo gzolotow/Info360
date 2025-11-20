@@ -83,6 +83,7 @@ header .cerrar {
 /* Menú lateral */
 header .offcanvas {
   background-color: var(--piel);
+  z-index: 999999;
 }
 header .navbar-nav h4 {
   font-size: 4ex;
@@ -100,6 +101,16 @@ header img {
   width: 14.5%;
   margin-top: -0.5%;
   height: auto;
+}
+header, 
+header * {
+    position: relative;
+    z-index: 99999 !important;
+}
+
+.offcanvas,
+.offcanvas.show {
+    z-index: 999999 !important;
 }
 
 .LogoHeader img {
@@ -171,11 +182,27 @@ header nav {
   align-items: center;
   gap: 15px;
 }
+.close{
+  right: 32%;
+  position: absolute;
+  bottom: 44%;
+  width: 130px;
+  height: auto;
+}
 
+.musica{
+  width: 125px;
+  height: auto;
+}
 .config-icon {
-  margin-top: 100%;
-  width: 60px;
-  height: 60px;
+  width: 125px;
+  height: auto;
+}
+.volumen{
+  width: 100px;
+  height: auto;
+  margin-left: 5%;
+ 
 }
 
 .config-slider {
@@ -192,6 +219,9 @@ header nav {
 
 .btn-cerrar {
   background-color: var(--azul);
+  position: absolute;
+  right: 25%;
+  bottom: 60%;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -280,7 +310,6 @@ nav a {
   border-radius: 12px;
   border: none;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .foto{
@@ -459,35 +488,46 @@ nav a {
   background-size: cover;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 90.4vh;
+  margin-top: 3%;
 }
 
 /* Botón salir */
 .inventario .boton {
   float: left;
   width: 5%;
+  height: 7.5%;
   text-align: center;
   background-color: var(--rojo);
   margin: 1%;
   padding: 0.5%;
   border-radius: 10px;
-  box-shadow: 0px 5px 10px rgba(151, 151, 151, 0.5);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   clear: both;
+  margin-left: 2%;
 }
+
+
 .inventario .boton img {
+  margin-top: 10%;
   width: 50px;
   height: auto;
+  margin-right: 1%;
+}
+.inventario .boton:hover {
+  transform: scale(1.05);
+
 }
 
 /* Selección de aspectos */
 .inventario .Seleccion {
-  width: 100%;
+  width:100%;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   place-items: center;
-  padding: 10% 0;
+  padding: 4% 0;
 }
 .inventario .Seleccion div {
   box-shadow: 0px 1px 10px grey;
@@ -532,7 +572,6 @@ nav a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 200px;
-  margin-bottom: 5%;
 }
 .inventario .Seleccionado {
   position: relative;
@@ -547,14 +586,14 @@ nav a {
 .plataforma {
   width: 100%;
   position: absolute;
-  top: 1200%;
+  top: 1050%;
   left: 25%;
 }
 .inventario .skin {
   width: 70%;
   height: auto;
   position: absolute;
-  top: 450%;
+  top: 350%;
   left: 40%;
 }
 
@@ -720,28 +759,28 @@ nav a {
 }
 
 /* Botón volver */
-.Perfil .col1{
-  background-color: var(--rojo);
-  border: none;
-  font-size: xx-large;
-  cursor: pointer;
-  text-decoration: none;
-  width: 75%;
-  height: 75%;
-  border-radius: 10px;
-  padding: 2%;
-  transition: background-color 0.3s ease, transform 0.1s ease-in;
-}
-
-.Perfil .col1:hover {
-  background-color: #ad1c17;
-  transform: scale(0.95)
-}
-
-.Perfil .col1 p{
-  color: black;
+.Perfil .layout .boton {
+  float: left;
+  width: 70%;
+  height: 100%;
   text-align: center;
+  background-color: var(--rojo);
+  margin: 1%;
+  padding: 0.5%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  clear: both;
 }
+.Perfil .layout .boton img {
+  margin-top: 15%;
+  width: 50px;
+  height: auto;
+}
+.Perfil .layout .boton:hover {
+    transform: scale(1.05);
+    color: black;
+}
+
 /* Avatar */
 .Perfil .col1Span6 {
   display: flex;
@@ -855,28 +894,30 @@ nav a {
 }
 
 /* Botones Superiores */
-.niveles-btn-volver {
-    position: absolute;
-    top: 13%;
-    left: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #dc2626;
-    border: none;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    z-index: 20;
-    text-decoration: none;
-    color: black;
-    font-size: 2rem;
-    transition: transform 0.2s;
+.niveles-container .boton {
+  float: left;
+  width: 5%;
+  height: 7.5%;
+  text-align: center;
+  background-color: var(--rojo);
+  margin: 1%;
+  padding: 0.5%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  clear: both;
+  margin-left: 2%;
+  margin-top: 4%;
 }
 
-.niveles-btn-volver:hover {
+
+.niveles-container .boton img {
+  margin-top: 10%;
+  width: 50px;
+  height: auto;
+  margin-right: 1%;
+}
+
+.niveles-container .boton:hover {
     transform: scale(1.05);
     color: black;
 }
@@ -1193,11 +1234,11 @@ body {
 
 .Home{
   background: url('/img/FondoHome.png') no-repeat center center/cover;
-  height: 91.5vh;
+  height: 90.5vh;
 }
 
 .Home .layout{
-  margin-top: 2.5%;
+  margin-top: 3%;
 }
 
 .Home .layout .col4Span6{
@@ -1386,18 +1427,31 @@ body {
 .subtitulo { font-size: 1.8vw; color: #333; }
 
 /* Botón volver */
-.btn-volver {
-  position: absolute;
-  top: 10%;
-  left: 2%;
-  width: 4%;
-  background-color: #e53935;
-  border-radius: 10px;
+.boton {
+  float: left;
+  width: 5%;
+  height: 7.5%;
   text-align: center;
-  font-size: 2vw;
-  color: #fff;
-  text-decoration: none;
-  padding: 5px;
+  background-color: var(--rojo);
+  margin: 1%;
+  padding: 0.5%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(151, 151, 151, 0.5);
+  clear: both;
+  margin-left: 2%;
+  margin-top: -7%;
+}
+
+
+.boton img {
+  margin-top: 10%;
+  width: 50px;
+  height: auto;
+  margin-right: 1%;
+}
+.boton:hover {
+  transform: scale(1.05);
+
 }
 
 /* Personaje */
@@ -1709,7 +1763,7 @@ body {
 
 .Editar {
   background-color: var(--piel);
-  height: 91.2vh;
+  height: 96.8vh;
   overflow: hidden;
 }
 
@@ -1720,7 +1774,7 @@ body {
   width: 90%;
   width: 30%;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 8%;
   padding-left: 5%;
   padding-right: 5%;
   box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);

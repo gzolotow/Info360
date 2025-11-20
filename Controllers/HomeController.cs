@@ -42,6 +42,8 @@ namespace EcoPlay.Controllers
         public IActionResult Inventario()
         {
             ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
+            ViewBag.nivelUsuario = Objeto.StringToObject<NivelUsuario>(HttpContext.Session.GetString("nivelUsuario"));
+            ViewBag.AspectoEquipado = BD.BuscarEquipado(ViewBag.nivelUsuario.IDNivelUsuario);
             return View();
         }
 
@@ -92,6 +94,8 @@ namespace EcoPlay.Controllers
          public IActionResult Nivel1()
         {
             ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
+            ViewBag.nivelUsuario = Objeto.StringToObject<NivelUsuario>(HttpContext.Session.GetString("nivelUsuario"));
+            ViewBag.AspectoEquipado = BD.BuscarEquipado(ViewBag.nivelUsuario.IDNivelUsuario);
             return View();
         }
         // *** NUEVA ACCIÓN PARA GUARDAR RESULTADO DEL NIVEL ***

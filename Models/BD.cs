@@ -113,4 +113,24 @@ public static class BD
             connection.Execute(query, new { pIDUsuario = IDUsuario });
         }
     }
+
+    public static NivelUsuario BuscarNivelUsuario(int IDUsuario)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = "SELECT * FROM NivelUsuario WHERE IDNivelUsuario = (SELECT IDNivelUsuario FROM Usuario WHERE IDUsuario = @pIDUsuario)";
+            return connection.QueryFirstOrDefault<NivelUsuario>(query, new { pIDUsuario = IDUsuario });
+        }
+    }
+
+    public static string BuscarEquipado(int IDNivelUsuario)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = "SELECT AspectoEquipado FROM NivelUsuario WHERE IDNivelUsuario = @pIDNivelUsuario";
+            return connection.QueryFirstOrDefault<string>(query, new { pIDNivelUsuario = IDNivelUsuario });
+        }
+        
+    }
+
 }

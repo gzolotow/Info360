@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "b7zgMRg4XpFvgKj5Z/ZBclda4ZVvrjenEBAB53PBgXA=",
+  "Hash": "5AS6RSp1ShdV8OZNSljKC9CCGqG7tD062p2iCGTzZsQ=",
   "Source": "EcoPlay",
   "BasePath": "_content/EcoPlay",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "EcoPlay\\wwwroot",
       "Source": "EcoPlay",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\css\\site.css",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\favicon.ico",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\fonts\\CuteSunrise.otf",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\fonts\\CuteSunrise.otf",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "fonts/CuteSunrise.otf",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\CuteSunrise.otf"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\abrir.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\abrir.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/abrir.png",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\img\\abrir.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\agua.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\agua.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/agua.png",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\img\\agua.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\arbol.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\arbol.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/arbol.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\img\\arbol.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\banana.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\banana.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/banana.png",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\img\\banana.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\bollo.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\bollo.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/bollo.png",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\img\\bollo.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\bolsa.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\bolsa.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/bolsa.png",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\img\\bolsa.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\botella.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\botella.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/botella.png",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\img\\botella.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\cerrarMenu.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\cerrarMenu.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/cerrarMenu.png",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\img\\cerrarMenu.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\cerrarOverlay.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\cerrarOverlay.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/cerrarOverlay.png",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\img\\cerrarOverlay.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\check.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\check.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/check.png",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\img\\check.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\config.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\config.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/config.png",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\img\\config.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\default.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\default.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/default.png",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\img\\default.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\diario.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\diario.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/diario.png",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\img\\diario.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\fondo.jpg",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondo.jpg",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/fondo.jpg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\img\\fondo.jpg"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\FondoHome.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\FondoHome.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/FondoHome.png",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\img\\FondoHome.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\fondoInv.jpg",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondoInv.jpg",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/fondoInv.jpg",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\img\\fondoInv.jpg"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\FondoLanding.jpg",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\FondoLanding.jpg",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/FondoLanding.jpg",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\img\\FondoLanding.jpg"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\fondonivel1.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondonivel1.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/fondonivel1.png",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\img\\fondonivel1.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\fondonivel2.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondonivel2.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/fondonivel2.png",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\img\\fondonivel2.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\fondoniveles.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondoniveles.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/fondoniveles.png",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\img\\fondoniveles.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\Heroe.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\Heroe.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/Heroe.png",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Heroe.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\inicio.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\inicio.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/inicio.png",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\img\\inicio.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\inventario.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\inventario.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/inventario.png",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\img\\inventario.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\lata.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\lata.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/lata.png",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\img\\lata.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\logo.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\logo.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/logo.png",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\img\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\manzana.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\manzana.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/manzana.png",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\img\\manzana.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\Mascota 2.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\Mascota 2.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/Mascota 2.png",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Mascota 2.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\menu.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\menu.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/menu.png",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\img\\menu.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\musica.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\musica.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/musica.png",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\img\\musica.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\perfil.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\perfil.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/perfil.png",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\img\\perfil.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\pizza.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\pizza.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/pizza.png",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\img\\pizza.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\plataforma.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\plataforma.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/plataforma.png",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\img\\plataforma.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\play.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\play.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/play.png",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\img\\play.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\salir.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\salir.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/salir.png",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\img\\salir.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\tacho.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tacho.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/tacho.png",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\img\\tacho.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\tachonegro.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tachonegro.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/tachonegro.png",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\img\\tachonegro.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\tachoverde.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tachoverde.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/tachoverde.png",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\img\\tachoverde.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\taper.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\taper.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/taper.png",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\img\\taper.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\tierra.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tierra.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/tierra.png",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\img\\tierra.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\tutorial.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tutorial.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/tutorial.png",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\img\\tutorial.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\undo.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\undo.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/undo.png",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\img\\undo.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\vasito.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\vasito.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/vasito.png",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\img\\vasito.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\vaso.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\vaso.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/vaso.png",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\img\\vaso.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\img\\volumen.png",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\volumen.png",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "img/volumen.png",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\img\\volumen.png"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\js\\nivel1.js",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\js\\nivel1.js",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "js/nivel1.js",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\js\\nivel1.js"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\js\\nivel2.js",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\js\\nivel2.js",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "js/nivel2.js",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\js\\nivel2.js"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\js\\site.js",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "EcoPlay",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta (2)\\Info360\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\",
       "BasePath": "_content/EcoPlay",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",

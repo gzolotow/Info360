@@ -124,12 +124,16 @@
 
   <main class="Perfil">
     <section class="layout">
-      <a asp-controller="Home" asp-action="Home" class="col1 row1"><p>⬅</p></a>
+        <section class="boton">
+            <a asp-controller="Home" asp-action="Home" class="col1 row1">
+                <img src="/img/salir.png" alt="salir">
+            </a>
+        </section>
 
-      <div class="col1Span6 row2Span8">
-        <img src="/img/default.png" alt="Avatar del usuario">
-        <a asp-controller="Home" asp-action="CerrarSesion" class="cerrar-sesion">Cerrar sesión</a>
-      </div>
+        <div class="col1Span6 row2Span8">
+            <img src="/img/default.png" alt="Avatar del usuario">
+            <a asp-controller="Home" asp-action="CerrarSesion" class="cerrar-sesion">Cerrar sesión</a>
+        </div>
 
       <div class="col8Span5 row2Span8">
         <h2>Perfil</h2>

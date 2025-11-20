@@ -128,9 +128,11 @@
         <div class="niveles-container">
     
     <!-- Botón Volver -->
-    <a asp-controller="Home" asp-action="Home" class="niveles-btn-volver">
-        &#8592;
-    </a>
+  <section class="boton">
+            <a asp-controller="Home" asp-action="Home" class="col1 row1">
+                <img src="/img/salir.png" alt="salir">
+            </a>
+        </section>
 
     <!-- Botón Misiones -->
     <a href="@Url.Action("Misiones", "Home")" class="niveles-btn-misiones">
