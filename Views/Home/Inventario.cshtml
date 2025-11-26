@@ -53,7 +53,8 @@
                             <button type="button" class="btn-offcanvas-cerrar" data-bs-dismiss="offcanvas"
                                 aria-label="Cerrar">
                                 <img class="Cerrar" src="/img/cerrarMenu.png" alt="Cerrar menú">
-                                <h4>Cerrar</h4>
+                              <h4>Cerrar</h4>
+
                             </button>
                             
                         </ul>
@@ -87,8 +88,8 @@
                             </button>
 
                             <!-- Botón Salir -->
-                            <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close">
-                                <img class = "close" src="/img/cerrarOverlay.png" alt="">
+                            <button class = "close" type="button"  data-bs-dismiss="offcanvas" aria-label="Close">
+                                <img src="/img/cerrarOverlay.png" alt="">
                             </button>
                         </div>
                     </div>
@@ -137,7 +138,7 @@
                             <img class="plataforma" src="/img/plataforma.png" alt="plataforma">
                         </div>
                         <div>
-                            <img id="skinEquipada" class="skin" src="/img/agua.png" alt="skin">
+                            <img id="skinEquipada" class="skin" src="/img/@ViewBag.AspectoEquipado" alt="skin">
 
                         </div>
                     </section>
@@ -147,10 +148,10 @@
                     <section class="Aspecto">
                         <h1>Aspecto</h1>
                         <section class="Seleccion">
-                            <div><img class="skin-select" src="/img/tacho.png" data-skin="/img/tacho.png" alt=""></div>
-                            <div><img class="skin-select" src="/img/Heroe.png" data-skin="/img/Heroe.png" alt=""></div>
-                            <div><img class="skin-select" src="/img/arbol.png" data-skin="/img/arbol.png" alt=""></div>
-                            <div><img class="skin-select" src="/img/agua.png" data-skin="/img/agua.png" alt=""></div>
+                            <a href='@Url.Action("EditarSkin", "Home", new {IDNivelUsuario = ViewBag.nivelUsuario.IDNivelUsuario, IDAspecto = 5})'><img class="skin-select" src="/img/tacho.png" data-skin="/img/tacho.png" alt=""></a>
+                            <a href='@Url.Action("EditarSkin", "Home", new {IDNivelUsuario = ViewBag.nivelUsuario.IDNivelUsuario, IDAspecto = 1})'><img class="skin-select" src="/img/Heroe.png" data-skin="/img/Heroe.png" alt=""></a>
+                            <a href='@Url.Action("EditarSkin", "Home", new {IDNivelUsuario = ViewBag.nivelUsuario.IDNivelUsuario, IDAspecto = 2})'><img class="skin-select" src="/img/arbol.png" data-skin="/img/arbol.png" alt=""></a>
+                            <a href='@Url.Action("EditarSkin", "Home", new {IDNivelUsuario = ViewBag.nivelUsuario.IDNivelUsuario, IDAspecto = 3})'><img class="skin-select" src="/img/agua.png" data-skin="/img/agua.png" alt=""></a>
                         </section>
 
                     </section>

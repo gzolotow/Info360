@@ -43,7 +43,7 @@ namespace EcoPlay.Controllers
         {
             ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
             ViewBag.nivelUsuario = Objeto.StringToObject<NivelUsuario>(HttpContext.Session.GetString("nivelUsuario"));
-            ViewBag.AspectoEquipado = BD.BuscarEquipado(ViewBag.nivelUsuario.IDNivelUsuario);
+            ViewBag.AspectoEquipado = BD.BuscarAspectoEquipado(BD.BuscarEquipado(ViewBag.nivelUsuario.IDNivelUsuario));
             return View();
         }
 
@@ -95,7 +95,7 @@ namespace EcoPlay.Controllers
         {
             ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
             ViewBag.nivelUsuario = Objeto.StringToObject<NivelUsuario>(HttpContext.Session.GetString("nivelUsuario"));
-            ViewBag.AspectoEquipado = BD.BuscarEquipado(ViewBag.nivelUsuario.IDNivelUsuario);
+            ViewBag.AspectoEquipado = BD.BuscarAspectoEquipado(BD.BuscarEquipado(ViewBag.nivelUsuario.IDNivelUsuario));
             return View();
         }
         // *** NUEVA ACCIÓN PARA GUARDAR RESULTADO DEL NIVEL ***
@@ -151,6 +151,16 @@ namespace EcoPlay.Controllers
             HttpContext.Session.SetString("user", Objeto.ObjectToString(usu));
 
             return View("Perfil");
+        }
+
+        public IActionResult EditarSkin(int IDNivelUsuario, int IDAspecto)
+        {
+            NivelUsuario nivelUsuario = Objeto.StringToObject<NivelUsuario>(HttpContext.Session.GetString("nivelUsuario"));
+            BD.EditarAspectoEquipado(IDNivelUsuario, IDAspecto);
+            nivelUsuario.AspectoEquipado = IDAspecto;
+            HttpContext.Session.SetString("nivelUsuario", Objeto.ObjectToString(nivelUsuario));
+  
+            return RedirectToAction("Inventario");
         }
     }
 }

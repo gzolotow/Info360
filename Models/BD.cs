@@ -123,14 +123,34 @@ public static class BD
         }
     }
 
-    public static string BuscarEquipado(int IDNivelUsuario)
+    public static int BuscarEquipado(int IDNivelUsuario)
     {
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string query = "SELECT AspectoEquipado FROM NivelUsuario WHERE IDNivelUsuario = @pIDNivelUsuario";
-            return connection.QueryFirstOrDefault<string>(query, new { pIDNivelUsuario = IDNivelUsuario });
+            return connection.QueryFirstOrDefault<int>(query, new { pIDNivelUsuario = IDNivelUsuario });
         }
         
+    }
+
+    public static string BuscarAspectoEquipado(int AspectoEquipado)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = "SELECT Imagen FROM Aspectos WHERE IDAspectos = @pAspectoEquipado";
+            return connection.QueryFirstOrDefault<string>(query, new { pAspectoEquipado = AspectoEquipado });
+        }
+        
+    }
+
+    public static void EditarAspectoEquipado(int IDNivelUsuario, int IDAspecto)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string queryUsuario = @"UPDATE NivelUsuario SET AspectoEquipado = @pAspectoEquipado WHERE IDNivelUsuario = @pIDNivelUsuario";
+
+            connection.Execute(queryUsuario, new { pIDNivelUsuario = IDNivelUsuario, pAspectoEquipado = IDAspecto });
+        }
     }
 
 }
