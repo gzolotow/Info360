@@ -18,7 +18,7 @@ namespace EcoPlay.Controllers
         {
             ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
 
-            return View();
+            return View("Nivel2");
         }
 
         public IActionResult Home()

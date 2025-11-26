@@ -1,157 +1,121 @@
-// Arrays de imágenes
-const reciclables = [
-    "/img/botella.png",
-    "/img/otella2.png",
-    "/img/botella3.png",
-    "/img/lata.png",
-    "/img/papel.png",
-    "/img/carton.png"
-];
+document.addEventListener("DOMContentLoaded", () => {
 
-const noReciclables = [
-    "/img/banana.png",
-    "/img/pizza.png",
-    "/img/aper.png",
-    "/img/vaso.png",
-    "/img/vasito.png"
-];
+    // LISTAS DE OBJETOS
+    const reciclables = ["bollo.png", "botella.png", "lata.png", "vaso.png"];
+    const noReciclables = ["pizza.png", "taper.png", "bolsa.png", "manzana.png", "vasito.png"];
 
-// DOM
-const player = document.getElementById("player");
-const fallingContainer = document.getElementById("falling-container");
-const progressBar = document.getElementById("progressBar");
-const overlayCompletado = document.getElementById("overlayCompletado");
+    // ELEMENTOS
+    const heroe = document.getElementById("heroe");
+    const tacho = document.getElementById("tacho");
+    const progresoBarra = document.getElementById("progreso");
+    const overlay = document.getElementById("overlayCompletado");
 
-const soundBien = document.getElementById("soundBien");
-const soundMal = document.getElementById("soundMal");
-const soundError = document.getElementById("soundError");
+    const sonidoOK = document.getElementById("sonidoOK");
+    const sonidoError = document.getElementById("sonidoError");
 
-let progreso = 0;
-let juegoTerminado = false;
+    let progreso = 0;
 
-// Movimiento del jugador
-document.addEventListener("mousemove", (e) => {
-    const limite = window.innerWidth - player.offsetWidth;
-    let x = e.clientX - player.offsetWidth / 2;
+    // ---------------------------
+    // MOVIMIENTO SUAVE CON MOUSE
+    // ---------------------------
+    document.addEventListener("mousemove", (e) => {
+        const x = e.clientX;
 
-    if (x < 0) x = 0;
-    if (x > limite) x = limite;
+        heroe.style.left = (x - 70) + "px";
+        tacho.style.left = (x - 20) + "px";
+    });
 
-    player.style.left = x + "px";
-});
+    // ---------------------------
+    // CREAR OBJETOS
+    // ---------------------------
+    function crearObjeto() {
+        const objeto = document.createElement("img");
+        objeto.classList.add("objeto");
 
-// Crear objetos
-function spawnObject() {
-    if (juegoTerminado) return;
+        const esReciclable = Math.random() < 0.5;
+        const lista = esReciclable ? reciclables : noReciclables;
 
-    const obj = document.createElement("img");
-    obj.classList.add("falling-object");
+        objeto.src = "img/" + lista[Math.floor(Math.random() * lista.length)];
+        objeto.style.left = Math.random() * 85 + "%";
 
-    const tipo = Math.random() < 0.6 ? "rec" : "no";
-    obj.dataset.tipo = tipo;
+        document.body.appendChild(objeto);
 
-    obj.src = `/images/${tipo === "rec" ? reciclables.random() : noReciclables.random()}`;
-    obj.style.left = Math.random() * (window.innerWidth - 100) + "px";
-    obj.style.top = "-120px";
+        let y = -80;
 
-    fallingContainer.appendChild(obj);
+        function caer() {
+            y += 3;
+            objeto.style.top = y + "px";
 
-    fall(obj);
-}
+            if (y >= window.innerHeight - 180) {
+                revisarChoque(objeto, esReciclable);
+                return;
+            }
 
-// Caída
-function fall(obj) {
-    let y = -120;
-    let speed = 3 + Math.random() * 2.5;
-
-    const interval = setInterval(() => {
-        if (juegoTerminado) {
-            obj.remove();
-            clearInterval(interval);
-            return;
+            requestAnimationFrame(caer);
         }
 
-        y += speed;
-        obj.style.top = y + "px";
-
-        if (checkCollision(obj, player)) {
-            if (obj.dataset.tipo === "rec") recogerBien(obj);
-            else recogerMal(obj);
-
-            clearInterval(interval);
-        }
-
-        if (y > window.innerHeight) {
-            obj.remove();
-            clearInterval(interval);
-        }
-
-    }, 16);
-}
-
-// ✔ Buena recolección
-function recogerBien(obj) {
-    soundBien.volume = 1;
-    soundBien.play();
-
-    obj.classList.add("absorb");
-
-    progreso += 4;
-    updateBarra();
-
-    setTimeout(() => obj.remove(), 300);
-}
-
-// ❌ Mala recolección
-function recogerMal(obj) {
-    soundMal.volume = 1;
-    soundMal.play();
-
-    obj.classList.add("explode");
-
-    progreso -= 6;
-    if (progreso < 0) progreso = 0;
-
-    soundError.volume = 1;
-    soundError.play();
-
-    updateBarra();
-
-    setTimeout(() => obj.remove(), 250);
-}
-
-// Barra
-function updateBarra() {
-    progressBar.style.width = progreso + "%";
-
-    if (progreso >= 100) {
-        terminarNivel();
+        caer();
     }
-}
 
-// Terminar nivel
-function terminarNivel() {
-    juegoTerminado = true;
-    setTimeout(() => overlayCompletado.classList.remove("hidden"), 400);
-}
+    // ---------------------------
+    // COLISIÓN Y PUNTOS
+    // ---------------------------
+    function revisarChoque(obj, esReciclable) {
+        const objRect = obj.getBoundingClientRect();
+        const tRect = tacho.getBoundingClientRect();
 
-// Helper
-Array.prototype.random = function () {
-    return this[Math.floor(Math.random() * this.length)];
-};
+        const choca =
+            objRect.left < tRect.right &&
+            objRect.right > tRect.left &&
+            objRect.bottom > tRect.top;
 
-// Spawn constante
-setInterval(spawnObject, 850);
+        if (choca) {
+            if (esReciclable) {
+                sumarPunto(obj);
+            } else {
+                restarPunto(obj);
+            }
+        } else {
+            obj.remove();
+        }
+    }
 
-// DETECTOR DE COLISION
-function checkCollision(a, b) {
-    const A = a.getBoundingClientRect();
-    const B = b.getBoundingClientRect();
+    // ---------------------------
+    // ANIMACIONES DE ACIERTO
+    // ---------------------------
+    function sumarPunto(obj) {
+        sonidoOK.volume = 1.0;
+        sonidoOK.currentTime = 0;
+        sonidoOK.play();
 
-    return !(
-        A.bottom < B.top ||
-        A.top > B.bottom ||
-        A.right < B.left ||
-        A.left > B.right
-    );
-}
+        obj.classList.add("entrarTacho");
+        setTimeout(() => obj.remove(), 500);
+
+        progreso += 10;
+        progresoBarra.style.width = progreso + "%";
+
+        if (progreso >= 100) {
+            overlay.classList.remove("hidden");
+        }
+    }
+
+    // ---------------------------
+    // ANIMACIONES DE ERROR
+    // ---------------------------
+    function restarPunto(obj) {
+        sonidoError.volume = 1.0;
+        sonidoError.currentTime = 0;
+        sonidoError.play();
+
+        obj.classList.add("explotar");
+        setTimeout(() => obj.remove(), 300);
+
+        progreso -= 5;
+        if (progreso < 0) progreso = 0;
+        progresoBarra.style.width = progreso + "%";
+    }
+
+    // CREAR OBJETOS CADA X TIEMPO
+    setInterval(crearObjeto, 1200);
+
+});

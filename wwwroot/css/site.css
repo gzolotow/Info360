@@ -183,10 +183,12 @@ header nav {
   gap: 15px;
 }
 .close{
-  right: 32%;
+  border: none;
+  background-color: var(--piel);
+  right: 30%;
   position: absolute;
-  bottom: 44%;
-  width: 130px;
+  top: 200%;
+  width: 100px;
   height: auto;
 }
 
@@ -220,8 +222,8 @@ header nav {
 .btn-cerrar {
   background-color: var(--azul);
   position: absolute;
-  right: 25%;
-  bottom: 60%;
+  right: 15%;
+  bottom: -60%;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -546,10 +548,7 @@ nav a {
 }
 
 /* Botones generales */
-.close {
-  border: none;
-  background-color: var(--piel);
-}
+
 .foto {
   text-decoration: none;
   margin-left: 70%;
@@ -1611,119 +1610,129 @@ body {
 /* ------------------------------
    ESTILOS GENERALES NIVEL 2
 --------------------------------*/
-
-/* CONTENEDOR PRINCIPAL */
+/* --- CONTENEDOR GENERAL DEL NIVEL --- */
 #nivel2-container {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('/img/fondonivel2.png') no-repeat center center;
+    overflow: hidden;
+    background-image: url('/img/fondonivel2.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
 }
 
-/* ------------------------------
-   BARRA DE PROGRESO
---------------------------------*/
-
-#progressWrapper {
-    width: 80%;
-    height: 25px;
-    background: #ffffff90;
-    border-radius: 20px;
-    margin: 20px auto;
-    overflow: hidden;
-    border: 2px solid #fff;
+/* TITULO DEL NIVEL */
+#nivel2-title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 90px;
+    font-size: 48px;
+    font-weight: 800;
+    color: #000;
 }
 
-#progressBar {
-    width: 0%;
-    height: 100%;
-    background: #00ff57;
-    transition: width 0.25s ease;
+#nivel2-subtitle {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 155px;
+    font-size: 26px;
+    font-weight: 600;
 }
 
-/* ------------------------------
-   JUGADOR (HÉROE + TACHO)
---------------------------------*/
+/* OBJETOS QUE CAEN */
+.objeto {
+    position: absolute;
+    width: 70px;
+    height: auto;
+    user-select: none;
+    pointer-events: none;
+    animation: caer linear;
+}
 
+/* ANIMACIÓN DE CAÍDA */
+@keyframes caer {
+    from { transform: translateY(-150px); }
+    to { transform: translateY(110vh); }
+}
+
+/* PERSONAJE + TACHO */
 #player {
     position: absolute;
     bottom: 40px;
-    width: 160px;
-    height: 160px;
     left: 50%;
     transform: translateX(-50%);
-    pointer-events: none;
+    display: flex;
+    align-items: center;
+    width: 160px;
 }
 
-#hero {
+/* PERSONAJE */
+#player img.hero {
+    width: 150px;
+    height: auto;
+    margin-right: -20px;
+}
+
+/* TACHO */
+#player img.tacho {
+    width: 95px;
+    height: auto;
+}
+
+/* EFECTO CUANDO SE RECICLA BIEN */
+.recyclo-bien {
+    animation: absorver 0.35s ease-out forwards;
+}
+
+@keyframes absorver {
+    0% { transform: scale(1) translateY(0); opacity: 1; }
+    100% { transform: scale(0.1) translateY(40px); opacity: 0; }
+}
+
+/* EFECTO ERROR */
+.recyclo-mal {
+    animation: explotar 0.35s ease-out forwards;
+}
+
+@keyframes explotar {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* BARRA DE PROGRESO */
+#barra-progreso {
     position: absolute;
-    left: -25px;
-    bottom: 25px;
-    width: 130px;
+    top: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    height: 26px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-#tacho {
-    position: absolute;
-    right: -10px;
-    bottom: 0;
-    width: 120px;
+#barra-progreso-inner {
+    width: 0%;
+    height: 100%;
+    background: #41c95b;
+    transition: width 0.2s;
 }
 
-/* ------------------------------
-   OBJETOS QUE CAEN
---------------------------------*/
-
-.falling-object {
-    position: absolute;
-    width: 85px;
-    user-select: none;
-    pointer-events: none;
-}
-
-/* ------------------------------
-   ANIMACIONES
---------------------------------*/
-
-/* Animación correcta (absorción) */
-.absorb {
-    animation: absorbAnim 0.35s forwards ease-out;
-}
-
-@keyframes absorbAnim {
-    0% { transform: scale(1) rotate(0deg); opacity: 1; }
-    100% { transform: scale(0) rotate(360deg); opacity: 0; }
-}
-
-/* Animación incorrecta (explosión) */
-.explode {
-    animation: explodeAnim 0.28s forwards;
-}
-
-@keyframes explodeAnim {
-    0% { transform: scale(1); opacity: 1; filter: brightness(1); }
-    100% { transform: scale(2); opacity: 0; filter: brightness(4) saturate(3); }
-}
-
-/* ------------------------------
-   OVERLAY NIVEL COMPLETADO
-   (USA TU MISMO DISEÑO)
---------------------------------*/
-
+/* OVERLAY NIVEL COMPLETADO (tu diseño ya lo tenía) */
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000b7;
+    background: rgba(0,0,0,0.75);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 99999;
+    z-index: 4000;
 }
 
 .overlay.hidden {
@@ -1731,30 +1740,17 @@ body {
 }
 
 .overlay-content {
-    background: #fff;
-    padding: 40px;
-    border-radius: 18px;
+    background: white;
+    padding: 35px;
     text-align: center;
-    width: 400px;
+    border-radius: 20px;
+    animation: aparecer 0.4s ease-out;
 }
 
-.overlay-content h2 {
-    margin-top: 0;
-    font-size: 28px;
+@keyframes aparecer {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
-
-.btn-volver {
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-    font-size: 24px;
-}
-
-.btn-volver p {
-    margin: 0;
-}
-
-
 
 
 /* /////////////////////////////////////////////////////////Nivel 2 FIN////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
