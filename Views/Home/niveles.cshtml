@@ -56,8 +56,6 @@
                             <button type="button" class="btn-offcanvas-cerrar" data-bs-dismiss="offcanvas"
                                 aria-label="Cerrar">
                                 <img class="Cerrar" src="/img/cerrarMenu.png" alt="Cerrar menú">
-                                <h4>Cerrar</h4>
-                                
                             </button>
 
                         </ul>
@@ -92,8 +90,6 @@
                             </button>
 
                             <!-- Botón Salir -->
-                               <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close">
-                                <img class = "close" src="/img/cerrarOverlay.png" alt="">
                                <button class = "close" type="button"  data-bs-dismiss="offcanvas" aria-label="Close">
                                 <img src="/img/cerrarOverlay.png" alt="">
                             </button>
@@ -129,18 +125,13 @@
     </header>
     <main> 
         <div class="niveles-container">
-
-    <!-- Botón Volver -->
-  <section class="boton">
-            <a asp-controller="Home" asp-action="Home" class="col1 row1">
-                <img src="/img/salir.png" alt="salir">
-            </a>
-        </section>
-
-    <!-- Botón Misiones -->
-    <a href="@Url.Action("Misiones", "Home")" class="niveles-btn-misiones">
-        Misiones
-    </a>
+    
+            <!-- Botón Volver -->
+            <section class="boton">
+                <a asp-controller="Home" asp-action="Home" class="col1 row1">
+                    <img src="/img/salir.png" alt="salir">
+                </a>
+            </section>
 
     <!-- Líneas Conectoras -->
     <svg class="niveles-conexiones-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -150,14 +141,14 @@
               stroke-width="3" 
               fill="none" 
               vector-effect="non-scaling-stroke" />
-
+        
         <!-- Nivel 1 a Nivel 2 -->
         <path d="M 40 35 C 55 35, 50 65, 65 65" 
               stroke="black" 
               stroke-width="3" 
               fill="none" 
               vector-effect="non-scaling-stroke" />
-
+        
         <!-- Nivel 2 a Nivel 3 -->
         <path d="M 65 65 C 80 65, 75 35, 90 35" 
               stroke="black" 
@@ -236,7 +227,6 @@
                             1. Aceptación de los términos...
                             <!-- (Texto de términos y condiciones) -->
                         </p>
-                        <button class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Cerrar</button>
                         <button class="btn" data-bs-dismiss="offcanvas">Cerrar</button>
                     </div>
                 </div>

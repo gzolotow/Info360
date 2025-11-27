@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\EcoPlay.csproj": {}
+    "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\EcoPlay.csproj": {}
   },
   "projects": {
-    "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\EcoPlay.csproj": {
+    "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\EcoPlay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\EcoPlay.csproj",
+        "projectUniqueName": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\EcoPlay.csproj",
         "projectName": "EcoPlay",
-        "projectPath": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\EcoPlay.csproj",
+        "projectPath": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\EcoPlay.csproj",
         "packagesPath": "C:\\Users\\49189314\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\obj\\",
+        "outputPath": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

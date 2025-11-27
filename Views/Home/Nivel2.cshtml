@@ -1,127 +1,7 @@
 @{
     ViewData["Title"] = "Nivel 2";
 }
-<body>
-        <header>
-        <!-- Nav inicio -->
-        <nav class="navbar fixed-top">
-            <div class="container-fluid">
-                <!-- Logo -->
-
-                <img class = "LogoHeader" src="/img/logo.png" alt="Ecoplay">
-
-                <!-- Termina Logo -->
-
-                <!-- ✅ Corregido: sin href -->
-                <a class="foto" asp-controller="Home" asp-action="Perfil">
-                    <img src="/img/default.png" alt="Inicio">
-                </a>
-
-                <!-- Botón para abrir el menú -->
-                <button class="Menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                    aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <img src="/img/menu.png" alt="Abrir menú">
-                </button>
-
-                <!-- Offcanvas -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-body d-flex flex-column justify-content-between">
-                        <ul class="navbar-nav flex-grow-1 pe-3">
-                           <li class="nav-item">
-                                <!-- ✅ Corregido -->
-                                <a class="Inicio" asp-controller="Home" asp-action="Home">
-                                    <img class="casa" src="/img/Inicio.png" alt="Inicio">
-                                </a>
-                                <h4>Inicio</h4>
-                            </li>
-
-                            <li class="nav-item">
-                                <!-- ✅ Corregido -->
-                                <a class="perfil" asp-controller="Home" asp-action="Perfil">
-                                    <img class="perfil" src="/img/perfil.png" alt="Perfil">
-                                </a>
-                                <h4>Perfil</h4>
-                            </li>
-
-                            <button class="btn-submenu" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasConfig" aria-controls="offcanvasConfig">
-                                <img class="config" src="/img/config.png" alt="Configuración">
-                            </button>
-                            <h4>Configuración</h4>
-
-                            <button type="button" class="btn-offcanvas-cerrar" data-bs-dismiss="offcanvas"
-                                aria-label="Cerrar">
-                                <img class="Cerrar" src="/img/cerrarMenu.png" alt="Cerrar menú">
-                            </button>
-                          
-
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 🧩 SUBOVERLAY de CONFIGURACIÓN -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasConfig" aria-labelledby="offcanvasConfigLabel">
-                    <div class="offcanvas-header"></div>
-                    <div class="offcanvas-body config-body text-center">
-
-                        <!-- Opción Música -->
-                        <div class="config-item">
-                            <img src="/img/musica.png" alt="Música" class="musica">
-                            <a href="#"><img src="/img/check.png" alt="Activado" class="config-icon"></a>
-                        </div>
-
-                        <!-- Opción Volumen -->
-                        <div class="config-item">
-                            <img src="/img/volumen.png" alt="Volumen" class="volumen">
-
-                            <!-- Slider funcional -->
-                            <input type="range" id="volumeSlider" min="0" max="100" value="80" class="rango">
-
-                            <!-- Texto dinámico -->
-                            <span id="volumeLabel" class="rango">Alto</span>
-
-                            <!-- Botón para abrir el offcanvas -->
-                            <button class="btn-cerrar"d type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasCenter" aria-controls="offcanvasCenter">
-                                terminos y condiciones
-                            </button>
-
-                            <!-- Botón Salir -->
-                              <button class = "close" type="button"  data-bs-dismiss="offcanvas" aria-label="Close">
-                                <img src="/img/cerrarOverlay.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 🎵 Script de volumen -->
-                <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-                        const slider = document.getElementById('volumeSlider');
-                        const label = document.getElementById('volumeLabel');
-
-                        if (slider && label) {
-                            slider.addEventListener('input', () => {
-                                const value = slider.value;
-
-                                if (value >= 70) {
-                                    label.textContent = 'Alto';
-                                } else if (value >= 40) {
-                                    label.textContent = 'Medio';
-                                } else if (value > 0) {
-                                    label.textContent = 'Bajo';
-                                } else {
-                                    label.textContent = 'Mute';
-                                }
-                            });
-                        }
-                    });
-                </script>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div id="nivel2" class="nivel">
+<div id="nivel2" class="nivel">
     <div id="area-juego">
         <h2>Nivel 2</h2>
         <p>Agarrá los objetos reciclables</p>
@@ -133,29 +13,40 @@
 
         <div id="personaje" class="personaje"></div>
         <div id="contenedor-residuos"></div>
-  <section class="boton">
-                <a asp-controller="Home" asp-action="Home" class="col1 row1">
-                    <img src="/img/salir.png" alt="salir">
-                </a>
-            </section>
     </div>
-          
 </div>
 
+<!-- Overlay al completar -->
+<div id="overlayCompletado" class="overlay hidden">
+    <div class="overlay-content">
+        <h2>¡Nivel completado!</h2>
+        <p>¡Felicitaciones! Has reciclado todos los residuos correctamente.</p>
+        <a asp-controller="Home" asp-action="niveles" class="btn-volver"><p>⬅</p></a>
+    </div>
+</div>
+ <div id="overlayCompletado" class="overlay-nivel hidden">
+    <div class="overlay-box">
 
+        <h2 class="overlay-titulo">¡Nivel completado!</h2>
 
+        <div class="overlay-botones">
 
-     <!-- Overlay Nivel Completado -->
-            <div id="overlayCompletado" class="overlay hidden">
-                <div class="overlay-content">
-                    <h2>¡Nivel completado!</h2>
-                    <p>¡Felicitaciones! Has reciclado todos los residuos correctamente.</p>
-                    <a asp-controller="Home" asp-action="niveles" class="btn-volver"><p>⬅</p></a>
-                </div>
-            </div>
+            <!-- HOME -->
+            <a asp-controller="Home" asp-action="Home" class="overlay-btn btn-home">
+                <img src="/img/Inicio.png" alt="Home">
+            </a>
 
-    </main>
-        
-</body>
+            <!-- REINTENTAR -->
+            <button class="overlay-btn btn-reintentar" onclick="location.reload();">
+                <img src="/img/Reintentar.png" alt="Reintentar">
+            </button>
 
-<script src="@Url.Content("~/js/nivel2.js")" defer></script>
+            <!-- SIGUIENTE NIVEL -->
+            <a asp-controller="Home" asp-action="Nivel2" class="overlay-btn btn-siguiente">
+                <img src="/img/siguiente.png" alt="Siguiente">
+            </a>
+
+        </div>
+    </div>
+</div>
+<script src="~/js/nivel2.js"></script>

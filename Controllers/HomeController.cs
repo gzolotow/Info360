@@ -33,18 +33,11 @@ namespace EcoPlay.Controllers
             return View();
         }
 
+       
         public IActionResult Niveles()
         {
-            var usuario = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
-            var nivelUsuario = Objeto.StringToObject<NivelUsuario>(HttpContext.Session.GetString("nivelUsuario"));
-
-            ViewBag.user = usuario;
-            ViewBag.nivelUsuario = nivelUsuario;
-
-            // Guardamos el nivel actual máximo del usuario
-            int nivelMax = nivelUsuario?.IDNivel ?? 1; 
-            HttpContext.Session.SetInt32("nivelMax", nivelMax);
-
+            ViewBag.Nivel1Completado = HttpContext.Session.GetString("Nivel1Completado") == "true";
+            ViewBag.Nivel2Completado = HttpContext.Session.GetString("Nivel2Completado") == "true";
             return View();
         }
 
@@ -59,7 +52,7 @@ namespace EcoPlay.Controllers
 
         public IActionResult NivelesJuego(int id)
         {
-            HttpContext.Session.SetInt32("IDNivel", id);
+            HttpContext.Session.SetInt32("NivelActual", id);
             ViewData["NivelSeleccionado"] = id;
 
             string titulo;
@@ -108,28 +101,30 @@ namespace EcoPlay.Controllers
             ViewBag.AspectoEquipado = BD.BuscarAspectoEquipado(BD.BuscarEquipado(ViewBag.nivelUsuario.IDNivelUsuario));
             return View();
         }
-        // *** NUEVA ACCIÓN PARA GUARDAR RESULTADO DEL NIVEL ***
-       
-       
-            [HttpPost]
-        public IActionResult GuardarResultadoNivel(int nivelId, int estrellas, int errores, string tiempo)
+        public IActionResult Nivel2()
         {
-            var mailUsuario = HttpContext.Session.GetString("MailUsuario");
-            if (string.IsNullOrEmpty(mailUsuario))
-                return Json(new { success = false, message = "Usuario no logueado." });
-
-            // Guardar resultado en BD...
-            
-            // Actualizar nivel máximo
-            var nivelUsuario = Objeto.StringToObject<NivelUsuario>(HttpContext.Session.GetString("nivelUsuario"));
-            if(nivelId >= nivelUsuario.IDNivel)
-            {
-                nivelUsuario.IDNivel = nivelId + 1; // desbloquea siguiente nivel
-                HttpContext.Session.SetString("nivelUsuario", Objeto.ObjectToString(nivelUsuario));
-            }
-
-            return Json(new { success = true });
+            ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
+            ViewBag.nivelUsuario = Objeto.StringToObject<NivelUsuario>(HttpContext.Session.GetString("nivelUsuario"));
+            ViewBag.AspectoEquipado = BD.BuscarAspectoEquipado(BD.BuscarEquipado(ViewBag.nivelUsuario.IDNivelUsuario));
+            return View();
         }
+        // *** NUEVA ACCIÓN PARA GUARDAR RESULTADO DEL NIVEL ***
+        
+[HttpPost]
+public IActionResult GuardarResultadoNivel([FromBody] NivelCompletadoRequest request)
+{
+    if (request.nivelId == 1)
+    {
+        HttpContext.Session.SetString("Nivel1Completado", "true");
+    }
+    else if (request.nivelId == 2)
+    {
+        HttpContext.Session.SetString("Nivel2Completado", "true");
+    }
+
+    return Json(new { success = true });
+}
+
 
 
 
@@ -157,6 +152,7 @@ namespace EcoPlay.Controllers
             }
 
             HttpContext.Session.SetString("user", Objeto.ObjectToString(usu));
+            ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
 
             return View("Perfil");
         }
@@ -170,13 +166,5 @@ namespace EcoPlay.Controllers
   
             return RedirectToAction("Inventario");
         }
-        public IActionResult Nivel2()
-        {
-            ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
-            ViewBag.nivelUsuario = Objeto.StringToObject<NivelUsuario>(HttpContext.Session.GetString("nivelUsuario"));
-            ViewBag.AspectoEquipado = BD.BuscarAspectoEquipado(BD.BuscarEquipado(ViewBag.nivelUsuario.IDNivelUsuario));
-            return View();
-        }
-
     }
 }

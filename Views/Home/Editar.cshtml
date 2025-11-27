@@ -53,8 +53,8 @@
                             <button type="button" class="btn-offcanvas-cerrar" data-bs-dismiss="offcanvas"
                                 aria-label="Cerrar">
                                 <img class="Cerrar" src="/img/cerrarMenu.png" alt="Cerrar menú">
+                              
                             </button>
-                                
 
                         </ul>
                     </div>
@@ -122,13 +122,7 @@
         </nav>
     </header>
   <main class="Editar">
-    <section class="boton">
-        <a asp-controller="Home" asp-action="Perfil" class="col1 row1">
-            <img src="/img/salir.png" alt="salir">
-        </a>
-    </section>
     <section>
-
       <h1>Editar Cuenta</h1>
 
       @if (ViewBag.Error != null)
@@ -147,7 +141,7 @@
 
         <input type="password" id="password" name="password" placeholder="contraseña" required>
 
-        <input type="text" id="fecha" name="fecha" placeholder="@ViewBag.user.FechaNacimiento (dd/mm/aa)" required>
+        <input type="text" id="fecha" name="fecha" placeholder="@ViewBag.user.FechaNacimiento.ToShortDateString() (dd/mm/aa)" required>
 
         <input type="file" name="image" id="image">
 

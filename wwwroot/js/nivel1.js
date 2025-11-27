@@ -41,16 +41,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     residuo.remove();
                     residuosCorrectos++;
 
-                    if (residuosCorrectos === totalResiduos) {
+                    
+if (residuosCorrectos === totalResiduos) {
     overlayCompletado.classList.remove("hidden");
 
-    // 🔥 MARCAR EL NIVEL COMO COMPLETADO
-    localStorage.setItem("nivel1Completado", "1");
-
-    // (opcional, por si después querés usarlo)
-    if (typeof window.nivelCompletado === "function") {
-        window.nivelCompletado(1);
-    }
+    // Avisar al servidor que el nivel se completó
+    fetch('/Home/GuardarResultadoNivel', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nivelId: 1, completado: true })
+    });
 }
 
                 }, 500);
@@ -60,4 +60,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-

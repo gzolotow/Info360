@@ -12,7 +12,6 @@ public class NivelUsuario
     public int Estrellas { get; set; }
     [JsonProperty]
     public int MisionesCompletadas { get; set; }
-    
     public NivelUsuario() { }
     public NivelUsuario(int IDNivel, int AspectoEquipado, int Estrellas, int MisionesCompletadas)
     {

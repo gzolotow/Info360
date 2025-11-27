@@ -1,251 +1,259 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\fonts\\CuteSunrise.otf",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\fonts\\CuteSunrise.otf",
       "PackagePath": "staticwebassets\\fonts\\CuteSunrise.otf"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\FondoHome.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\FondoHome.png",
       "PackagePath": "staticwebassets\\img\\FondoHome.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\FondoLanding.jpg",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\FondoLanding.jpg",
       "PackagePath": "staticwebassets\\img\\FondoLanding.jpg"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\Heroe.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\Heroe.png",
       "PackagePath": "staticwebassets\\img\\Heroe.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\Mascota 2.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\Mascota 2.png",
       "PackagePath": "staticwebassets\\img\\Mascota 2.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\abrir.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\Reintentar.png",
+      "PackagePath": "staticwebassets\\img\\Reintentar.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\abrir.png",
       "PackagePath": "staticwebassets\\img\\abrir.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\agua.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\agua.png",
       "PackagePath": "staticwebassets\\img\\agua.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\arbol.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\arbol.png",
       "PackagePath": "staticwebassets\\img\\arbol.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\banana.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\banana.png",
       "PackagePath": "staticwebassets\\img\\banana.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\bollo.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\bollo.png",
       "PackagePath": "staticwebassets\\img\\bollo.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\bolsa.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\bolsa.png",
       "PackagePath": "staticwebassets\\img\\bolsa.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\botella.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\botella.png",
       "PackagePath": "staticwebassets\\img\\botella.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\cerrarMenu.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\cerrarMenu.png",
       "PackagePath": "staticwebassets\\img\\cerrarMenu.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\cerrarOverlay.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\cerrarOverlay.png",
       "PackagePath": "staticwebassets\\img\\cerrarOverlay.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\check.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\check.png",
       "PackagePath": "staticwebassets\\img\\check.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\config.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\config.png",
       "PackagePath": "staticwebassets\\img\\config.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\default.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\default.png",
       "PackagePath": "staticwebassets\\img\\default.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\diario.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\diario.png",
       "PackagePath": "staticwebassets\\img\\diario.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondo.jpg",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\fondo.jpg",
       "PackagePath": "staticwebassets\\img\\fondo.jpg"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondoInv.jpg",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\fondoInv.jpg",
       "PackagePath": "staticwebassets\\img\\fondoInv.jpg"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondonivel1.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\fondonivel1.png",
       "PackagePath": "staticwebassets\\img\\fondonivel1.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondonivel2.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\fondonivel2.png",
       "PackagePath": "staticwebassets\\img\\fondonivel2.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\fondoniveles.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\fondoniveles.png",
       "PackagePath": "staticwebassets\\img\\fondoniveles.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\inicio.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\inicio.png",
       "PackagePath": "staticwebassets\\img\\inicio.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\inventario.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\inventario.png",
       "PackagePath": "staticwebassets\\img\\inventario.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\lata.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\lata.png",
       "PackagePath": "staticwebassets\\img\\lata.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\logo.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\manzana.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\manzana.png",
       "PackagePath": "staticwebassets\\img\\manzana.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\menu.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\menu.png",
       "PackagePath": "staticwebassets\\img\\menu.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\musica.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\musica.png",
       "PackagePath": "staticwebassets\\img\\musica.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\perfil.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\perfil.png",
       "PackagePath": "staticwebassets\\img\\perfil.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\pizza.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\pizza.png",
       "PackagePath": "staticwebassets\\img\\pizza.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\plataforma.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\plataforma.png",
       "PackagePath": "staticwebassets\\img\\plataforma.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\play.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\play.png",
       "PackagePath": "staticwebassets\\img\\play.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\salir.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\salir.png",
       "PackagePath": "staticwebassets\\img\\salir.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tacho.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\siguiente.png",
+      "PackagePath": "staticwebassets\\img\\siguiente.png"
+    },
+    {
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\tacho.png",
       "PackagePath": "staticwebassets\\img\\tacho.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tachonegro.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\tachonegro.png",
       "PackagePath": "staticwebassets\\img\\tachonegro.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tachoverde.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\tachoverde.png",
       "PackagePath": "staticwebassets\\img\\tachoverde.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\taper.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\taper.png",
       "PackagePath": "staticwebassets\\img\\taper.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tierra.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\tierra.png",
       "PackagePath": "staticwebassets\\img\\tierra.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\tutorial.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\tutorial.png",
       "PackagePath": "staticwebassets\\img\\tutorial.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\undo.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\undo.png",
       "PackagePath": "staticwebassets\\img\\undo.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\vasito.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\vasito.png",
       "PackagePath": "staticwebassets\\img\\vasito.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\vaso.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\vaso.png",
       "PackagePath": "staticwebassets\\img\\vaso.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\img\\volumen.png",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\img\\volumen.png",
       "PackagePath": "staticwebassets\\img\\volumen.png"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\js\\nivel1.js",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\js\\nivel1.js",
       "PackagePath": "staticwebassets\\js\\nivel1.js"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\js\\nivel2.js",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\js\\nivel2.js",
       "PackagePath": "staticwebassets\\js\\nivel2.js"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\49189314\\Downloads\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\Info360-d493ef5bc64a1e5b9a5a33c460382588372926b8\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
