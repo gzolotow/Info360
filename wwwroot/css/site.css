@@ -65,7 +65,7 @@ header {
 header .navbar {
   background-color: var(--verde) !important;
   margin: 0;
-  margin-top: 0.5%;
+
   padding: 0;
 }
 header a {
@@ -88,11 +88,16 @@ header .offcanvas {
 header .navbar-nav h4 {
   font-size: 4ex;
   text-align: center;
+  align-items: center;
+}
+
+.navbar-nav img{
+  
 }
 
 /* Logo */
 header img {
-  margin-top: -0.5%;
+  margin-top: 0.3%;
   margin-left: -0.5%;
   height: 80px;
   width: auto;
@@ -139,7 +144,7 @@ header nav {
   border-radius: 12px;
   border: none;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.555);
+
 }
 
 .index-botones:hover {
@@ -188,6 +193,8 @@ header nav {
   right: 30%;
   position: absolute;
   top: 200%;
+}
+.close img{
   width: 100px;
   height: auto;
 }
@@ -220,7 +227,7 @@ background-color: var(--verde);
   color: white;
 }
 .btn{
-  background-color: var(--rojo));
+  background-color: var(--rojo);
 }
 
 .config-slider {
@@ -257,6 +264,11 @@ background-color: var(--verde);
   background-color: var(--piel);
   border: none;
 }
+.btn-offcanvas-cerrar img {
+  width: 100px;
+  height: auto;
+}
+
 .config {
   background: none;
   border: none;
@@ -265,10 +277,7 @@ background-color: var(--verde);
 
 
 
-.btn-offcanvas-cerrar img {
-  width: 60px;
-  height: 60px;
-}
+
 
 .section h2 {
     color: var(--verde);
@@ -777,7 +786,7 @@ nav a {
 .Perfil .layout .boton {
   float: left;
   width: 70%;
-  height: 100%;
+  height:90%;
   text-align: center;
   background-color: var(--rojo);
   margin: 1%;
@@ -1521,7 +1530,7 @@ body {
 .overlay.hidden { display: none; }
 .overlay-content {
   background: #fff;
-  padding: 3%;
+  padding: 1%;
   border-radius: 12px;
   text-align: center;
   font-size: 1.5vw;
@@ -1546,14 +1555,17 @@ body {
 .tacho.highlight {
   border: 0.5vw solid yellow;
   border-radius: 8px;
-}/* Overlay Nivel Completado */
+}
+                                     /* Overlay Nivel Completado */
+
+/* Overlay general */
 #overlayCompletado {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+ 
+background: rgba(0, 0, 0, 0.6); /* Fondo oscuro detrás */
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1564,44 +1576,85 @@ body {
   display: none;
 }
 
+/* Contenedor blanco */
 #overlayCompletado .overlay-content {
-  background: linear-gradient(135deg, #4CAF50, #81C784); /* degradado verde */
-  color: #fff;
+  background: #ffffff; /* Fondo blanco */
+  color: #4CAF50; /* Texto verde */
   text-align: center;
-  padding: 30px 40px;
+  padding: 40px 50px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  animation: popIn 0.6s ease forwards;
   max-width: 400px;
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* Título */
 #overlayCompletado .overlay-content h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
+/* Texto */
 #overlayCompletado .overlay-content p {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
 
+/* Botón volver */
 #overlayCompletado .btn-volver {
   display: inline-block;
-  background-color: #fff;
-  color: #4CAF50;
+  background-color: #4CAF50; /* Verde */
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
   padding: 12px 20px;
   border-radius: 8px;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 #overlayCompletado .btn-volver:hover {
   background-color: #388E3C;
-  color: #fff;
 }
+
+
+.btn-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.btn-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.btn-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Colores específicos */
+.btn-icon.home { background-color: #f44336; } /* Rojo */
+.btn-icon.reload { background-color: #2196F3; } /* Azul */
+.btn-icon.next { background-color: #FFEB3B; } /* Amarillo */
+
+/* Animación */
+@keyframes popIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+/* Animación entrada */
+@keyframes popIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
 
 /* Animación */
 @keyframes popIn {
@@ -1628,10 +1681,11 @@ body {
 #area-juego {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 95.6vh;
   overflow: hidden;
   background: url('/img/fondonivel2.png') no-repeat center center;
   background-size: cover;
+  margin-top: 0.6%;
 }
 
 /* Personaje */
@@ -1646,13 +1700,40 @@ body {
   background-size: contain;
 }
 
-/* Residuos */
-.residuo {
+.nivel .boton {
+  float: left;
+  width: 5%;
+  height: 7%;
+  text-align: center;
+  background-color: var(--rojo);
+  margin: 1%;
+  padding: 0.5%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  clear: both;
+  margin-left: 5%;
+  margin-top: 4%;
   position: absolute;
-  top: -50px;
+
+}
+
+
+.nivel .boton img {
+  margin-top: 0%;
   width: 50px;
-  height: 50px;
-  transition: transform 0.3s ease;
+  height: auto;
+  margin-right: 1%;
+}
+.nivel .boton:hover {
+  transform: scale(1.05);
+}
+/* Residuos */
+
+#area-juego .residuo {
+    position: absolute;
+    top: -50px;
+    width: 50px;
+    height: 50px;
 }
 
 /* Texto del nivel */
@@ -1660,6 +1741,32 @@ body {
   text-align: center;
   font-size: 2rem;
   margin-top: 10px;
+}
+.Editar .boton {
+  float: left;
+  width: 5%;
+  height: 7%;
+  text-align: center;
+  background-color: var(--rojo);
+  margin: 1%;
+  padding: 0.5%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  clear: both;
+  margin-left: 5%;
+  margin-top: 4%;
+
+}
+
+
+.Editar .boton img {
+  margin-top: 0%;
+  width: 50px;
+  height: auto;
+  margin-right: 1%;
+}
+.Editar .boton:hover {
+  transform: scale(1.05);
 }
 
 .nivel p {
@@ -1745,6 +1852,33 @@ body {
   padding-right: 5%;
   box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
 }
+.Editar .boton {
+  float: left;
+  width: 5%;
+  height: 7%;
+  text-align: center;
+  background-color: var(--rojo);
+  margin: 1%;
+  padding: 0.5%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  clear: both;
+  margin-left: 5%;
+  margin-top: 4%;
+
+}
+
+
+.Editar .boton img {
+  margin-top: 0%;
+  width: 50px;
+  height: auto;
+  margin-right: 1%;
+}
+.Editar .boton:hover {
+  transform: scale(1.05);
+}
+
 
 .Editar section h1 {
   font-family: 'Cute Dino','Comic Sans MS', Arial, sans-serif;
@@ -1815,3 +1949,4 @@ body {
   text-decoration: none;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+

@@ -22,9 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Mostrar overlay
-    function mostrarOverlay() {
-        overlay.classList.remove('hidden');
+   // Mostrar overlay
+function mostrarOverlay() {
+    overlay.classList.remove('hidden');
+
+    // marcar completado (evitar duplicados)
+    if (!localStorage.getItem('nivel2Completado')) {
+        localStorage.setItem('nivel2Completado', '1');
+
+        // llamada opcional por compatibilidad
+        if (typeof window.nivelCompletado === 'function') {
+            window.nivelCompletado(2);
+        }
     }
+}
+
 
     // Crear residuos con velocidad y rotación aleatoria
     function crearResiduo() {
@@ -79,3 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setInterval(crearResiduo, 2000);
 });
+
+https[Post] IDBTransaction(){
+    return VisualViewport("")
+}

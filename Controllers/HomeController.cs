@@ -18,7 +18,7 @@ namespace EcoPlay.Controllers
         {
             ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
 
-            return View("Nivel2");
+            return View();
         }
 
         public IActionResult Home()
@@ -34,10 +34,20 @@ namespace EcoPlay.Controllers
         }
 
         public IActionResult Niveles()
-        {
-            ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
-            return View();
-        }
+{
+    var usuario = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
+    var nivelUsuario = Objeto.StringToObject<NivelUsuario>(HttpContext.Session.GetString("nivelUsuario"));
+
+    ViewBag.user = usuario;
+    ViewBag.nivelUsuario = nivelUsuario;
+
+    // Guardamos el nivel actual máximo del usuario
+    int nivelMax = nivelUsuario?.NivelActual ?? 1; 
+    HttpContext.Session.SetInt32("nivelMax", nivelMax);
+
+    return View();
+}
+
 
         public IActionResult Inventario()
         {
@@ -102,27 +112,26 @@ namespace EcoPlay.Controllers
         [HttpPost]
         public IActionResult GuardarResultadoNivel(int nivelId, int estrellas, int errores, string tiempo)
         {
-            var mailUsuario = HttpContext.Session.GetString("MailUsuario");
-            if (string.IsNullOrEmpty(mailUsuario))
-            {
-                return Json(new { success = false, message = "Usuario no logueado." });
-            }
-            // Parsear tiempo (ej: "1:45" a TimeSpan)
-            var tiempoSpan = TimeSpan.Parse("00:" + tiempo);
-            var resultado = new ResumenNivelView
-            {
-                UsuarioMail = mailUsuario,
-                NivelId = nivelId,
-                Estrellas = estrellas,
-                Errores = errores,
-                Tiempo = tiempoSpan,
-                FechaCompletado = DateTime.Now
-            };
+            [HttpPost]
+public IActionResult GuardarResultadoNivel(int nivelId, int estrellas, int errores, string tiempo)
+{
+    var mailUsuario = HttpContext.Session.GetString("MailUsuario");
+    if (string.IsNullOrEmpty(mailUsuario))
+        return Json(new { success = false, message = "Usuario no logueado." });
 
-            // Opcional: actualizar sesión (ej: incrementar items recolectados)
-            var itemsActuales = HttpContext.Session.GetInt32("ItemsRecolectados") ?? 0;
-            HttpContext.Session.SetInt32("ItemsRecolectados", itemsActuales + estrellas);  // Ej: +1 ítem por estrella
-            return Json(new { success = true, message = "Resultado guardado." });
+    // Guardar resultado en BD...
+    
+    // Actualizar nivel máximo
+    var nivelUsuario = Objeto.StringToObject<NivelUsuario>(HttpContext.Session.GetString("nivelUsuario"));
+    if(nivelId >= nivelUsuario.NivelActual)
+    {
+        nivelUsuario.NivelActual = nivelId + 1; // desbloquea siguiente nivel
+        HttpContext.Session.SetString("nivelUsuario", Objeto.ObjectToString(nivelUsuario));
+    }
+
+    return Json(new { success = true });
+}
+
         }
 
         public IActionResult Editar()
@@ -162,5 +171,13 @@ namespace EcoPlay.Controllers
   
             return RedirectToAction("Inventario");
         }
+        public IActionResult Nivel2()
+{
+    ViewBag.user = Objeto.StringToObject<Usuario>(HttpContext.Session.GetString("user"));
+    ViewBag.nivelUsuario = Objeto.StringToObject<NivelUsuario>(HttpContext.Session.GetString("nivelUsuario"));
+    ViewBag.AspectoEquipado = BD.BuscarAspectoEquipado(BD.BuscarEquipado(ViewBag.nivelUsuario.IDNivelUsuario));
+    return View();
+}
+
     }
 }
