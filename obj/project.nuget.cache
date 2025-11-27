@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H+0a5NLfjRcZkrMVsYIlh+LERHvA0edMsuaqvsFYb6eNQGylvboWHMYrNfNnIuk0AG1iq/S2zSSMXkJrALxG3Q==",
+  "dgSpecHash": "Hla6dMO6HGDM+8sUnqEZX0MAcdUV0f7LBOqbRKzXGS91V+WVY7vLwxuT9PEnd69dMzHDflYqsZ3i5cnWR4PMDg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\49189314\\Downloads\\gays\\Info360\\EcoPlay.csproj",
+  "projectFilePath": "C:\\Users\\49189314\\Downloads\\Nueva carpeta\\Info360\\EcoPlay.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\49189314\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\49189314\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

@@ -91,9 +91,6 @@ header .navbar-nav h4 {
   align-items: center;
 }
 
-.navbar-nav img{
-  
-}
 
 /* Logo */
 header img {
@@ -220,7 +217,6 @@ header nav {
   background-color: var(--verdeClarito);
 }
 .offcanvas-body{
-  
 background-color: var(--verde);  
 }
 .offcanvas-body p{
@@ -1346,7 +1342,7 @@ body {
 .Home .layout .col5Span4{
   background-color: white;
   width: 60%;
-  height: 118%;
+  height: 115%;
   border: 1px solid #D9D9D9;
   border-radius: 50%;
   margin-left: 20%;
